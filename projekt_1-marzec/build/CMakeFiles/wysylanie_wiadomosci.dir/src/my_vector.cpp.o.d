@@ -1,8 +1,7 @@
-CMakeFiles/wysylanie_wiadomosci.dir/src/receiving_message.cpp.o: \
- /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/receiving_message.cpp \
+CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.o: \
+ /home/kubus/Pulpit/PAMSI/projekt_1-marzec/src/my_vector.cpp \
  /usr/include/stdc-predef.h \
- /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/inc/receiving_message.hpp \
- /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/inc/my_vector.hpp \
+ /home/kubus/Pulpit/PAMSI/projekt_1-marzec/inc/my_vector.hpp \
  /usr/include/c++/9/string \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \

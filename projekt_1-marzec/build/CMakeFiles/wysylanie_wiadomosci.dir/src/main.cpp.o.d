@@ -1,5 +1,5 @@
 CMakeFiles/wysylanie_wiadomosci.dir/src/main.cpp.o: \
- /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/main.cpp \
+ /home/kubus/Pulpit/PAMSI/projekt_1-marzec/src/main.cpp \
  /usr/include/stdc-predef.h /usr/include/c++/9/iostream \
  /usr/include/x86_64-linux-gnu/c++/9/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/9/bits/os_defines.h \
@@ -136,4 +136,4 @@ CMakeFiles/wysylanie_wiadomosci.dir/src/main.cpp.o: \
  /usr/include/c++/9/bits/basic_ios.tcc \
  /usr/include/c++/9/bits/ostream.tcc /usr/include/c++/9/istream \
  /usr/include/c++/9/bits/istream.tcc \
- /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/inc/sorting.hpp
+ /home/kubus/Pulpit/PAMSI/projekt_1-marzec/inc/sorting.hpp

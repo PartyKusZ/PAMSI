@@ -8,19 +8,26 @@ class t_vector{
 
     private:
         static constexpr int  first_node = 0;
-        int get_number_of_node(){return number_of_node;};
-        void set_number_of_node(int x){number_of_node = x;};
-    protected:
-        int number_of_node;
-        T part_of_message;
-        t_vector *next;
-        t_vector *last;
-        int size ;
+
+        struct  str_of_data{
+            int number_of_node;
+            T part_of_message;
+            t_vector<T> *next;
+            t_vector<T> *last;
+        };
+
+        t_vector<T> :: str_of_data data;
+        
+        data.number_of_node = 0;
+
+        
+        int quantity_of_nodes;
+        
 
     public:
       
 
-        t_vector(): number_of_node(first_node), next(nullptr), last(nullptr){;};
+        t_vector() {;};
         void push(const T data);
         void pop();
         T top() const;

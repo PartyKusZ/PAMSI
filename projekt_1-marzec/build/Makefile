@@ -57,10 +57,10 @@ RM = /snap/cmake/1035/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec
+CMAKE_SOURCE_DIR = /home/kubus/Pulpit/PAMSI/projekt_1-marzec
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build
+CMAKE_BINARY_DIR = /home/kubus/Pulpit/PAMSI/projekt_1-marzec/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kubus/Pulpit/PAMSI/projekt_1-marzec/build/CMakeFiles /home/kubus/Pulpit/PAMSI/projekt_1-marzec/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kubus/Pulpit/PAMSI/projekt_1-marzec/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -152,6 +152,30 @@ src/main.s: src/main.cpp.s
 src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/wysylanie_wiadomosci.dir/build.make CMakeFiles/wysylanie_wiadomosci.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
+
+src/my_vector.o: src/my_vector.cpp.o
+.PHONY : src/my_vector.o
+
+# target to build an object file
+src/my_vector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wysylanie_wiadomosci.dir/build.make CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.o
+.PHONY : src/my_vector.cpp.o
+
+src/my_vector.i: src/my_vector.cpp.i
+.PHONY : src/my_vector.i
+
+# target to preprocess a source file
+src/my_vector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wysylanie_wiadomosci.dir/build.make CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.i
+.PHONY : src/my_vector.cpp.i
+
+src/my_vector.s: src/my_vector.cpp.s
+.PHONY : src/my_vector.s
+
+# target to generate assembly for a file
+src/my_vector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/wysylanie_wiadomosci.dir/build.make CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.s
+.PHONY : src/my_vector.cpp.s
 
 src/receiving_message.o: src/receiving_message.cpp.o
 .PHONY : src/receiving_message.o
@@ -237,6 +261,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/my_vector.o"
+	@echo "... src/my_vector.i"
+	@echo "... src/my_vector.s"
 	@echo "... src/receiving_message.o"
 	@echo "... src/receiving_message.i"
 	@echo "... src/receiving_message.s"
