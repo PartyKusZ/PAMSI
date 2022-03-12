@@ -1,6 +1,6 @@
 #pragma once 
 #include<iostream>
-
+#include <stdexcept>
 template<typename T>
 
 class t_vector{
@@ -13,18 +13,19 @@ class t_vector{
             T T_type;
             str_of_data *next = nullptr;
             str_of_data *last = nullptr;
+            int nr_of_node = 0;
         };
         str_of_data *data;
 
     public:
         t_vector(): quantity(initial_size), data(nullptr){;};
-        void push(T val);
+        void push(const T &val);
         void pop();
         bool empty(){return data == nullptr;};
-        T top(){return data->T_type;};
+        T top();
         int size(){return quantity;};
-        T &operator[](int i);
-        // add = overloading 
+        T &operator[](const int &i);
+        void operator=(const T &val);
         T print();
 
 };
