@@ -1,4 +1,4 @@
-# Install script for directory: /home/kubus/Pulpit/PAMSI/projekt_1-marzec
+# Install script for directory: /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/kubus/Pulpit/PAMSI/projekt_1-marzec/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

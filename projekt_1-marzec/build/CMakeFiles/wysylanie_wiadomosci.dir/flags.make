@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/kubus/Pulpit/PAMSI/projekt_1-marzec/inc
+CXX_INCLUDES = -I/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/inc
 
 CXX_FLAGS = 
 

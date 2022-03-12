@@ -1,38 +1,31 @@
-#pragma once
-#include<string>
+#pragma once 
+#include<iostream>
 
- 
 template<typename T>
 
 class t_vector{
 
     private:
-        static constexpr int  first_node = 0;
-
-        struct  str_of_data{
-            int number_of_node;
-            T part_of_message;
-            t_vector<T> *next;
-            t_vector<T> *last;
+        
+        static constexpr int initial_size = 0;
+        int quantity; //quantity of nodes 
+        struct str_of_data {
+            T T_type;
+            str_of_data *next = nullptr;
+            str_of_data *last = nullptr;
         };
-
-        t_vector<T> :: str_of_data data;
-        
-        data.number_of_node = 0;
-
-        
-        int quantity_of_nodes;
-        
+        str_of_data *data;
 
     public:
-      
-
-        t_vector() {;};
-        void push(const T data);
+        t_vector(): quantity(initial_size), data(nullptr){;};
+        void push(T val);
         void pop();
-        T top() const;
-        bool empty() const;
-        size_t size() const;
-        T& operator[](const int x);
-        
+        bool empty(){return data == nullptr;};
+        T top(){return data->T_type;};
+        int size(){return quantity;};
+        T &operator[](int i);
+        // add = overloading 
+        T print();
+
 };
+
