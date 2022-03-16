@@ -1,18 +1,20 @@
-
-# Consider dependencies only in project.
-set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
-
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
   )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/main.cpp" "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles/wysylanie_wiadomosci.dir/src/main.cpp.o"
+  "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/my_vector.cpp" "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.o"
+  "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/receiving_message.cpp" "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles/wysylanie_wiadomosci.dir/src/receiving_message.cpp.o"
+  "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sending_message.cpp" "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles/wysylanie_wiadomosci.dir/src/sending_message.cpp.o"
+  "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sorting.cpp" "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The set of dependency files which are needed:
-set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/main.cpp" "CMakeFiles/wysylanie_wiadomosci.dir/src/main.cpp.o" "gcc" "CMakeFiles/wysylanie_wiadomosci.dir/src/main.cpp.o.d"
-  "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/my_vector.cpp" "CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.o" "gcc" "CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.o.d"
-  "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/receiving_message.cpp" "CMakeFiles/wysylanie_wiadomosci.dir/src/receiving_message.cpp.o" "gcc" "CMakeFiles/wysylanie_wiadomosci.dir/src/receiving_message.cpp.o.d"
-  "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sending_message.cpp" "CMakeFiles/wysylanie_wiadomosci.dir/src/sending_message.cpp.o" "gcc" "CMakeFiles/wysylanie_wiadomosci.dir/src/sending_message.cpp.o.d"
-  "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sorting.cpp" "CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.o" "gcc" "CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.o.d"
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../inc"
   )
 
 # Targets to which this target links.

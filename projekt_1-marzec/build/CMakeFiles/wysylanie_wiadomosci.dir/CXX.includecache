@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../inc/my_vector.hpp
+iostream
+-
+stdexcept
+-
+
+../inc/receiving_message.hpp
+
+../inc/sending_message.hpp
+
+../inc/sorting.hpp
+
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/main.cpp
+iostream
+-
+my_vector.hpp
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/my_vector.hpp
+
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/my_vector.cpp
+my_vector.hpp
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/my_vector.hpp
+
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/receiving_message.cpp
+receiving_message.hpp
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/receiving_message.hpp
+
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sending_message.cpp
+sending_message.hpp
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sending_message.hpp
+
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sorting.cpp
+sorting.hpp
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sorting.hpp
+
