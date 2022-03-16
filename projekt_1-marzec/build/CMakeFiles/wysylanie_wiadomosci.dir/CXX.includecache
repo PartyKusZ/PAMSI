@@ -26,7 +26,15 @@ iostream
 string
 -
 
-/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sorting.cpp
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/main.cpp
+iostream
+-
+my_vector.hpp
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/my_vector.hpp
+string
+-
+struct_for_message.hpp
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/struct_for_message.hpp
 sorting.hpp
 /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sorting.hpp
 

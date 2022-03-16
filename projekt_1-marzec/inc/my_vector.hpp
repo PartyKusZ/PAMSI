@@ -28,6 +28,7 @@ class t_vector{
         int size(){return quantity;};
         T &operator[](const int &i);
         void operator=(const T &val);
+        
         str_of_data *begin(){return data;};
         str_of_data *end(){return data->last;};
 
