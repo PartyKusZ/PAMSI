@@ -2,7 +2,7 @@
 
 template<typename T>
 
-void t_vector<T> :: push(const T &val){
+void t_vector<T> :: push(const T &val,const int &x){
 
    
     
@@ -11,12 +11,17 @@ void t_vector<T> :: push(const T &val){
         data->T_type = val;
         data->last = data;
         quantity++;
+        data->key = x;
 
     }else{
         data->last->next = new str_of_data;
         data->last->next->T_type = val;
         data->last->next->nr_of_node = quantity++;
+        data->last->next->key = x;
         data->last = data->last->next;
+        
+
+
     }
 
 }
@@ -54,7 +59,7 @@ T t_vector<T> :: top(){
 
 template<typename T>
 
-T &t_vector<T> :: operator[](const int &i){
+  typename t_vector<T> :: str_of_data &t_vector<T> :: operator[](const int &i){
     str_of_data *tmp;
     tmp = data;
     try{
@@ -69,7 +74,7 @@ T &t_vector<T> :: operator[](const int &i){
 
                 tmp = tmp->next;
             }
-            return tmp->T_type;
+            return *tmp;
 
         }
 
@@ -83,13 +88,83 @@ T &t_vector<T> :: operator[](const int &i){
 
 
 
+
 template<typename T>
 
-void t_vector<T> :: operator=(const T &val){
+void t_vector<T> :: str_of_data ::  operator=(const str_of_data &val){
 
-    data->T_type = val;
-
+   T_type = val.T_type;
+   key = val.key;
+    
 }
+
+
+
+
+template<typename T>
+
+void t_vector<T> :: sort(const int &left,const int &right){
+
+    str_of_data tmp;
+
+    int i = left;
+    int j = right;
+    int pivot = (left + right) / 2;
+    do{
+        while(comprasion_ascending((*this)[pivot],(*this)[i])){
+            i++;
+        }
+        while(comprasion_ascending((*this)[j],(*this)[pivot])){
+            j--;
+        }
+        if(i <= j){
+            tmp = (*this)[i];
+            (*this)[i] = (*this)[j];
+            (*this)[j] = tmp;
+            i++;
+            j--;
+        }
+    }while(i <= j);
+     if(left < j)
+       this->sort(left,j);
+    if(right > i)
+        this->sort(i,right);
+
+};
+
+
+
+template<typename T>
+
+void t_vector<T> :: sort(){
+
+    str_of_data tmp;
+
+    int i = 0;
+    int j = quantity - 1;
+    int pivot = quantity / 2;
+    do{
+        while(comprasion_ascending((*this)[pivot],(*this)[i])){
+            i++;
+        }
+        while(comprasion_ascending((*this)[j],(*this)[pivot])){
+            j--;
+        }
+        if(i <= j){
+            tmp = (*this)[i];
+            (*this)[i] = (*this)[j];
+            (*this)[j] = tmp;
+            
+            i++;
+            j--;
+        }
+    }while(i <= j);
+     if(0 < j)
+       this->sort(0,j);
+    if(quantity - 1 > i)
+        this->sort(i,quantity - 1);
+
+};
 
 
 template<typename T>

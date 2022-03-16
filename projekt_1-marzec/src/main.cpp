@@ -11,21 +11,21 @@ int main(){
     part_of_message one;
     
  
-    for(int i = 10000; i >=  0; --i){
+    for(int i = 10000; i >= 0; --i){
       one.set_number_of_part(i);
       one.set_part_of_message("Qsh" + to_string(i));
-      tab.push(one);
+      tab.push(one,one.get_number_of_part());
     }    
 
    
-   // tab.print();
+    tab.print();
    
     
     std :: cout << "---------------------" << std :: endl;
    
     // TO DO
-    t_sort :: sort(tab,0,tab.size()-1,t_comprasion_more());
-      tab.print();
+    tab.sort();
+    tab.print();
      
    
 }

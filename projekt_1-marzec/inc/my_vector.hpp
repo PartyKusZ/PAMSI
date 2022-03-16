@@ -16,19 +16,26 @@ class t_vector{
             str_of_data *next = nullptr;
             str_of_data *last = nullptr;
             int nr_of_node = 0;
+            int key;
+            void operator=(const str_of_data &val);
         };
         str_of_data *data;
 
+        bool comprasion_ascending(str_of_data x, str_of_data y){return x.key > y.key;};
+        str_of_data &operator[](const int &i);
+        void sort(const int &left,const int &right);
+
+
     public:
         t_vector(): quantity(initial_size), data(nullptr){;};
-        void push(const T &val);
+        void push(const T &val, const int &x);
         void pop();
         bool empty(){return data == nullptr;};
         T top();
         int size(){return quantity;};
-        T &operator[](const int &i);
-        void operator=(const T &val);
         
+        void sort();
+
         str_of_data *begin(){return data;};
         str_of_data *end(){return data->last;};
 

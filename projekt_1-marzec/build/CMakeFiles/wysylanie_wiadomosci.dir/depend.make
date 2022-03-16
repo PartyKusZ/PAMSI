@@ -16,8 +16,5 @@ CMakeFiles/wysylanie_wiadomosci.dir/src/receiving_message.cpp.o: ../src/receivin
 CMakeFiles/wysylanie_wiadomosci.dir/src/sending_message.cpp.o: ../inc/sending_message.hpp
 CMakeFiles/wysylanie_wiadomosci.dir/src/sending_message.cpp.o: ../src/sending_message.cpp
 
-CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.o: ../inc/my_vector.hpp
-CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.o: ../inc/sorting.hpp
-CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.o: ../inc/struct_for_message.hpp
 CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.o: ../src/sorting.cpp
 
