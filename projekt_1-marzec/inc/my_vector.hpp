@@ -1,6 +1,8 @@
 #pragma once 
-#include<iostream>
+#include <iostream>
 #include <stdexcept>
+#include "struct_for_message.hpp"
+
 template<typename T>
 
 class t_vector{
@@ -26,7 +28,10 @@ class t_vector{
         int size(){return quantity;};
         T &operator[](const int &i);
         void operator=(const T &val);
-        T print();
+        str_of_data *begin(){return data;};
+        str_of_data *end(){return data->last;};
+
+        void print();
 
 };
 

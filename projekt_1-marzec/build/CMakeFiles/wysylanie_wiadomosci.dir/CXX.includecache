@@ -11,30 +11,20 @@ iostream
 -
 stdexcept
 -
-
-../inc/receiving_message.hpp
-
-../inc/sending_message.hpp
+struct_for_message.hpp
+../inc/struct_for_message.hpp
 
 ../inc/sorting.hpp
+struct_for_message.hpp
+../inc/struct_for_message.hpp
+my_vector.hpp
+../inc/my_vector.hpp
 
-/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/main.cpp
+../inc/struct_for_message.hpp
 iostream
 -
-my_vector.hpp
-/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/my_vector.hpp
-
-/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/my_vector.cpp
-my_vector.hpp
-/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/my_vector.hpp
-
-/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/receiving_message.cpp
-receiving_message.hpp
-/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/receiving_message.hpp
-
-/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sending_message.cpp
-sending_message.hpp
-/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sending_message.hpp
+string
+-
 
 /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sorting.cpp
 sorting.hpp

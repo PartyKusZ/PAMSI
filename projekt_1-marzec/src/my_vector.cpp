@@ -59,7 +59,7 @@ T &t_vector<T> :: operator[](const int &i){
     tmp = data;
     try{
 
-        if(i > quantity -1 && i < 0){
+        if(i > quantity -1 || i < 0){
 
             throw std :: range_error("index of t_vector out of range");
 
@@ -94,7 +94,7 @@ void t_vector<T> :: operator=(const T &val){
 
 template<typename T>
 
-T t_vector<T> :: print(){
+void t_vector<T> :: print(){
     str_of_data *tmp = data;
     do{
         std :: cout << tmp->T_type << " | "<<tmp->nr_of_node <<  std :: endl;
@@ -104,3 +104,5 @@ T t_vector<T> :: print(){
 
 
 template class t_vector<int>;
+template class t_vector<part_of_message>;
+template class t_vector<std :: string>;
