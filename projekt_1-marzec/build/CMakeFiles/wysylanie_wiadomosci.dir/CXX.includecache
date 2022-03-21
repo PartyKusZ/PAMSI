@@ -14,12 +14,6 @@ stdexcept
 struct_for_message.hpp
 ../inc/struct_for_message.hpp
 
-../inc/sorting.hpp
-struct_for_message.hpp
-../inc/struct_for_message.hpp
-my_vector.hpp
-../inc/my_vector.hpp
-
 ../inc/struct_for_message.hpp
 iostream
 -
@@ -35,6 +29,4 @@ string
 -
 struct_for_message.hpp
 /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/struct_for_message.hpp
-sorting.hpp
-/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sorting.hpp
 

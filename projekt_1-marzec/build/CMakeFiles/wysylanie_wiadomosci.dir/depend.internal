@@ -3,7 +3,6 @@
 
 CMakeFiles/wysylanie_wiadomosci.dir/src/main.cpp.o
  ../inc/my_vector.hpp
- ../inc/sorting.hpp
  ../inc/struct_for_message.hpp
  /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/main.cpp
 CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.o
@@ -16,5 +15,8 @@ CMakeFiles/wysylanie_wiadomosci.dir/src/receiving_message.cpp.o
 CMakeFiles/wysylanie_wiadomosci.dir/src/sending_message.cpp.o
  ../inc/sending_message.hpp
  /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sending_message.cpp
-CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.o
- /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sorting.cpp
+CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.o
+ ../inc/my_vector.hpp
+ ../inc/struct_for_message.hpp
+ ../inc/test.hpp
+ /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/test.cpp

@@ -231,32 +231,32 @@ src/sending_message.cpp.s:
 	$(MAKE) -f CMakeFiles/wysylanie_wiadomosci.dir/build.make CMakeFiles/wysylanie_wiadomosci.dir/src/sending_message.cpp.s
 .PHONY : src/sending_message.cpp.s
 
-src/sorting.o: src/sorting.cpp.o
+src/test.o: src/test.cpp.o
 
-.PHONY : src/sorting.o
+.PHONY : src/test.o
 
 # target to build an object file
-src/sorting.cpp.o:
-	$(MAKE) -f CMakeFiles/wysylanie_wiadomosci.dir/build.make CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.o
-.PHONY : src/sorting.cpp.o
+src/test.cpp.o:
+	$(MAKE) -f CMakeFiles/wysylanie_wiadomosci.dir/build.make CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.o
+.PHONY : src/test.cpp.o
 
-src/sorting.i: src/sorting.cpp.i
+src/test.i: src/test.cpp.i
 
-.PHONY : src/sorting.i
+.PHONY : src/test.i
 
 # target to preprocess a source file
-src/sorting.cpp.i:
-	$(MAKE) -f CMakeFiles/wysylanie_wiadomosci.dir/build.make CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.i
-.PHONY : src/sorting.cpp.i
+src/test.cpp.i:
+	$(MAKE) -f CMakeFiles/wysylanie_wiadomosci.dir/build.make CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.i
+.PHONY : src/test.cpp.i
 
-src/sorting.s: src/sorting.cpp.s
+src/test.s: src/test.cpp.s
 
-.PHONY : src/sorting.s
+.PHONY : src/test.s
 
 # target to generate assembly for a file
-src/sorting.cpp.s:
-	$(MAKE) -f CMakeFiles/wysylanie_wiadomosci.dir/build.make CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.s
-.PHONY : src/sorting.cpp.s
+src/test.cpp.s:
+	$(MAKE) -f CMakeFiles/wysylanie_wiadomosci.dir/build.make CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.s
+.PHONY : src/test.cpp.s
 
 # Help Target
 help:
@@ -279,9 +279,9 @@ help:
 	@echo "... src/sending_message.o"
 	@echo "... src/sending_message.i"
 	@echo "... src/sending_message.s"
-	@echo "... src/sorting.o"
-	@echo "... src/sorting.i"
-	@echo "... src/sorting.s"
+	@echo "... src/test.o"
+	@echo "... src/test.i"
+	@echo "... src/test.s"
 .PHONY : help
 
 

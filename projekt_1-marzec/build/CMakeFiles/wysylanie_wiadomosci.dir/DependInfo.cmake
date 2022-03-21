@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/my_vector.cpp" "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.o"
   "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/receiving_message.cpp" "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles/wysylanie_wiadomosci.dir/src/receiving_message.cpp.o"
   "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sending_message.cpp" "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles/wysylanie_wiadomosci.dir/src/sending_message.cpp.o"
-  "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sorting.cpp" "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.o"
+  "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/test.cpp" "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -1,27 +1,27 @@
 [
 {
   "directory": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build",
-  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/inc  -g   -o CMakeFiles/wysylanie_wiadomosci.dir/src/main.cpp.o -c /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/main.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/inc  -O3 -DNDEBUG   -o CMakeFiles/wysylanie_wiadomosci.dir/src/main.cpp.o -c /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/main.cpp",
   "file": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/main.cpp"
 },
 {
   "directory": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build",
-  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/inc  -g   -o CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.o -c /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/my_vector.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/inc  -O3 -DNDEBUG   -o CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.o -c /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/my_vector.cpp",
   "file": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/my_vector.cpp"
 },
 {
   "directory": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build",
-  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/inc  -g   -o CMakeFiles/wysylanie_wiadomosci.dir/src/receiving_message.cpp.o -c /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/receiving_message.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/inc  -O3 -DNDEBUG   -o CMakeFiles/wysylanie_wiadomosci.dir/src/receiving_message.cpp.o -c /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/receiving_message.cpp",
   "file": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/receiving_message.cpp"
 },
 {
   "directory": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build",
-  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/inc  -g   -o CMakeFiles/wysylanie_wiadomosci.dir/src/sending_message.cpp.o -c /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sending_message.cpp",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/inc  -O3 -DNDEBUG   -o CMakeFiles/wysylanie_wiadomosci.dir/src/sending_message.cpp.o -c /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sending_message.cpp",
   "file": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sending_message.cpp"
 },
 {
   "directory": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build",
-  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/inc  -g   -o CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.o -c /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sorting.cpp",
-  "file": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sorting.cpp"
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/inc  -O3 -DNDEBUG   -o CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.o -c /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/test.cpp",
+  "file": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/test.cpp"
 }
 ]

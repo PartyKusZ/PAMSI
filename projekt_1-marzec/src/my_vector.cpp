@@ -1,5 +1,4 @@
 #include"my_vector.hpp"
-
 template<typename T>
 
 void t_vector<T> :: push(const T &val,const int &x){
@@ -26,15 +25,85 @@ void t_vector<T> :: push(const T &val,const int &x){
 
 }
 
+
+
+
+
+
 template<typename T>
 
-void t_vector<T> ::pop(){
-    str_of_data *tmp;
-    tmp = data->next;
-    delete data;
-    data = tmp;
+void t_vector<T> :: pushs(const T &val,const int &x){
+
+   
+    
+    if(data == nullptr){
+        data = new str_of_data;
+        data->T_type = val;
+        data->last = data;
+        quantity++;
+        data->key = x;
+
+    }else{
+        data->last->next = new str_of_data;
+        data->last->next->T_type = val;
+        data->last->next->nr_of_node = quantity++;
+        data->last->next->key = x;
+        data->last = data->last->next;
+        
+
+
+    }
+    this->sort();
 }
 
+
+
+template<typename T>
+
+void t_vector<T> :: pop(){
+    str_of_data *tmp;
+    try{
+        if(this->empty() != true){
+           
+            tmp = data->next;
+            delete data;
+            data = tmp;
+            quantity--;
+            delete tmp;
+        }else{
+            throw std :: range_error("t_vector is empty  -> pop()");
+        }
+    }catch(const std :: range_error& e){
+        std::cerr <<" std :: range_error: "<< e.what() << '\n';
+        exit(EXIT_FAILURE);
+    }
+
+   
+}
+
+
+template<typename T>
+
+void t_vector<T> :: pop_all(){
+    str_of_data *tmp;
+    try{
+        if(this->empty() != true){
+            while(this->empty() != true){
+            tmp = data->next;
+            delete data;
+            data = tmp;
+            quantity--;
+            delete tmp;
+            }
+        }else{
+            throw std :: range_error("t_vector is empty  -> pop_all()");
+        }
+    }catch(const std :: range_error& e){
+        std::cerr <<" std :: range_error: "<< e.what() << '\n';
+        exit(EXIT_FAILURE);
+    }
+    
+}
 
 
 template<typename T>
@@ -44,7 +113,7 @@ T t_vector<T> :: top(){
         if(this->empty() != true){
             return data->T_type;
         }else{
-            throw std :: range_error("t_vector is empty");
+            throw std :: range_error("t_vector is empty  -> top()");
 
         }
     }
@@ -66,7 +135,7 @@ template<typename T>
 
         if(i > quantity -1 || i < 0){
 
-            throw std :: range_error("index of t_vector out of range");
+            throw std :: range_error("index of t_vector out of range -> operator[]");
 
         }else{
 

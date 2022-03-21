@@ -3,7 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.o"
   "CMakeFiles/wysylanie_wiadomosci.dir/src/receiving_message.cpp.o"
   "CMakeFiles/wysylanie_wiadomosci.dir/src/sending_message.cpp.o"
-  "CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.o"
+  "CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.o"
   "wysylanie_wiadomosci"
   "wysylanie_wiadomosci.pdb"
 )

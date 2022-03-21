@@ -109,18 +109,18 @@ CMakeFiles/wysylanie_wiadomosci.dir/src/sending_message.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wysylanie_wiadomosci.dir/src/sending_message.cpp.s"
 	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sending_message.cpp -o CMakeFiles/wysylanie_wiadomosci.dir/src/sending_message.cpp.s
 
-CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.o: CMakeFiles/wysylanie_wiadomosci.dir/flags.make
-CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.o: ../src/sorting.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.o -c /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sorting.cpp
+CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.o: CMakeFiles/wysylanie_wiadomosci.dir/flags.make
+CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.o: ../src/test.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.o -c /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/test.cpp
 
-CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sorting.cpp > CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.i
+CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.i"
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/test.cpp > CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.i
 
-CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sorting.cpp -o CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.s
+CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.s"
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/test.cpp -o CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.s
 
 # Object files for target wysylanie_wiadomosci
 wysylanie_wiadomosci_OBJECTS = \
@@ -128,7 +128,7 @@ wysylanie_wiadomosci_OBJECTS = \
 "CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.o" \
 "CMakeFiles/wysylanie_wiadomosci.dir/src/receiving_message.cpp.o" \
 "CMakeFiles/wysylanie_wiadomosci.dir/src/sending_message.cpp.o" \
-"CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.o"
+"CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.o"
 
 # External object files for target wysylanie_wiadomosci
 wysylanie_wiadomosci_EXTERNAL_OBJECTS =
@@ -137,7 +137,7 @@ wysylanie_wiadomosci: CMakeFiles/wysylanie_wiadomosci.dir/src/main.cpp.o
 wysylanie_wiadomosci: CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.o
 wysylanie_wiadomosci: CMakeFiles/wysylanie_wiadomosci.dir/src/receiving_message.cpp.o
 wysylanie_wiadomosci: CMakeFiles/wysylanie_wiadomosci.dir/src/sending_message.cpp.o
-wysylanie_wiadomosci: CMakeFiles/wysylanie_wiadomosci.dir/src/sorting.cpp.o
+wysylanie_wiadomosci: CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.o
 wysylanie_wiadomosci: CMakeFiles/wysylanie_wiadomosci.dir/build.make
 wysylanie_wiadomosci: CMakeFiles/wysylanie_wiadomosci.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable wysylanie_wiadomosci"

@@ -1,7 +1,8 @@
 #pragma once 
 #include <iostream>
 #include <stdexcept>
-#include "struct_for_message.hpp"
+#include"struct_for_message.hpp"
+
 
 template<typename T>
 
@@ -29,15 +30,16 @@ class t_vector{
     public:
         t_vector(): quantity(initial_size), data(nullptr){;};
         void push(const T &val, const int &x);
+        void pushs(const T &val, const int &x);
         void pop();
+        void pop_all();
         bool empty(){return data == nullptr;};
         T top();
         int size(){return quantity;};
         
         void sort();
 
-        str_of_data *begin(){return data;};
-        str_of_data *end(){return data->last;};
+       
 
         void print();
 
