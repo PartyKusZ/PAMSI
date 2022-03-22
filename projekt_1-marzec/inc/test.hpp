@@ -1,6 +1,8 @@
 #pragma once
 #include"my_vector.hpp"
 #include<chrono>
+#include<fstream>
+#include <iomanip>
 void test_push();
 void test_pushs();
 void test_pop();

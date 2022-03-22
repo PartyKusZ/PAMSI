@@ -69,7 +69,7 @@ void t_vector<T> :: pop(){
             delete data;
             data = tmp;
             quantity--;
-            delete tmp;
+            
         }else{
             throw std :: range_error("t_vector is empty  -> pop()");
         }
@@ -85,23 +85,12 @@ void t_vector<T> :: pop(){
 template<typename T>
 
 void t_vector<T> :: pop_all(){
-    str_of_data *tmp;
-    try{
-        if(this->empty() != true){
-            while(this->empty() != true){
-            tmp = data->next;
-            delete data;
-            data = tmp;
-            quantity--;
-            delete tmp;
-            }
-        }else{
-            throw std :: range_error("t_vector is empty  -> pop_all()");
-        }
-    }catch(const std :: range_error& e){
-        std::cerr <<" std :: range_error: "<< e.what() << '\n';
-        exit(EXIT_FAILURE);
+   
+  
+    while(this->empty() != true){
+        this->pop();
     }
+       
     
 }
 
@@ -241,6 +230,8 @@ template<typename T>
 void t_vector<T> :: print(){
     str_of_data *tmp = data;
     do{
+        if(tmp == nullptr)
+            break;
         std :: cout << tmp->T_type << " | "<<tmp->nr_of_node <<  std :: endl;
         tmp = tmp->next;
     }while(tmp != nullptr);

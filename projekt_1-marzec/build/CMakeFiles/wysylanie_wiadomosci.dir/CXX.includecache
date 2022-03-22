@@ -14,19 +14,23 @@ stdexcept
 struct_for_message.hpp
 ../inc/struct_for_message.hpp
 
+../inc/sending_message.hpp
+my_vector.hpp
+../inc/my_vector.hpp
+struct_for_message.hpp
+../inc/struct_for_message.hpp
+fstream
+-
+string
+-
+
 ../inc/struct_for_message.hpp
 iostream
 -
 string
 -
 
-/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/main.cpp
-iostream
--
-my_vector.hpp
-/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/my_vector.hpp
-string
--
-struct_for_message.hpp
-/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/struct_for_message.hpp
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sending_message.cpp
+sending_message.hpp
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sending_message.hpp
 

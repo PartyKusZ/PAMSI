@@ -18,7 +18,7 @@
 					]
 				}
 			],
-			"name" : "Release",
+			"name" : "Debug",
 			"projects" : 
 			[
 				{
@@ -38,7 +38,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "wysylanie_wiadomosci::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-wysylanie_wiadomosci-Release-22c0049eea1bd04db908.json",
+					"jsonFile" : "target-wysylanie_wiadomosci-Debug-90e9a47ce592387bbc21.json",
 					"name" : "wysylanie_wiadomosci",
 					"projectIndex" : 0
 				}
