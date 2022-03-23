@@ -1,24 +1,36 @@
 #include"sending_message.hpp"
 
 void t_sending_message :: take_message(){
-    int counter = 0;
-    int counter1 = 0;
-
+    
+    int full10;
+    int rest;
     std :: string tmp;
+    std :: string tmp_b;
     char c;
+    this->open("../message.txt");
     while(!file.eof()){
-        while(!file.eof() && counter < quan_of_char){
-            file >> c;
-            tmp += c;
-            counter++;
+       std :: getline(file,tmp);
+       tmp_b += tmp;
+    }
+    full10 = tmp_b.size() / quan_of_char;
+    rest = tmp_b.size() % quan_of_char;
+    tmp.clear();
+    for(int i = full10 - 1; i >= 0; --i){
+        for(int j = 0; j < quan_of_char; ++j){
+            tmp += tmp_b[(i*quan_of_char) + j];
         }
-        
         message.set_part_of_message(tmp);
-        message.set_number_of_part(counter1);
+        message.set_number_of_part(i);
         tab.push(message,message.get_number_of_part());
         tmp.clear();
-        counter1++;
     }
+    for(int i = 0; i < rest; ++i){
+        tmp += tmp_b[(full10 * quan_of_char) + i]; 
+    }
+    message.set_part_of_message(tmp);
+    message.set_number_of_part(full10);
+    tab.push(message,message.get_number_of_part());
+    this->close();
 
 }
 

@@ -11,10 +11,12 @@ class t_sending_message{
         std :: fstream file;
         static constexpr int quan_of_char = 10;
         part_of_message message;
+        void open(std :: string name){file.open(name, std :: ios :: in);};
+        void close(){file.close();};
     public:
-    void open(std :: string name){file.open(name, std :: ios :: in);};
-    void close(){file.close();};
+   
     void take_message();
     part_of_message send_message();
+    bool empty(){return tab.empty();};
     void print(){tab.print();};
 };

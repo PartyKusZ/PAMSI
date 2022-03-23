@@ -3,6 +3,7 @@
 
 CMakeFiles/wysylanie_wiadomosci.dir/src/main.cpp.o
  ../inc/my_vector.hpp
+ ../inc/receiving_message.hpp
  ../inc/sending_message.hpp
  ../inc/struct_for_message.hpp
  ../inc/test.hpp
@@ -12,7 +13,9 @@ CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.o
  ../inc/struct_for_message.hpp
  /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/my_vector.cpp
 CMakeFiles/wysylanie_wiadomosci.dir/src/receiving_message.cpp.o
+ ../inc/my_vector.hpp
  ../inc/receiving_message.hpp
+ ../inc/struct_for_message.hpp
  /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/receiving_message.cpp
 CMakeFiles/wysylanie_wiadomosci.dir/src/sending_message.cpp.o
  ../inc/my_vector.hpp
