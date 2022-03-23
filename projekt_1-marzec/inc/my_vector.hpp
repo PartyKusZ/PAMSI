@@ -24,7 +24,6 @@ class t_vector{
 
         bool comprasion_ascending(str_of_data x, str_of_data y){return x.key > y.key;};
         str_of_data &operator[](const int &i);
-        void sort(const int &left,const int &right);
 
 
     public:
@@ -36,7 +35,7 @@ class t_vector{
         bool empty(){return data == nullptr;};
         T top();
         int size(){return quantity;};
-        
+        void sort(const int &left,const int &right);
         void sort();
 
        

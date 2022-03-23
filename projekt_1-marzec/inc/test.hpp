@@ -3,6 +3,7 @@
 #include<chrono>
 #include<fstream>
 #include <iomanip>
+#include <random>
 void test_push();
 void test_pushs();
 void test_pop();

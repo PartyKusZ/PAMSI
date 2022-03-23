@@ -12,6 +12,7 @@ void t_sending_message :: take_message(){
             tmp += c;
             counter++;
         }
+        
         message.set_part_of_message(tmp);
         message.set_number_of_part(counter1);
         tab.push(message,message.get_number_of_part());
