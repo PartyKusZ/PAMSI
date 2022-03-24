@@ -24,14 +24,15 @@ int main(){
   // std :: cout << "--------------------------" << std :: endl;
   // recive_message.write();
  
-  int a,b;
-  while(true){
-    std :: cout << "wartość a" << std :: endl;
-    cin >> a;
-    std :: cout<< std :: endl << "wartość b" << std :: endl;
-    cin >> b;
-    tab.insert(a,b);
-    tab.print();
-  }
+  // int a,b;
+  // while(true){
+  //   std :: cout << "wartość a" << std :: endl;
+  //   cin >> a;
+  //   std :: cout<< std :: endl << "wartość b" << std :: endl;
+  //   cin >> b;
+  //   tab.insert(a,b);
+  //   tab.print();
+  // }
   
+  test_insert();
 }

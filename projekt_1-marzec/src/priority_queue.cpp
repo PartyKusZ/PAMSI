@@ -36,8 +36,8 @@ void t_priority_queue<T> :: insert(const T &val, const int &x){
                 tmpnew->key = x;
                 tmpnew->next = tmp;
                 tmp->previous = tmpnew;
-                data == tmp->previous;
-            }
+                data = tmp->previous;
+            }else{
             tmpnew = new str_of_data;
             tmpnew->T_type = val;
             tmpnew->key = x;
@@ -48,7 +48,7 @@ void t_priority_queue<T> :: insert(const T &val, const int &x){
             if(tmp == data)
                 data = tmp->previous;
             quantity++;
-            
+            }
         }
         //tmpnew->nr_of_node = tmp->nr_of_node;
         
