@@ -50,8 +50,6 @@ void t_priority_queue<T> :: insert(const T &val, const int &x){
             quantity++;
             }
         }
-        //tmpnew->nr_of_node = tmp->nr_of_node;
-        
         
     }
 

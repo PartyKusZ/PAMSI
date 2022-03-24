@@ -53,9 +53,13 @@ odebrania pakietów, posortowania i złożenia ich w jedną całą odebraną wia
 
 \subsection{Struktura danych}
 
-W celu przechowywania pakietów w pamięci komputera została napisana struktura danych \\,,t\_priority\_queue '' działająca na podstawie listy jednokierunkowej, dodatkowo z możliwością sortowania,
-na kształt kolejki priorytetowej. Wybór takiej struktury danych wynika ze specyfiki zadnia - wiadomości posiadające klucz identyfikacyjny mogą być dostarczane w losowej kolejności.
-Ich liczba jest uzależniona od długości wiadomości (argument za zastosowaniem czegoś co działa na kolejce) i posiadają klucz (konieczność sortowania). 
+\subsubsection{Kolejka priorytetowa}
+
+W celu przechowywania pakietów w pamięci komputera została zastosowana kolejka priorytetowa. Zaimplementowana została struktura danych ,,t\_priority\_queue '' działająca na podstawie listy jednokierunkowej, dodatkowo z możliwością sortowania 
+poprzez wstawianie elementów w odpowiednie miejsca, porównując ich klucze.
+\subsubsection{Uzasadnienie wyboru}
+ Wybór takiej struktury danych wynika ze specyfiki zadnia - wiadomości posiadające klucz identyfikacyjny mogą być dostarczane w losowej kolejności.
+Ich liczba jest uzależniona od długości wiadomości (argument za zastosowaniem czegoś co działa na podstawie listy) i posiadają klucz (konieczność sortowania). 
 Do rozwiązania tak postawionego problemu najlepiej nadaje się kolejka priorytetowa.  
 Oto jej definicja:\\
 \small{
@@ -63,205 +67,90 @@ Oto jej definicja:\\
 
 Metodami pozwalającymi wykonywać operacje na obiektach klasy ,,t\_priority\_queue'' są:
 \begin{itemize}
-    \item push() - dodaje element na koniec kolejki,
-    \item pushs() - dodaje element na koniec kolejki i sortuje kolejkę wg kluczy,
+    \item insert() - dodaje element do kolejki ustawiając jego położenie na podstawie klucza,
     \item pop() - usuwa element z początku kolejki,
     \item pop\_all() - usuwa całą kolejkę,
     \item empty() - orzeka, czy kolejka jest pusta,
     \item top() - zwraca wartość pierwszego elementu,
-    \item size() - zwraca ilość elementów w kolejce,
-    \item sort() - sortuje kolejkę wg kluczy. 
+    \item size() - zwraca ilość elementów w kolejce, 
 \end{itemize}
 
 \subsection{Sortowanie}
 
-Jako algorytm sortujący kolejkę został wybrany \textbf{quick sort}.
-
-\subsubsection{Zasada działania}
-
-Algorytm wykorzystuje technikę "dziel i zwyciężaj". Według ustalonego schematu wybierany jest jeden element w sortowanej 
-tablicy, który będziemy nazywać pivot. Pivot może być elementem środkowym, pierwszym, ostatnim, 
-losowym lub wybranym według jakiegoś innego schematu dostosowanego do zbioru danych. 
-Następnie ustawiamy elementy nie większe na lewo tej wartości, 
-natomiast nie mniejsze na prawo. 
-W ten sposób powstaną nam dwie części tablicy (niekoniecznie równe), gdzie w 
-pierwszej części znajdują się elementy nie większe od drugiej. Następnie każdą z tych 
-podtablic sortujemy osobno według tego samego schematu. 
-
-\subsubsection{Implementacja}
-
-W programie algorytm qiuck sort został zaimplementowany w sposób rekurencyjny:
-\begin{lstlisting}[language = C++]
-  
-    template<typename T>
-
-void t_vector<T> :: sort(const int &left,const int &right){
-
-    template<typename T>
-
-    void t_vector<T> :: sort(){
-    
-        str_of_data tmp;
-    
-        int i = 0;
-        int j = quantity - 1;
-        int pivot = quantity / 2;
-        do{
-            while(comprasion_ascending((*this)[pivot],(*this)[i])){
-                i++;
-            }
-            while(comprasion_ascending((*this)[j],(*this)[pivot])){
-                j--;
-            }
-            if(i <= j){
-                tmp = (*this)[i];
-                (*this)[i] = (*this)[j];
-                (*this)[j] = tmp;
-                
-                i++;
-                j--;
-            }
-        }while(i <= j);
-         if(0 < j)
-           this->sort(0,j);
-        if(quantity - 1 > i)
-            this->sort(i,quantity - 1);
-    
-    };
-\end{lstlisting}
+Sortowanie danych odbywa się w niezwykle prosty sposób. Do kolejki wysyłana jest dana wraz z kluczem, metoda insert()
+przesuwa wskaźnik po kolejnych elementach kolejki. Jeśli funkcja orzekająca określająca relacje pomiędzy kolejnymi kluczami kolejki a
+podanym do insert() kluczem stwierdzi, iż klucz podany przestaje spełniać określoną relację (>,<), insert()
+utworzy nowy węzeł i umieści nowy element we właściwym miejscu. Poniżej znajduje definicja insert():
 
 \begin{lstlisting}
-    
+    void t_priority_queue<T> :: insert(const T &val, const int &x){
 
-    bool comprasion_ascending(str_of_data x, str_of_data y){return x.key > y.key;};
+    if(data == nullptr){
+        data = new str_of_data;
+        data->T_type = val;
+        quantity++;
+        data->key = x;
+    }else{
+        str_of_data *tmp;
+        str_of_data *tmpnew;
+        str_of_data *tmpprev;
+        
 
+        tmp = data;
+        while(this->comprasion_ascending(x,tmp->key) && tmp->next != nullptr){
+
+            tmp = tmp->next;
+
+        }
+
+        if(this->comprasion_ascending(x,tmp->key)){
+            tmp->next = new str_of_data;
+            tmp->next->T_type = val;
+            tmp->next->key = x;
+            tmp->next->previous = tmp;
+            quantity++;
+        }else{
+            if(tmp->previous == nullptr){
+                tmpnew = new str_of_data;
+                tmpnew->T_type = val;
+                tmpnew->key = x;
+                tmpnew->next = tmp;
+                tmp->previous = tmpnew;
+                data = tmp->previous;
+            }else{
+            tmpnew = new str_of_data;
+            tmpnew->T_type = val;
+            tmpnew->key = x;
+            tmpnew->next = tmp;
+            tmpnew->previous = tmp->previous;
+            tmp->previous->next = tmpnew;
+            tmp->previous = tmpnew;
+            if(tmp == data)
+                data = tmp->previous;
+            quantity++;
+            }
+        }        
+        
+    }
+
+}
 \end{lstlisting}
-
-\textbf{Uwaga.} W kodzie znajduje się również druga wersja metody sort(), przyjmująca 
-argumenty określające zakres sortowania. Wersja bez argumentu domyślnie sortuje całą kolejkę, następnie rekurencyjnie wywołuje 
-wersję z argumentami zakresu.
 
 
 \section{Złożoności obliczeniowe}
 
-W celu określenia złożoności obliczeniowej poszczególnych operacji na kolejce, zostały przeprowadzone testy
-szybkości w zależności od ilości elementów znajdujących się w kolejce. Testom poddano każdą metodę 
-w zakresie od 1 do 10000 elementów w kolejce i sporządzono wykresy.
+\subsection{insert()}
 
-\begin{multicols}{2}
-    \subsection{push()}
+Metoda insert() w celu dodania elementu we właściwe miejsce, musi wykonać odpowiednio wiele przejść po elementach kolejki 
+aby natrafić na element, którego klucz nie spełnia właściwej relacji (>,<). Jeśli element, przy którym relacja (>,<)
+przestaje być spełniona znajduje się w odległości $n$ węzłów od początku kolejki, to kolejka musi wykonać $n$ przejść 
+przez swoją listę. Oznacza to, iż ilość przejść jest wprost proporcjonalna do odległości ów węzła. Z tego wynika, iż
+złożoność obliczeniowa jest określona \textbf{funkcją liniową}. Notacja dużego O:
 
-
-\begin{figure}[H]
-    \centering
-    \input{wykres_push.tex}
-    \label{graph: push}
-\end{figure}
-{\small
-Poszczególne czasy wykonywania metody push() różnią się od siebie czasem wykonania, lecz \textbf{złożoność czasowa jest stała}.
-
-}
-\Large{
-\begin{equation*}
-    O(1)
-\end{equation*}}
-
-\subsection{pushs()}
-
-\begin{figure}[H]
-    \centering
-    \input{wykres_pushs.tex}
-    \label{graph: pushs}    
-\end{figure}
-{\small Poszczególne czasy wykonywania metody pushs() różnią się od siebie czasem wykonania. Z powyższego wykresu wynika, iż \textbf{złożoność czasowa jest kwadratowa}.}
-{\Large
-\begin{equation*}
-    O(n^2)
-\end{equation*}}
-
-\subsection{pop()}
-\begin{figure}[H]
-    \centering
-   \input{wykres_pop.tex}
-    \label{graph: pop}
-    
-\end{figure}
-Poszczególne czasy wykonywania metody pop() różnią się od siebie czasem wykonania, lecz \textbf{złożoność czasowa jest stała}.
-\Large{
-\begin{equation*}
-    O(1)
-\end{equation*}}
-
-
-\subsection{pop\_all()}
-\begin{figure}[H]
-    \centering
-    \input{wykres_pop_all.tex}
-    \label{graph: pop_all}
-    
-\end{figure}
-Poszczególne czasy wykonywania metody pop\_all() różnią się od siebie czasem wykonania. Z powyższego wykresu wynika, iż \textbf{złożoność czasowa jest liniowa}.
-\Large{
-\begin{equation*}
+\Large{\begin{equation*}
     O(n)
-\end{equation*}}
+\end{equation*} }
 
-\subsection{empty()}
-
-\begin{figure}[H]
-    \centering
-   \input{wykres_empty.tex}
-    \label{graph: empty}
-    
-\end{figure}
-Poszczególne czasy wykonywania metody empty() różnią się od siebie czasem wykonania, lecz \textbf{złożoność czasowa jest stała}.
-\Large{
-\begin{equation*}
-    O(1)
-\end{equation*}}
-
-\subsection{top()}
-
-\begin{figure}[H]
-    \centering
-    \input{wykres_top.tex}
-    \label{graph: top}
-    
-\end{figure}
-Poszczególne czasy wykonywania metody top() różnią się od siebie czasem wykonania, lecz \textbf{złożoność czasowa jest stała}.
-\Large{
-\begin{equation*}
-    O(1)
-\end{equation*}}
-
-\subsection{size()}
-
-\begin{figure}[H]
-    \centering
-    \input{wykres_size.tex}
-    \label{graph: size}
-    
-\end{figure}
-Poszczególne czasy wykonywania metody size() różnią się od siebie czasem wykonania, lecz \textbf{złożoność czasowa jest stała}.
-\Large{
-\begin{equation*}
-    O(1)
-\end{equation*}}
-
-\subsection{sort()}
-
-\begin{figure}[H]
-    \centering
-    \input{wykres_sort.tex}
-    \label{graph: sort}
-    
-\end{figure}
-{\small Poszczególne czasy wykonywania metody sort() różnią się od siebie czasem wykonania. Z powyższego wykresu wynika, iż \textbf{złożoność czasowa jest kwadratowa}.}
-\Large{
-\begin{equation*}
-    O(n^2)
-\end{equation*}}
-\end{multicols}
 
 \section{Wnioski}
 

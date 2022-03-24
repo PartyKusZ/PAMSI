@@ -10,29 +10,20 @@ using namespace std;
 int main(){
   t_priority_queue<int> tab;
 
-  // t_sending_message send_message;
-  // t_receiving_message recive_message;
+  t_sending_message send_message;
+  t_receiving_message recive_message;
 
  
-  // send_message.take_message();
-  // send_message.print();
+  send_message.take_message();
+  send_message.print();
 
-  // while(send_message.empty() != true){
-  //   recive_message.recive_message(send_message.send_message());
-  // }
+  while(send_message.empty() != true){
+    recive_message.recive_message(send_message.send_message());
+  }
 
-  // std :: cout << "--------------------------" << std :: endl;
-  // recive_message.write();
+  std :: cout << "--------------------------" << std :: endl;
+  recive_message.write();
  
-  // int a,b;
-  // while(true){
-  //   std :: cout << "wartość a" << std :: endl;
-  //   cin >> a;
-  //   std :: cout<< std :: endl << "wartość b" << std :: endl;
-  //   cin >> b;
-  //   tab.insert(a,b);
-  //   tab.print();
-  // }
-  
-  test_insert();
+
+
 }

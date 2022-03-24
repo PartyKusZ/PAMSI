@@ -2,16 +2,9 @@
 \BOOKMARK [1][-]{section.2}{Rozwiazanie}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{Idea}{section.2}% 3
 \BOOKMARK [2][-]{subsection.2.2}{Struktura danych}{section.2}% 4
-\BOOKMARK [2][-]{subsection.2.3}{Sortowanie}{section.2}% 5
-\BOOKMARK [3][-]{subsubsection.2.3.1}{Zasada dzia\233ania}{subsection.2.3}% 6
-\BOOKMARK [3][-]{subsubsection.2.3.2}{Implementacja}{subsection.2.3}% 7
+\BOOKMARK [3][-]{subsubsection.2.2.1}{Kolejka priorytetowa}{subsection.2.2}% 5
+\BOOKMARK [3][-]{subsubsection.2.2.2}{Uzasadnienie wyboru}{subsection.2.2}% 6
+\BOOKMARK [2][-]{subsection.2.3}{Sortowanie}{section.2}% 7
 \BOOKMARK [1][-]{section.3}{Z\233ozonosci obliczeniowe}{}% 8
-\BOOKMARK [2][-]{subsection.3.1}{push\(\)}{section.3}% 9
-\BOOKMARK [2][-]{subsection.3.2}{pushs\(\)}{section.3}% 10
-\BOOKMARK [2][-]{subsection.3.3}{pop\(\)}{section.3}% 11
-\BOOKMARK [2][-]{subsection.3.4}{pop\137all\(\)}{section.3}% 12
-\BOOKMARK [2][-]{subsection.3.5}{empty\(\)}{section.3}% 13
-\BOOKMARK [2][-]{subsection.3.6}{top\(\)}{section.3}% 14
-\BOOKMARK [2][-]{subsection.3.7}{size\(\)}{section.3}% 15
-\BOOKMARK [2][-]{subsection.3.8}{sort\(\)}{section.3}% 16
-\BOOKMARK [1][-]{section.4}{Wnioski}{}% 17
+\BOOKMARK [2][-]{subsection.3.1}{insert\(\)}{section.3}% 9
+\BOOKMARK [1][-]{section.4}{Wnioski}{}% 10

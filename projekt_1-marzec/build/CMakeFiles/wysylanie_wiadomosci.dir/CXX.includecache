@@ -70,3 +70,19 @@ sending_message.hpp
 receiving_message.hpp
 /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/receiving_message.hpp
 
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/priority_queue.cpp
+priority_queue.hpp
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/priority_queue.hpp
+
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/receiving_message.cpp
+receiving_message.hpp
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/receiving_message.hpp
+
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sending_message.cpp
+sending_message.hpp
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sending_message.hpp
+
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/test.cpp
+test.hpp
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/test.hpp
+
