@@ -1,5 +1,5 @@
 #pragma once
-#include"my_vector.hpp"
+#include"priority_queue.hpp"
 #include"struct_for_message.hpp"
 #include<fstream>
 #include<string>
@@ -8,7 +8,7 @@
 class t_receiving_message{
 
     private:
-        t_vector<part_of_message> tab;
+        t_priority_queue<part_of_message> tab;
         std :: fstream file;
         void open(std :: string name){file.open(name, std :: ios :: out);};
         void close(){file.close();};

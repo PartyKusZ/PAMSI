@@ -150,32 +150,32 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/wysylanie_wiadomosci.dir/build.make CMakeFiles/wysylanie_wiadomosci.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/my_vector.o: src/my_vector.cpp.o
+src/priority_queue.o: src/priority_queue.cpp.o
 
-.PHONY : src/my_vector.o
+.PHONY : src/priority_queue.o
 
 # target to build an object file
-src/my_vector.cpp.o:
-	$(MAKE) -f CMakeFiles/wysylanie_wiadomosci.dir/build.make CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.o
-.PHONY : src/my_vector.cpp.o
+src/priority_queue.cpp.o:
+	$(MAKE) -f CMakeFiles/wysylanie_wiadomosci.dir/build.make CMakeFiles/wysylanie_wiadomosci.dir/src/priority_queue.cpp.o
+.PHONY : src/priority_queue.cpp.o
 
-src/my_vector.i: src/my_vector.cpp.i
+src/priority_queue.i: src/priority_queue.cpp.i
 
-.PHONY : src/my_vector.i
+.PHONY : src/priority_queue.i
 
 # target to preprocess a source file
-src/my_vector.cpp.i:
-	$(MAKE) -f CMakeFiles/wysylanie_wiadomosci.dir/build.make CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.i
-.PHONY : src/my_vector.cpp.i
+src/priority_queue.cpp.i:
+	$(MAKE) -f CMakeFiles/wysylanie_wiadomosci.dir/build.make CMakeFiles/wysylanie_wiadomosci.dir/src/priority_queue.cpp.i
+.PHONY : src/priority_queue.cpp.i
 
-src/my_vector.s: src/my_vector.cpp.s
+src/priority_queue.s: src/priority_queue.cpp.s
 
-.PHONY : src/my_vector.s
+.PHONY : src/priority_queue.s
 
 # target to generate assembly for a file
-src/my_vector.cpp.s:
-	$(MAKE) -f CMakeFiles/wysylanie_wiadomosci.dir/build.make CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.s
-.PHONY : src/my_vector.cpp.s
+src/priority_queue.cpp.s:
+	$(MAKE) -f CMakeFiles/wysylanie_wiadomosci.dir/build.make CMakeFiles/wysylanie_wiadomosci.dir/src/priority_queue.cpp.s
+.PHONY : src/priority_queue.cpp.s
 
 src/receiving_message.o: src/receiving_message.cpp.o
 
@@ -270,9 +270,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/my_vector.o"
-	@echo "... src/my_vector.i"
-	@echo "... src/my_vector.s"
+	@echo "... src/priority_queue.o"
+	@echo "... src/priority_queue.i"
+	@echo "... src/priority_queue.s"
 	@echo "... src/receiving_message.o"
 	@echo "... src/receiving_message.i"
 	@echo "... src/receiving_message.s"

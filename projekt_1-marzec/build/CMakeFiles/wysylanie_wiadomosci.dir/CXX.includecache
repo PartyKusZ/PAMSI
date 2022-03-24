@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../inc/my_vector.hpp
+../inc/priority_queue.hpp
 iostream
 -
 stdexcept
@@ -14,23 +14,13 @@ stdexcept
 struct_for_message.hpp
 ../inc/struct_for_message.hpp
 
-../inc/sending_message.hpp
-my_vector.hpp
-../inc/my_vector.hpp
-struct_for_message.hpp
-../inc/struct_for_message.hpp
-fstream
--
-string
--
-
 ../inc/struct_for_message.hpp
 iostream
 -
 string
 -
 
-/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sending_message.cpp
-sending_message.hpp
-/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sending_message.hpp
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/priority_queue.cpp
+priority_queue.hpp
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/priority_queue.hpp
 

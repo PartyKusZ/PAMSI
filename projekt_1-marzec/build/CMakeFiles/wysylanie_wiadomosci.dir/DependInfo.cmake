@@ -5,7 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/main.cpp" "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles/wysylanie_wiadomosci.dir/src/main.cpp.o"
-  "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/my_vector.cpp" "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.o"
+  "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/priority_queue.cpp" "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles/wysylanie_wiadomosci.dir/src/priority_queue.cpp.o"
   "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/receiving_message.cpp" "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles/wysylanie_wiadomosci.dir/src/receiving_message.cpp.o"
   "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/sending_message.cpp" "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles/wysylanie_wiadomosci.dir/src/sending_message.cpp.o"
   "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/test.cpp" "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.o"

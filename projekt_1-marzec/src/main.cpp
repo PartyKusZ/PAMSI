@@ -1,5 +1,5 @@
 #include<iostream>
-#include"my_vector.hpp"
+#include"priority_queue.hpp"
 #include<string>
 #include"struct_for_message.hpp"
 #include "test.hpp"
@@ -8,27 +8,30 @@
 using namespace std;
 
 int main(){
+  t_priority_queue<int> tab;
 
-  t_sending_message send_message;
-  t_receiving_message recive_message;
+  // t_sending_message send_message;
+  // t_receiving_message recive_message;
 
  
-  send_message.take_message();
-  send_message.print();
+  // send_message.take_message();
+  // send_message.print();
 
-  while(send_message.empty() != true){
-    recive_message.recive_message(send_message.send_message());
+  // while(send_message.empty() != true){
+  //   recive_message.recive_message(send_message.send_message());
+  // }
+
+  // std :: cout << "--------------------------" << std :: endl;
+  // recive_message.write();
+ 
+  int a,b;
+  while(true){
+    std :: cout << "wartość a" << std :: endl;
+    cin >> a;
+    std :: cout<< std :: endl << "wartość b" << std :: endl;
+    cin >> b;
+    tab.insert(a,b);
+    tab.print();
   }
-  recive_message.write();
- 
- 
-
-//  test_push();
-// test_pushs();
-// test_pop();
-// test_pop_all();
-// test_top();
-// test_empty();
-// test_size();
-// test_sort();
+  
 }

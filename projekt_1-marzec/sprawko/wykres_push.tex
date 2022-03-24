@@ -1,11 +1,12 @@
-\begin{tikzpicture}[scale=1.5]
+\begin{tikzpicture}[scale=0.7]
     \begin{axis}[
-    title={Czas wykonywania metody push() w funkcji ilości elementów},
+    title={Czas wykonywania metody push() w zależności od  ilości elementów},
     title style={text width=16em},
+    grid=both,
     xlabel={ilość elementów},
     ylabel={czas[us]},
-    xmin=0,xmax=100,
-    ymin=0,ymax=120,
+    xmin=0,xmax=10000,
+    ymin=0,ymax=50000,
     legend pos=north west,
     ymajorgrids=true,grid style=dashed
     ]

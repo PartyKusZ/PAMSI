@@ -6,7 +6,7 @@
 
 template<typename T>
 
-class t_vector{
+class t_priority_queue{
 
     private:
         
@@ -16,30 +16,27 @@ class t_vector{
             T T_type;
             str_of_data *next = nullptr;
             str_of_data *last = nullptr;
-            int nr_of_node = 0;
+            str_of_data *previous = nullptr;
+            
             int key;
             void operator=(const str_of_data &val);
         };
         str_of_data *data;
 
         bool comprasion_ascending(str_of_data x, str_of_data y){return x.key > y.key;};
-        str_of_data &operator[](const int &i);
+        bool comprasion_ascending(int  x, int y){return x > y;};
+        
+        
 
 
     public:
-        t_vector(): quantity(initial_size), data(nullptr){;};
-        void push(const T &val, const int &x);
-        void pushs(const T &val, const int &x);
+        t_priority_queue(): quantity(initial_size), data(nullptr){;};
+        void insert(const T &val, const int &x);
         void pop();
         void pop_all();
         bool empty(){return data == nullptr;};
         T top();
         int size(){return quantity;};
-        void sort(const int &left,const int &right);
-        void sort();
-
-       
-
         void print();
 
 };

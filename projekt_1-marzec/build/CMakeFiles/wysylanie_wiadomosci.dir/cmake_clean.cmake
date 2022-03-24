@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/wysylanie_wiadomosci.dir/src/main.cpp.o"
-  "CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.o"
+  "CMakeFiles/wysylanie_wiadomosci.dir/src/priority_queue.cpp.o"
   "CMakeFiles/wysylanie_wiadomosci.dir/src/receiving_message.cpp.o"
   "CMakeFiles/wysylanie_wiadomosci.dir/src/sending_message.cpp.o"
   "CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.o"

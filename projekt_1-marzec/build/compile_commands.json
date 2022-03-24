@@ -6,8 +6,8 @@
 },
 {
   "directory": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build",
-  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/inc  -g   -o CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.o -c /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/my_vector.cpp",
-  "file": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/my_vector.cpp"
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/inc  -g   -o CMakeFiles/wysylanie_wiadomosci.dir/src/priority_queue.cpp.o -c /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/priority_queue.cpp",
+  "file": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/priority_queue.cpp"
 },
 {
   "directory": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build",

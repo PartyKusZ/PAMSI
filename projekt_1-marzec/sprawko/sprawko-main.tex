@@ -23,19 +23,248 @@
 \usepackage{listings}
 \usepackage{multicol}
 \usepackage{pgfplots}
-\pgfplotsset{compat=1.16}
+%\pgfplotsset{compat=1.16}
+\pgfplotsset{ticks=none}
 \newgeometry{tmargin=1.8cm,bmargin=1.8cm,lmargin =1.8cm,rmargin=1.8cm}
 
 \begin{document}
     
-\input{wykres_empty.tex}
-\input{wykres_pop.tex}
-\input{wykres_pop_all.tex}
-\input{wykres_push.tex}
-\input{wykres_pushs.tex}
-\input{wykres_size.tex}
-\input{wykres_sort.tex}
-\input{wykres_top.tex}
+\input{strona_tytulowa.tex}
+
+\section{Zadanie}
+
+
+Załóżmy, że Jan chce wysłać przez Internet wiadomość W do Anny. Z różnych powodów musi podzielić
+ją na n pakietów. Każdemu pakietowi nadaje kolejne numery i wysyła przez sieć. Komputer Anny po otrzymaniu
+przesłanych pakietów musi poskładać je w całą wiadomość, ponieważ mogą one przychodzić w losowej
+kolejności. Państwa zadaniem jest zaprojektowanie i zaimplementowanie odpowiedniego rozwiązania radzącego
+sobie z tym problemem. Należy wybrać i zaimplementować zgodnie z danym dla wybranej struktury
+ADT oraz przeanalizować czas działania - złożoność obliczeniową proponowanego rozwiązania.
+
+\section{Rozwiązanie}
+
+Kod źródłowy znajduje się  \href{https://github.com/PartyKusZ/PAMSI}{\textbf{tutaj}}.
+
+\subsection{Idea}
+
+W celu rozwiązania wyżej postawionego zadania napisany został program, którego działanie polega na odczytaniu treści wiadomości z pliku ,,message.txt'',
+podzieleniu jej na 10-cio znakowe pakiety, nadanie im kluczy definiujących położenie w treści wiadomości, zasymulowaniu wysłania pakietów, zasymulowaniu 
+odebrania pakietów, posortowania i złożenia ich w jedną całą odebraną wiadomość zapisaną w pliku ,,rec\_message.txt''.
+
+\subsection{Struktura danych}
+
+W celu przechowywania pakietów w pamięci komputera została napisana struktura danych \\,,t\_priority\_queue '' działająca na podstawie listy jednokierunkowej, dodatkowo z możliwością sortowania,
+na kształt kolejki priorytetowej. Wybór takiej struktury danych wynika ze specyfiki zadnia - wiadomości posiadające klucz identyfikacyjny mogą być dostarczane w losowej kolejności.
+Ich liczba jest uzależniona od długości wiadomości (argument za zastosowaniem czegoś co działa na kolejce) i posiadają klucz (konieczność sortowania). 
+Do rozwiązania tak postawionego problemu najlepiej nadaje się kolejka priorytetowa.  
+Oto jej definicja:\\
+\small{
+\lstinputlisting[language=C++]{../inc/priority_queue.hpp}}
+
+Metodami pozwalającymi wykonywać operacje na obiektach klasy ,,t\_priority\_queue'' są:
+\begin{itemize}
+    \item push() - dodaje element na koniec kolejki,
+    \item pushs() - dodaje element na koniec kolejki i sortuje kolejkę wg kluczy,
+    \item pop() - usuwa element z początku kolejki,
+    \item pop\_all() - usuwa całą kolejkę,
+    \item empty() - orzeka, czy kolejka jest pusta,
+    \item top() - zwraca wartość pierwszego elementu,
+    \item size() - zwraca ilość elementów w kolejce,
+    \item sort() - sortuje kolejkę wg kluczy. 
+\end{itemize}
+
+\subsection{Sortowanie}
+
+Jako algorytm sortujący kolejkę został wybrany \textbf{quick sort}.
+
+\subsubsection{Zasada działania}
+
+Algorytm wykorzystuje technikę "dziel i zwyciężaj". Według ustalonego schematu wybierany jest jeden element w sortowanej 
+tablicy, który będziemy nazywać pivot. Pivot może być elementem środkowym, pierwszym, ostatnim, 
+losowym lub wybranym według jakiegoś innego schematu dostosowanego do zbioru danych. 
+Następnie ustawiamy elementy nie większe na lewo tej wartości, 
+natomiast nie mniejsze na prawo. 
+W ten sposób powstaną nam dwie części tablicy (niekoniecznie równe), gdzie w 
+pierwszej części znajdują się elementy nie większe od drugiej. Następnie każdą z tych 
+podtablic sortujemy osobno według tego samego schematu. 
+
+\subsubsection{Implementacja}
+
+W programie algorytm qiuck sort został zaimplementowany w sposób rekurencyjny:
+\begin{lstlisting}[language = C++]
+  
+    template<typename T>
+
+void t_vector<T> :: sort(const int &left,const int &right){
+
+    template<typename T>
+
+    void t_vector<T> :: sort(){
+    
+        str_of_data tmp;
+    
+        int i = 0;
+        int j = quantity - 1;
+        int pivot = quantity / 2;
+        do{
+            while(comprasion_ascending((*this)[pivot],(*this)[i])){
+                i++;
+            }
+            while(comprasion_ascending((*this)[j],(*this)[pivot])){
+                j--;
+            }
+            if(i <= j){
+                tmp = (*this)[i];
+                (*this)[i] = (*this)[j];
+                (*this)[j] = tmp;
+                
+                i++;
+                j--;
+            }
+        }while(i <= j);
+         if(0 < j)
+           this->sort(0,j);
+        if(quantity - 1 > i)
+            this->sort(i,quantity - 1);
+    
+    };
+\end{lstlisting}
+
+\begin{lstlisting}
+    
+
+    bool comprasion_ascending(str_of_data x, str_of_data y){return x.key > y.key;};
+
+\end{lstlisting}
+
+\textbf{Uwaga.} W kodzie znajduje się również druga wersja metody sort(), przyjmująca 
+argumenty określające zakres sortowania. Wersja bez argumentu domyślnie sortuje całą kolejkę, następnie rekurencyjnie wywołuje 
+wersję z argumentami zakresu.
+
+
+\section{Złożoności obliczeniowe}
+
+W celu określenia złożoności obliczeniowej poszczególnych operacji na kolejce, zostały przeprowadzone testy
+szybkości w zależności od ilości elementów znajdujących się w kolejce. Testom poddano każdą metodę 
+w zakresie od 1 do 10000 elementów w kolejce i sporządzono wykresy.
+
+\begin{multicols}{2}
+    \subsection{push()}
+
+
+\begin{figure}[H]
+    \centering
+    \input{wykres_push.tex}
+    \label{graph: push}
+\end{figure}
+{\small
+Poszczególne czasy wykonywania metody push() różnią się od siebie czasem wykonania, lecz \textbf{złożoność czasowa jest stała}.
+
+}
+\Large{
+\begin{equation*}
+    O(1)
+\end{equation*}}
+
+\subsection{pushs()}
+
+\begin{figure}[H]
+    \centering
+    \input{wykres_pushs.tex}
+    \label{graph: pushs}    
+\end{figure}
+{\small Poszczególne czasy wykonywania metody pushs() różnią się od siebie czasem wykonania. Z powyższego wykresu wynika, iż \textbf{złożoność czasowa jest kwadratowa}.}
+{\Large
+\begin{equation*}
+    O(n^2)
+\end{equation*}}
+
+\subsection{pop()}
+\begin{figure}[H]
+    \centering
+   \input{wykres_pop.tex}
+    \label{graph: pop}
+    
+\end{figure}
+Poszczególne czasy wykonywania metody pop() różnią się od siebie czasem wykonania, lecz \textbf{złożoność czasowa jest stała}.
+\Large{
+\begin{equation*}
+    O(1)
+\end{equation*}}
+
+
+\subsection{pop\_all()}
+\begin{figure}[H]
+    \centering
+    \input{wykres_pop_all.tex}
+    \label{graph: pop_all}
+    
+\end{figure}
+Poszczególne czasy wykonywania metody pop\_all() różnią się od siebie czasem wykonania. Z powyższego wykresu wynika, iż \textbf{złożoność czasowa jest liniowa}.
+\Large{
+\begin{equation*}
+    O(n)
+\end{equation*}}
+
+\subsection{empty()}
+
+\begin{figure}[H]
+    \centering
+   \input{wykres_empty.tex}
+    \label{graph: empty}
+    
+\end{figure}
+Poszczególne czasy wykonywania metody empty() różnią się od siebie czasem wykonania, lecz \textbf{złożoność czasowa jest stała}.
+\Large{
+\begin{equation*}
+    O(1)
+\end{equation*}}
+
+\subsection{top()}
+
+\begin{figure}[H]
+    \centering
+    \input{wykres_top.tex}
+    \label{graph: top}
+    
+\end{figure}
+Poszczególne czasy wykonywania metody top() różnią się od siebie czasem wykonania, lecz \textbf{złożoność czasowa jest stała}.
+\Large{
+\begin{equation*}
+    O(1)
+\end{equation*}}
+
+\subsection{size()}
+
+\begin{figure}[H]
+    \centering
+    \input{wykres_size.tex}
+    \label{graph: size}
+    
+\end{figure}
+Poszczególne czasy wykonywania metody size() różnią się od siebie czasem wykonania, lecz \textbf{złożoność czasowa jest stała}.
+\Large{
+\begin{equation*}
+    O(1)
+\end{equation*}}
+
+\subsection{sort()}
+
+\begin{figure}[H]
+    \centering
+    \input{wykres_sort.tex}
+    \label{graph: sort}
+    
+\end{figure}
+{\small Poszczególne czasy wykonywania metody sort() różnią się od siebie czasem wykonania. Z powyższego wykresu wynika, iż \textbf{złożoność czasowa jest kwadratowa}.}
+\Large{
+\begin{equation*}
+    O(n^2)
+\end{equation*}}
+\end{multicols}
+
+\section{Wnioski}
+
 
 
 \end{document}

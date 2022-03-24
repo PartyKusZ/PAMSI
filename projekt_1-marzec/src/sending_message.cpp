@@ -21,7 +21,7 @@ void t_sending_message :: take_message(){
         }
         message.set_part_of_message(tmp);
         message.set_number_of_part(i);
-        tab.push(message,message.get_number_of_part());
+        tab.push_back(message);
         tmp.clear();
     }
     for(int i = 0; i < rest; ++i){
@@ -29,17 +29,16 @@ void t_sending_message :: take_message(){
     }
     message.set_part_of_message(tmp);
     message.set_number_of_part(full10);
-    tab.push(message,message.get_number_of_part());
+    tab.push_back(message);
     this->close();
 
 }
 
 
 part_of_message t_sending_message :: send_message(){
-
     part_of_message tmp;
-    tmp = tab.top();
-    tab.pop();
+    tmp = tab.front();
+    tab.erase(tab.begin());
     return tmp;
     
 }

@@ -1,13 +1,13 @@
 #pragma once
- 
-#include"my_vector.hpp"
+#include<vector>
+#include"priority_queue.hpp"
 #include"struct_for_message.hpp"
 #include<fstream>
 #include<string>
 class t_sending_message{
 
     private:
-        t_vector<part_of_message> tab;
+        std :: vector<part_of_message> tab;
         std :: fstream file;
         static constexpr int quan_of_char = 10;
         part_of_message message;
@@ -18,5 +18,9 @@ class t_sending_message{
     void take_message();
     part_of_message send_message();
     bool empty(){return tab.empty();};
-    void print(){tab.print();};
+    void print(){
+        for(int i = 0; i < tab.size(); ++i){
+            std :: cout << tab[i].get_part_of_message() << "|" << tab[i].get_number_of_part() << std :: endl;
+        }
+    };
 };

@@ -70,18 +70,18 @@ CMakeFiles/wysylanie_wiadomosci.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wysylanie_wiadomosci.dir/src/main.cpp.s"
 	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/main.cpp -o CMakeFiles/wysylanie_wiadomosci.dir/src/main.cpp.s
 
-CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.o: CMakeFiles/wysylanie_wiadomosci.dir/flags.make
-CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.o: ../src/my_vector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.o"
-	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.o -c /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/my_vector.cpp
+CMakeFiles/wysylanie_wiadomosci.dir/src/priority_queue.cpp.o: CMakeFiles/wysylanie_wiadomosci.dir/flags.make
+CMakeFiles/wysylanie_wiadomosci.dir/src/priority_queue.cpp.o: ../src/priority_queue.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/wysylanie_wiadomosci.dir/src/priority_queue.cpp.o"
+	/bin/x86_64-linux-gnu-g++-9  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/wysylanie_wiadomosci.dir/src/priority_queue.cpp.o -c /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/priority_queue.cpp
 
-CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.i"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/my_vector.cpp > CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.i
+CMakeFiles/wysylanie_wiadomosci.dir/src/priority_queue.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/wysylanie_wiadomosci.dir/src/priority_queue.cpp.i"
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/priority_queue.cpp > CMakeFiles/wysylanie_wiadomosci.dir/src/priority_queue.cpp.i
 
-CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.s"
-	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/my_vector.cpp -o CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.s
+CMakeFiles/wysylanie_wiadomosci.dir/src/priority_queue.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/wysylanie_wiadomosci.dir/src/priority_queue.cpp.s"
+	/bin/x86_64-linux-gnu-g++-9 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/src/priority_queue.cpp -o CMakeFiles/wysylanie_wiadomosci.dir/src/priority_queue.cpp.s
 
 CMakeFiles/wysylanie_wiadomosci.dir/src/receiving_message.cpp.o: CMakeFiles/wysylanie_wiadomosci.dir/flags.make
 CMakeFiles/wysylanie_wiadomosci.dir/src/receiving_message.cpp.o: ../src/receiving_message.cpp
@@ -125,7 +125,7 @@ CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.s: cmake_force
 # Object files for target wysylanie_wiadomosci
 wysylanie_wiadomosci_OBJECTS = \
 "CMakeFiles/wysylanie_wiadomosci.dir/src/main.cpp.o" \
-"CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.o" \
+"CMakeFiles/wysylanie_wiadomosci.dir/src/priority_queue.cpp.o" \
 "CMakeFiles/wysylanie_wiadomosci.dir/src/receiving_message.cpp.o" \
 "CMakeFiles/wysylanie_wiadomosci.dir/src/sending_message.cpp.o" \
 "CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.o"
@@ -134,7 +134,7 @@ wysylanie_wiadomosci_OBJECTS = \
 wysylanie_wiadomosci_EXTERNAL_OBJECTS =
 
 wysylanie_wiadomosci: CMakeFiles/wysylanie_wiadomosci.dir/src/main.cpp.o
-wysylanie_wiadomosci: CMakeFiles/wysylanie_wiadomosci.dir/src/my_vector.cpp.o
+wysylanie_wiadomosci: CMakeFiles/wysylanie_wiadomosci.dir/src/priority_queue.cpp.o
 wysylanie_wiadomosci: CMakeFiles/wysylanie_wiadomosci.dir/src/receiving_message.cpp.o
 wysylanie_wiadomosci: CMakeFiles/wysylanie_wiadomosci.dir/src/sending_message.cpp.o
 wysylanie_wiadomosci: CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.o
