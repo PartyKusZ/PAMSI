@@ -10,6 +10,7 @@ void test_pop_all();
 void test_top();
 void test_empty();
 void test_insert();
+void testy();
 
 
 

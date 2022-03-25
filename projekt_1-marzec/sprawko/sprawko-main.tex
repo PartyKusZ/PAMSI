@@ -141,15 +141,82 @@ utworzy nowy węzeł i umieści nowy element we właściwym miejscu. Poniżej zn
 
 \subsection{insert()}
 
+\begin{figure}[H]
+    \centering
+    \input{wykres_insert.tex}
+\end{figure}
+
 Metoda insert() w celu dodania elementu we właściwe miejsce, musi wykonać odpowiednio wiele przejść po elementach kolejki 
 aby natrafić na element, którego klucz nie spełnia właściwej relacji (>,<). Jeśli element, przy którym relacja (>,<)
 przestaje być spełniona znajduje się w odległości $n$ węzłów od początku kolejki, to kolejka musi wykonać $n$ przejść 
 przez swoją listę. Oznacza to, iż ilość przejść jest wprost proporcjonalna do odległości ów węzła. Z tego wynika, iż
 złożoność obliczeniowa jest określona \textbf{funkcją liniową}. Notacja dużego O:
 
-\Large{\begin{equation*}
+{\Large \begin{equation*}
     O(n)
 \end{equation*} }
+
+\subsection{pop()}
+
+\begin{figure}[H]
+    \centering
+    \input{wykres_pop.tex}
+\end{figure}
+
+Metoda pop() w celu zdjęcia pierwszego elementu musi wykonać zawsze 
+tylko jedną operację, więc jej złożoność jest stała.
+
+{\Large \begin{equation*}
+    O(1)
+\end{equation*} }
+
+\subsection{pop\_all()}
+
+\begin{figure}[H]
+    \centering
+    \input{wykres_popall.tex}
+\end{figure}
+Metoda pop\_all() w celu usunięcia wszystkich elementów musi wykonać tyle operacji ile jest węzłów w kolejce,
+z czego wynika że jej złożoność obliczeniowa jest liniowa.
+{\Large \begin{equation*}
+    O(n)
+\end{equation*} }
+
+
+\subsection{empty()}
+
+\begin{figure}[H]
+    \centering
+    \input{wykres_empty.tex}
+\end{figure}
+
+Metoda empty() w celu zwrócenia informacji o tym czy kolejka jest pusta musi wykonać zawsze 
+tylko jedną operację, więc jej złożoność jest stała.
+
+{\Large \begin{equation*}
+    O(1)
+\end{equation*} }
+
+\subsection{top()}
+
+\begin{figure}[H]
+    \centering
+    \input{wykres_top.tex}
+\end{figure}
+
+Metoda top() w celu zwrócenia wartości elementu znajdującego się na początku kolejki zawsze musi wykonać tylko jedną operacje,
+wiec złożoność obliczeniowa jest stała. 
+
+{\Large \begin{equation*}
+    O(1)
+\end{equation*} }
+
+\subsection{size()}
+\begin{figure}[H]
+    \centering
+    \input{wykres_size.tex}
+\end{figure}
+
 
 
 \section{Wnioski}

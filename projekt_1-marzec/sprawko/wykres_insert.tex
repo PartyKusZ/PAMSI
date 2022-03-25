@@ -1,0 +1,17 @@
+\begin{tikzpicture}[scale=1.5]
+    \begin{axis}[
+    title={Czas wykonywania metody insert() w funkcji ilości elementów},
+    title style={text width=16em},
+    xlabel={ilości elementów},
+    ylabel={czas[ns]},
+    xmin=0,xmax=10000,
+    ymin=-1,ymax=4000,
+    ymajorgrids=true,grid style=dashed
+    ]
+
+  
+    \addplot[color=red] table[ignore chars={(,)},col sep=comma]{graph_insert_nanoseconds.tex};
+
+  
+    \end{axis}
+    \end{tikzpicture}

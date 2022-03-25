@@ -24,6 +24,6 @@ int main(){
   std :: cout << "--------------------------" << std :: endl;
   recive_message.write();
  
-
+testy();
 
 }
