@@ -2,6 +2,10 @@
 #include <iostream>
 #include <stdexcept>
 #include"struct_for_message.hpp"
+#include<algorithm>
+#include"how_sort.hpp"
+
+
 
 
 template<typename T>
@@ -21,13 +25,22 @@ class t_priority_queue{
         };
         str_of_data *data;
 
-        bool comprasion_ascending(int  x, int y){return x > y;};
+        sort how_sort;
+
+        bool comprasion(int  x, int y){
+            if(how_sort == sort :: asc)
+                return x > y;
+            if(how_sort == sort ::des)
+                return x < y;
+
+        };
         
         
 
 
     public:
-        t_priority_queue(): quantity(initial_size), data(nullptr){;};
+        t_priority_queue<T>(sort x): how_sort(x),quantity(initial_size), data(nullptr){;};
+        t_priority_queue<T>() = default;
         void insert(const T &val, const int &x);
         void pop();
         void pop_all();

@@ -4,12 +4,13 @@
 #include"struct_for_message.hpp"
 #include<fstream>
 #include<string>
+#include<random>
 class t_sending_message{
 
     private:
         std :: vector<part_of_message> tab;
         std :: fstream file;
-        static constexpr int quan_of_char = 10;
+        int quan_of_char;
         part_of_message message;
         void open(std :: string name){file.open(name, std :: ios :: in);};
         void close(){file.close();};

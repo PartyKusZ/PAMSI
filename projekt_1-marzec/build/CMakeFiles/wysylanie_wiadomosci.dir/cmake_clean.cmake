@@ -1,14 +1,9 @@
 file(REMOVE_RECURSE
   "CMakeFiles/wysylanie_wiadomosci.dir/src/main.cpp.o"
-  "CMakeFiles/wysylanie_wiadomosci.dir/src/main.cpp.o.d"
   "CMakeFiles/wysylanie_wiadomosci.dir/src/priority_queue.cpp.o"
-  "CMakeFiles/wysylanie_wiadomosci.dir/src/priority_queue.cpp.o.d"
   "CMakeFiles/wysylanie_wiadomosci.dir/src/receiving_message.cpp.o"
-  "CMakeFiles/wysylanie_wiadomosci.dir/src/receiving_message.cpp.o.d"
   "CMakeFiles/wysylanie_wiadomosci.dir/src/sending_message.cpp.o"
-  "CMakeFiles/wysylanie_wiadomosci.dir/src/sending_message.cpp.o.d"
   "CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.o"
-  "CMakeFiles/wysylanie_wiadomosci.dir/src/test.cpp.o.d"
   "wysylanie_wiadomosci"
   "wysylanie_wiadomosci.pdb"
 )

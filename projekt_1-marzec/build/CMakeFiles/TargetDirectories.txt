@@ -1,3 +1,3 @@
-/home/kubus/Pulpit/PAMSI/projekt_1-marzec/build/CMakeFiles/wysylanie_wiadomosci.dir
-/home/kubus/Pulpit/PAMSI/projekt_1-marzec/build/CMakeFiles/edit_cache.dir
-/home/kubus/Pulpit/PAMSI/projekt_1-marzec/build/CMakeFiles/rebuild_cache.dir
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles/rebuild_cache.dir
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles/edit_cache.dir
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build/CMakeFiles/wysylanie_wiadomosci.dir

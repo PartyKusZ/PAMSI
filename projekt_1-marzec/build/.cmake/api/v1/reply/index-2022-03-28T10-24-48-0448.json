@@ -3,40 +3,30 @@
 	{
 		"generator" : 
 		{
-			"multiConfig" : false,
 			"name" : "Unix Makefiles"
 		},
 		"paths" : 
 		{
-			"cmake" : "/snap/cmake/1035/bin/cmake",
-			"cpack" : "/snap/cmake/1035/bin/cpack",
-			"ctest" : "/snap/cmake/1035/bin/ctest",
-			"root" : "/snap/cmake/1035/share/cmake-3.22"
+			"cmake" : "/usr/bin/cmake",
+			"cpack" : "/usr/bin/cpack",
+			"ctest" : "/usr/bin/ctest",
+			"root" : "/usr/share/cmake-3.16"
 		},
 		"version" : 
 		{
 			"isDirty" : false,
 			"major" : 3,
-			"minor" : 22,
+			"minor" : 16,
 			"patch" : 3,
-			"string" : "3.22.3",
+			"string" : "3.16.3",
 			"suffix" : ""
 		}
 	},
 	"objects" : 
 	[
 		{
-			"jsonFile" : "codemodel-v2-e037bc1130c64a6860ec.json",
+			"jsonFile" : "codemodel-v2-50fc22c6d5e3d98f0c68.json",
 			"kind" : "codemodel",
-			"version" : 
-			{
-				"major" : 2,
-				"minor" : 3
-			}
-		},
-		{
-			"jsonFile" : "cache-v2-9c81d736bc3edc44eeb2.json",
-			"kind" : "cache",
 			"version" : 
 			{
 				"major" : 2,
@@ -44,11 +34,11 @@
 			}
 		},
 		{
-			"jsonFile" : "toolchains-v1-ee5ca47e57a615ee224c.json",
-			"kind" : "toolchains",
+			"jsonFile" : "cache-v2-038595ad31a65409b7fe.json",
+			"kind" : "cache",
 			"version" : 
 			{
-				"major" : 1,
+				"major" : 2,
 				"minor" : 0
 			}
 		}
@@ -77,7 +67,7 @@
 				"responses" : 
 				[
 					{
-						"jsonFile" : "cache-v2-9c81d736bc3edc44eeb2.json",
+						"jsonFile" : "cache-v2-038595ad31a65409b7fe.json",
 						"kind" : "cache",
 						"version" : 
 						{
@@ -86,22 +76,16 @@
 						}
 					},
 					{
-						"jsonFile" : "codemodel-v2-e037bc1130c64a6860ec.json",
+						"jsonFile" : "codemodel-v2-50fc22c6d5e3d98f0c68.json",
 						"kind" : "codemodel",
 						"version" : 
 						{
 							"major" : 2,
-							"minor" : 3
+							"minor" : 0
 						}
 					},
 					{
-						"jsonFile" : "toolchains-v1-ee5ca47e57a615ee224c.json",
-						"kind" : "toolchains",
-						"version" : 
-						{
-							"major" : 1,
-							"minor" : 0
-						}
+						"error" : "unknown request kind 'toolchains'"
 					}
 				]
 			}

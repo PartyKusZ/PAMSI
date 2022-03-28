@@ -1,15 +1,15 @@
 #include "test.hpp"
 
-constexpr int QUAN_ELEM = 100000;
+constexpr int QUAN_ELEM = 10000;
 
 
 void test_insert(){
 
     std :: ofstream file("../sprawko/graph_insert_nanoseconds.tex");
-    t_priority_queue<int> tab;
+    t_priority_queue<int> tab(sort::asc);
     
     
-    for(int i =0; i < QUAN_ELEM; i = i+100){
+    for(int i =0; i < QUAN_ELEM; i=i+100){
         
       
         auto start = std :: chrono :: high_resolution_clock :: now();

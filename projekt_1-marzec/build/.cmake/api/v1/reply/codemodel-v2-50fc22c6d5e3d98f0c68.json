@@ -6,7 +6,6 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.0"
@@ -19,7 +18,7 @@
 					]
 				}
 			],
-			"name" : "",
+			"name" : "Debug",
 			"projects" : 
 			[
 				{
@@ -39,7 +38,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "wysylanie_wiadomosci::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-wysylanie_wiadomosci-1e6e3d57030ce0df703d.json",
+					"jsonFile" : "target-wysylanie_wiadomosci-Debug-31c071f6f26ee7527f61.json",
 					"name" : "wysylanie_wiadomosci",
 					"projectIndex" : 0
 				}
@@ -49,12 +48,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/kubus/Pulpit/PAMSI/projekt_1-marzec/build",
-		"source" : "/home/kubus/Pulpit/PAMSI/projekt_1-marzec"
+		"build" : "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec/build",
+		"source" : "/home/kubus/Pulpit/SEM4/PAMSI/projekt_1-marzec"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 3
+		"minor" : 0
 	}
 }

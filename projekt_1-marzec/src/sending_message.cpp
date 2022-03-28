@@ -1,7 +1,8 @@
 #include"sending_message.hpp"
 
 void t_sending_message :: take_message(){
-    
+    std :: cout << "Z ilu znaków ma się składać pakiet?"<< std :: endl;
+    std ::  cin >> quan_of_char;
     int full10;
     int rest;
     std :: string tmp;
@@ -32,6 +33,10 @@ void t_sending_message :: take_message(){
     tab.push_back(message);
     this->close();
 
+    std::random_device rd;
+    std::mt19937 g(rd());
+    
+    std::shuffle(tab.begin(), tab.end(), g);
 }
 
 

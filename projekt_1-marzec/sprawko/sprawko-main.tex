@@ -23,15 +23,60 @@
 \usepackage{listings}
 \usepackage{multicol}
 \usepackage{pgfplots}
-%\pgfplotsset{compat=1.16}
+\usepackage{fancyhdr}
+
+
+
+\definecolor{clr-background}{RGB}{255,255,255}
+\definecolor{clr-text}{RGB}{0,0,0}
+\definecolor{clr-string}{RGB}{163,21,21}
+\definecolor{clr-namespace}{RGB}{0,0,0}
+\definecolor{clr-preprocessor}{RGB}{128,128,128}
+\definecolor{clr-keyword}{RGB}{0,0,255}
+\definecolor{clr-type}{RGB}{59, 112, 230}
+\definecolor{clr-variable}{RGB}{0,0,0}
+\definecolor{clr-constant}{RGB}{111,0,138} % macro color
+\definecolor{clr-comment}{RGB}{0,128,0}
+\definecolor{mycolor}{rgb}{0.8,0.8,0.8}
+\lstset{
+  xleftmargin=20pt,
+  xrightmargin=0pt,
+  framexleftmargin=20pt,
+  framexrightmargin=0pt,
+  framexbottommargin=2pt,
+  columns=flexible,
+  keepspaces=true,
+  showstringspaces=false,
+  backgroundcolor=\color{clr-background},
+  basicstyle=\color{clr-text}, % any text
+  stringstyle=\color{clr-string},
+  identifierstyle=\color{clr-variable}, % just about anything that isn't a directive, comment, string or known type
+  commentstyle=\color{clr-comment},
+  keywordstyle=\color{clr-type},
+  tabsize=4,
+  aboveskip=1em,
+  belowskip=0em,
+  frame=b,
+  rulecolor=\color{mycolor},
+  numbers=left,
+  numbersep=10pt,
+  numberstyle={\fontsize{9pt}{11pt}\selectfont\color{gray}},
+}
+
+
 \pgfplotsset{ticks=none}
 \newgeometry{tmargin=1.8cm,bmargin=1.8cm,lmargin =1.8cm,rmargin=1.8cm}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Jakub Kusz}
+\lhead{PAMSI}
+\cfoot{ \thepage}
 
 \begin{document}
     
 \input{strona_tytulowa.tex}
 
-\section{Zadanie}
+\section{Zadanie}\label{ch:1}
 
 
 Załóżmy, że Jan chce wysłać przez Internet wiadomość W do Anny. Z różnych powodów musi podzielić
@@ -41,7 +86,7 @@ kolejności. Państwa zadaniem jest zaprojektowanie i zaimplementowanie odpowied
 sobie z tym problemem. Należy wybrać i zaimplementować zgodnie z danym dla wybranej struktury
 ADT oraz przeanalizować czas działania - złożoność obliczeniową proponowanego rozwiązania.
 
-\section{Rozwiązanie}
+\section{Rozwiązanie}\label{ch:2}
 
 Kod źródłowy znajduje się  \href{https://github.com/PartyKusZ/PAMSI}{\textbf{tutaj}}.
 
@@ -97,13 +142,13 @@ utworzy nowy węzeł i umieści nowy element we właściwym miejscu. Poniżej zn
         
 
         tmp = data;
-        while(this->comprasion_ascending(x,tmp->key) && tmp->next != nullptr){
+        while(this->comprasion(x,tmp->key) && tmp->next != nullptr){
 
             tmp = tmp->next;
 
         }
 
-        if(this->comprasion_ascending(x,tmp->key)){
+        if(this->comprasion(x,tmp->key)){
             tmp->next = new str_of_data;
             tmp->next->T_type = val;
             tmp->next->key = x;
@@ -136,27 +181,32 @@ utworzy nowy węzeł i umieści nowy element we właściwym miejscu. Poniżej zn
 }
 \end{lstlisting}
 
-
 \section{Złożoności obliczeniowe}
 
-\subsection{insert()}
+\begin{multicols}{2}
+
+    \subsection{insert()}
+    
 
 \begin{figure}[H]
     \centering
     \input{wykres_insert.tex}
 \end{figure}
-
 Metoda insert() w celu dodania elementu we właściwe miejsce, musi wykonać odpowiednio wiele przejść po elementach kolejki 
 aby natrafić na element, którego klucz nie spełnia właściwej relacji (>,<). Jeśli element, przy którym relacja (>,<)
 przestaje być spełniona znajduje się w odległości $n$ węzłów od początku kolejki, to kolejka musi wykonać $n$ przejść 
 przez swoją listę. Oznacza to, iż ilość przejść jest wprost proporcjonalna do odległości ów węzła. Z tego wynika, iż
-złożoność obliczeniowa jest określona \textbf{funkcją liniową}. Notacja dużego O:
+złożoność obliczeniowa jest określona funkcją liniową. Notacja dużego O:
 
 {\Large \begin{equation*}
     O(n)
-\end{equation*} }
+\end{equation*} }\\
+\textbf{Uwaga}. W celu ukazania liniowej złożoności obliczeniowej na każdy kolejny element 
+dodawany jest z wyższą wartością klucza od największego klucza w kolejce, aby każde kolejne dodanie elementu 
+wiązało się z przebyciem drogi przez całą kolejkę.
 
 \subsection{pop()}
+\vspace{1.51cm}
 
 \begin{figure}[H]
     \centering
@@ -164,20 +214,22 @@ złożoność obliczeniowa jest określona \textbf{funkcją liniową}. Notacja d
 \end{figure}
 
 Metoda pop() w celu zdjęcia pierwszego elementu musi wykonać zawsze 
-tylko jedną operację, więc jej złożoność jest stała.
+tylko jedną operację, więc jej złożoność jest stała. Notacja dużego O:
 
 {\Large \begin{equation*}
     O(1)
 \end{equation*} }
-
+\newpage
 \subsection{pop\_all()}
 
 \begin{figure}[H]
     \centering
     \input{wykres_popall.tex}
 \end{figure}
+
 Metoda pop\_all() w celu usunięcia wszystkich elementów musi wykonać tyle operacji ile jest węzłów w kolejce,
-z czego wynika że jej złożoność obliczeniowa jest liniowa.
+z czego wynika że jej złożoność obliczeniowa jest liniowa. Notacja dużego O:
+
 {\Large \begin{equation*}
     O(n)
 \end{equation*} }
@@ -191,7 +243,7 @@ z czego wynika że jej złożoność obliczeniowa jest liniowa.
 \end{figure}
 
 Metoda empty() w celu zwrócenia informacji o tym czy kolejka jest pusta musi wykonać zawsze 
-tylko jedną operację, więc jej złożoność jest stała.
+tylko jedną operację, więc jej złożoność jest stała. Notacja dużego O:
 
 {\Large \begin{equation*}
     O(1)
@@ -205,7 +257,7 @@ tylko jedną operację, więc jej złożoność jest stała.
 \end{figure}
 
 Metoda top() w celu zwrócenia wartości elementu znajdującego się na początku kolejki zawsze musi wykonać tylko jedną operacje,
-wiec złożoność obliczeniowa jest stała. 
+wiec złożoność obliczeniowa jest stała. Notacja dużego O:
 
 {\Large \begin{equation*}
     O(1)
@@ -217,9 +269,23 @@ wiec złożoność obliczeniowa jest stała.
     \input{wykres_size.tex}
 \end{figure}
 
+Metoda size() w celu zwrócenia wartości ilości elementów w kolejce zawsze musi wykonać tylko jedną operacje,
+wiec złożoność obliczeniowa jest stała. Notacja dużego O:
 
+{\Large \begin{equation*}
+    O(1)
+\end{equation*} }
 
-\section{Wnioski}
+    
+\end{multicols}
+\section{Podsumowanie i wnioski}
+
+Poprzez zaimplementowanie kolejki priorytetowej udało się rozwiązać zadanie postawione w pkt.(\ref{ch:1}), co 
+prezentuje driver znajdujący się w podanym w pkt.(\ref{ch:2}) repozytorium. Wybór kolejki priorytetowej uważam za jak najbardziej 
+uzasadniony, specyfika jej działania idealnie sprawdza się w przypadkach, gdy należy sortować ciągle napływające dane, nie znając do tego ich ilości.\\
+
+Szybkość działania kolejki jest na bardzo wysokim poziome, powyższa implementacja gwarantuje liniową zależność 
+czasową podczas dodawania elementu jak i podczas usuwania całej kolejki, pozostałe metody są stałe w czasie. 
 
 
 

@@ -17,13 +17,13 @@ void t_priority_queue<T> :: insert(const T &val, const int &x){
         
 
         tmp = data;
-        while(this->comprasion_ascending(x,tmp->key) && tmp->next != nullptr){
+        while(this->comprasion(x,tmp->key) && tmp->next != nullptr){
 
             tmp = tmp->next;
 
         }
 
-        if(this->comprasion_ascending(x,tmp->key)){
+        if(this->comprasion(x,tmp->key)){
             tmp->next = new str_of_data;
             tmp->next->T_type = val;
             tmp->next->key = x;
