@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../inc/data.hpp
+string
+-
+
+../inc/parser.hpp
+fstream
+-
+parser.hpp
+../inc/parser.hpp
+data.hpp
+../inc/data.hpp
+iostream
+-
+
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/main.cpp
+parser.hpp
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/parser.hpp
+
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/parser.cpp
+parser.hpp
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/parser.hpp
+

@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/inc  -g   -o CMakeFiles/sortowanie.dir/src/main.cpp.o -c /home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/main.cpp",
+  "file": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/main.cpp"
+},
+{
+  "directory": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/inc  -g   -o CMakeFiles/sortowanie.dir/src/parser.cpp.o -c /home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/parser.cpp",
+  "file": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/parser.cpp"
+},
+{
+  "directory": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/inc  -g   -o CMakeFiles/sortowanie.dir/src/sorting_algorithms.cpp.o -c /home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/sorting_algorithms.cpp",
+  "file": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/sorting_algorithms.cpp"
+}
+]
