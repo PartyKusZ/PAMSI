@@ -1,6 +1,6 @@
 #include "test.hpp"
 
-constexpr int QUAN_ELEM = 10000;
+constexpr int QUAN_ELEM = 10000000;
 
 
 void test_insert(){
@@ -9,7 +9,7 @@ void test_insert(){
     t_priority_queue<int> tab(sort::asc);
     
     
-    for(int i =0; i < QUAN_ELEM; i=i+100){
+    for(int i =0; i < QUAN_ELEM; ++i){
         
       
         auto start = std :: chrono :: high_resolution_clock :: now();

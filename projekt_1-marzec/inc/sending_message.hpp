@@ -5,6 +5,7 @@
 #include<fstream>
 #include<string>
 #include<random>
+#include<algorithm>
 class t_sending_message{
 
     private:
