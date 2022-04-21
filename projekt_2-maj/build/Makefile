@@ -204,6 +204,33 @@ src/sorting_algorithms.cpp.s:
 	$(MAKE) -f CMakeFiles/sortowanie.dir/build.make CMakeFiles/sortowanie.dir/src/sorting_algorithms.cpp.s
 .PHONY : src/sorting_algorithms.cpp.s
 
+src/write_to_mem.o: src/write_to_mem.cpp.o
+
+.PHONY : src/write_to_mem.o
+
+# target to build an object file
+src/write_to_mem.cpp.o:
+	$(MAKE) -f CMakeFiles/sortowanie.dir/build.make CMakeFiles/sortowanie.dir/src/write_to_mem.cpp.o
+.PHONY : src/write_to_mem.cpp.o
+
+src/write_to_mem.i: src/write_to_mem.cpp.i
+
+.PHONY : src/write_to_mem.i
+
+# target to preprocess a source file
+src/write_to_mem.cpp.i:
+	$(MAKE) -f CMakeFiles/sortowanie.dir/build.make CMakeFiles/sortowanie.dir/src/write_to_mem.cpp.i
+.PHONY : src/write_to_mem.cpp.i
+
+src/write_to_mem.s: src/write_to_mem.cpp.s
+
+.PHONY : src/write_to_mem.s
+
+# target to generate assembly for a file
+src/write_to_mem.cpp.s:
+	$(MAKE) -f CMakeFiles/sortowanie.dir/build.make CMakeFiles/sortowanie.dir/src/write_to_mem.cpp.s
+.PHONY : src/write_to_mem.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -222,6 +249,9 @@ help:
 	@echo "... src/sorting_algorithms.o"
 	@echo "... src/sorting_algorithms.i"
 	@echo "... src/sorting_algorithms.s"
+	@echo "... src/write_to_mem.o"
+	@echo "... src/write_to_mem.i"
+	@echo "... src/write_to_mem.s"
 .PHONY : help
 
 

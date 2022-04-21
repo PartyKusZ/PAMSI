@@ -6,7 +6,7 @@
 #include "data.hpp"
 #include <iostream>
 
-t_data read_from_csv_file(std :: fstream &file);
+t_datas read_from_csv_file(std :: fstream &file);
 
 
 

@@ -74,12 +74,12 @@ clean: CMakeFiles/sortowanie.dir/clean
 CMakeFiles/sortowanie.dir/all:
 	$(MAKE) -f CMakeFiles/sortowanie.dir/build.make CMakeFiles/sortowanie.dir/depend
 	$(MAKE) -f CMakeFiles/sortowanie.dir/build.make CMakeFiles/sortowanie.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/build/CMakeFiles --progress-num=1,2,3,4 "Built target sortowanie"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target sortowanie"
 .PHONY : CMakeFiles/sortowanie.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/sortowanie.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/build/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/sortowanie.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/build/CMakeFiles 0
 .PHONY : CMakeFiles/sortowanie.dir/rule
