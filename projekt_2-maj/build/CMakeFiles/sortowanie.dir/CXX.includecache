@@ -20,6 +20,14 @@ data.hpp
 iostream
 -
 
+../inc/sorting_algorithms.hpp
+algorithm
+-
+vector
+-
+cmath
+-
+
 ../inc/write_to_mem.hpp
 vector
 -
@@ -33,10 +41,18 @@ vector
 -
 chrono
 -
+algorithm
+-
 data.hpp
 /home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/data.hpp
 parser.hpp
 /home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/parser.hpp
 write_to_mem.hpp
 /home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/write_to_mem.hpp
+sorting_algorithms.hpp
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/sorting_algorithms.hpp
+
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/sorting_algorithms.cpp
+sorting_algorithms.hpp
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/sorting_algorithms.hpp
 

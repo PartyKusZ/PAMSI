@@ -4,6 +4,7 @@
 #include <fstream>
 #include "data.hpp"
 void write_to_mem(std :: vector<t_data> &tab, std :: fstream &file);
+void write_to_mems(std :: vector<t_data> &tab, std :: fstream &file);
 
 
 #endif
