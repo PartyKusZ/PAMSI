@@ -24,6 +24,7 @@ void test_bucket_sort_962903(double *tab);
 void test_intro_sort_10000(double *arr  );
 void test_intro_sort_100000(double *arr );
 void test_intro_sort_500000(double *arr );
+void test_intro_sort_962903(double *arr);
 
 
 
