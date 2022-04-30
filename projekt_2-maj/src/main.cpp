@@ -5,6 +5,7 @@
 #include "parser.hpp"
 #include "write_to_mem.hpp"
 #include "sorting_algorithms.hpp"
+#include "tests.hpp"
 #define SIZE_10000 10000
 #define SIZE_100000 100000
 #define SIZE_500000 500000
@@ -44,11 +45,18 @@ int main(){
     for(int i = 0; i < SIZE_MAXIMUM; ++i){
         tabmax[i] = movie_rating_list[i].rating;
     }
-   
-    intro_sort(tab10000,10);
-    for(int i = 0; i < 10; ++i){
-        std :: cout << tab10000[i] << '\n';
-    }
+    
+   // test_qsort_10000(tab10000);
+    //test_qsort_100000(tab100000);
+   // test_qsort_500000(tab500000);
+   // test_qsort_962903(tabmax);
+    //test_merge_sort_10000(tab10000);
+    test_merge_sort_100000(tab100000);
+    test_merge_sort_500000(tab500000);
+    test_merge_sort_962903(tabmax);
+    
 
+
+   
     
 }
