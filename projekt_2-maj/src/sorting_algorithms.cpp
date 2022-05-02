@@ -80,7 +80,7 @@ void merge(double array [], int const left , int const mid, int const right ){
 void bucket_sort(double *tab, int n){
 
     // 1) Create n empty buckets
-   std ::  vector<double> b[n];
+   std ::  vector<double> b[n+1];
  
     // 2) Put array elements
     // in different buckets
