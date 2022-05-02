@@ -173,9 +173,11 @@ void test_bucket_sort_10000(double *tab){
     std::random_device rd;
     std::mt19937 g(rd());
     double *max = std :: max_element(tab, tab + SIZE_10000);
+    
     for(int i = 100; i <= SIZE_10000; i+=100){
         auto start = std::chrono::high_resolution_clock::now();
-        bucket_sort(tab,i,*max);
+        bucket_sort(tab,sizeof(tab[0]) * i);
+
         std :: cout << i << "test_bucket_10000 " << "Done" << "\n";
 
          auto stop = std::chrono::high_resolution_clock::now();
@@ -192,7 +194,8 @@ void test_bucket_sort_100000(double *tab){
     double *max = std :: max_element(tab, tab + SIZE_100000);
     for(int i = 100; i <= SIZE_100000; i+=1000){
         auto start = std::chrono::high_resolution_clock::now();
-        bucket_sort(tab,i,*max);
+        bucket_sort(tab,sizeof(tab[0]) * i);
+    
         std :: cout << i << "test_bucket_100000 " << "Done" << "\n";
 
          auto stop = std::chrono::high_resolution_clock::now();
@@ -209,7 +212,8 @@ void test_bucket_sort_500000(double *tab){
     double *max = std :: max_element(tab, tab + SIZE_500000);
     for(int i = 100; i <= SIZE_500000; i+=5000){
         auto start = std::chrono::high_resolution_clock::now();
-        bucket_sort(tab,i,*max);
+                bucket_sort(tab,sizeof(tab[0]) * i);
+
         std :: cout << i << "test_bucket_500000 " << "Done" << "\n";
 
          auto stop = std::chrono::high_resolution_clock::now();
@@ -227,7 +231,8 @@ void test_bucket_sort_962903(double *tab){
     double *max = std :: max_element(tab, tab + SIZE_MAXIMUM - 3);
     for(int i = 100; i <= SIZE_MAXIMUM - 3; i+=9629){
         auto start = std::chrono::high_resolution_clock::now();
-        bucket_sort(tab,i,*max);
+        bucket_sort(tab,sizeof(tab[0]) * i);
+
         std :: cout << i << "test_bucket_max  " << "Done" << "\n";
 
          auto stop = std::chrono::high_resolution_clock::now();
