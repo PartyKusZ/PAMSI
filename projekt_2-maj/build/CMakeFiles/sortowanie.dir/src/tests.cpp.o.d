@@ -165,5 +165,5 @@ CMakeFiles/sortowanie.dir/src/tests.cpp.o: \
  /usr/include/c++/9/bits/stl_bvector.h /usr/include/c++/9/bits/vector.tcc \
  /usr/include/x86_64-linux-gnu/c++/9/bits/opt_random.h \
  /usr/include/c++/9/bits/random.tcc /usr/include/c++/9/numeric \
- /usr/include/c++/9/bits/stl_numeric.h \
+ /usr/include/c++/9/bits/stl_numeric.h /usr/include/c++/9/iostream \
  /home/kubus/Pulpit/PAMSI/projekt_2-maj/inc/sorting_algorithms.hpp

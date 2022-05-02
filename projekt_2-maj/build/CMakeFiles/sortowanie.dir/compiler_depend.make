@@ -725,6 +725,7 @@ CMakeFiles/sortowanie.dir/src/tests.cpp.o: ../src/tests.cpp \
   /usr/include/c++/9/bits/random.tcc \
   /usr/include/c++/9/numeric \
   /usr/include/c++/9/bits/stl_numeric.h \
+  /usr/include/c++/9/iostream \
   ../inc/sorting_algorithms.hpp
 
 CMakeFiles/sortowanie.dir/src/write_to_mem.cpp.o: ../src/write_to_mem.cpp \

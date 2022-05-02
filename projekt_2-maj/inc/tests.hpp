@@ -3,6 +3,7 @@
 #include <chrono>
 #include <algorithm>
 #include <random>
+#include <iostream>
 #include "sorting_algorithms.hpp"
 #define SIZE_10000 10000
 #define SIZE_100000 100000
