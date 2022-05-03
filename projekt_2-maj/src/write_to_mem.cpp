@@ -10,7 +10,7 @@ void write_to_mem(std :: vector<t_data> &tab, std :: fstream &file){
         auto start = std::chrono::high_resolution_clock::now();
         auto stop = std::chrono::high_resolution_clock::now();
     
-    for(int i = 0; i <= 1011000; i+=1000){
+    for(int i = 0; i <= 1011000; i+=10000){
         auto start = std::chrono::high_resolution_clock::now();
         tab.clear();
         for(int j = 0; j < i && !file.eof(); ++j){
@@ -26,7 +26,7 @@ void write_to_mem(std :: vector<t_data> &tab, std :: fstream &file){
         }
         file.seekg (0, std :: ios :: beg);
         auto stop = std::chrono::high_resolution_clock::now();
-        auto time = std::chrono::duration_cast<std::chrono::nanoseconds>(stop - start);
+        auto time = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
         filtr << i << " " << time.count() << std :: endl;
     
     }

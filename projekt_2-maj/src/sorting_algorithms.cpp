@@ -79,21 +79,16 @@ void merge(double array [], int const left , int const mid, int const right ){
 
 void bucket_sort(double *tab, int n){
 
-    // 1) Create n empty buckets
    std ::  vector<double> b[n+1];
  
-    // 2) Put array elements
-    // in different buckets
     for (int i = 0; i < n; i++) {
         b[static_cast<int>(tab[i])].push_back(tab[i]);
     }
  
-    // 3) Sort individual buckets
     for (int i = 0; i < n; i++)
         quick_sort(b[i].data(),0,b[i].size() - 1);
 
  
-    // 4) Concatenate all buckets into arr[]
     int index = 0;
     for (int i = 0; i < n; i++){
         for (int j = 0; j < b[i].size(); j++){

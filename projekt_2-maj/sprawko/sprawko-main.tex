@@ -32,10 +32,83 @@
 \newgeometry{tmargin=1.8cm,bmargin=1.8cm,lmargin =1.8cm,rmargin=1.8cm}
 \pagestyle{fancy}
 \fancyhf{}
-\rhead{Overleaf}
-\lhead{Guides and tutorials}
+\rhead{\textit{Sortowanie}}
+\lhead{\textit{Jakub Kusz}}
 \begin{document}
-    
 
+\input{strona_tytulowa.tex}
+    
+\tableofcontents
+\newpage
+\section{Cel projektu}
+Celem projektu jest zapoznanie się z różnymi algorytmami sortującymi i ich złożonością obliczeniową zależną od różnych zestawów danych. 
+\section{Zadanie do wykonania}
+Dla danych w pliku projekt2\_dane.csv należy wykonać eksperymenty z sortowaniem danych względem
+rankingu filmów. Załączony plik jest okrojoną bazą filmów ,,IMDb Largest Review Dataset'' z kaggle.com.
+Plik zawiera tylko tytuł oraz ranking. Proszę o wykonanie następujących zadań:
+\begin{enumerate}
+    \item Przefiltrowanie danych i usunięcie pustych wpisów w polu ranking (jeśli występują). Proszę zmierzyć
+    i podać w sprawozdaniu czas przeszukiwania. Czy był on zgodny z oczekiwaną złożonością przeszukiwania
+    dla wybranej struktury danych?
+    \item Przygotować strukturę danych zawierającą odpowiednio: 10 000, 100 000, 500 000, 1 000 000,
+    maksymalną ilość danych z pliku.
+    \item Przeprowadzić analizę efektywności sortowania na danych z §2 z wykorzystaniem zaimplementowanych
+    algorytmów. 
+    \item  Dodatkowo dla każdego zestawu danych proszę podać w tabeli czas sortowania, średnią wartość
+    oraz medianę rankingu.
+    
+\end{enumerate}
+Zostały przeze mnie wybrane 4 algorytmy sortujące, które poddałem testom:
+
+\begin{enumerate}
+    \item \textbf{quicksort},
+    \item \textbf{mergesort},
+    \item \textbf{bucketsort},
+    \item \textbf{introsort}.
+\end{enumerate}
+\section{Filtrowanie danych}
+Pierwszym krokiem było przefiltrowanie danych z pliku .csv zawierającego tytułu i rankingi. Należało usunąć wpisy, 
+które nie zawierały rankingu. Filtrowanie odbywało się jednocześnie z pobieraniem poszczególnych linii z pliku .csv - jeśli dana 
+linia nie zawierała pola z rankingiem to nie zostawała zapisana do struktury danych. 
+\subsection{Przewidywana złożoność obliczeniowa}
+Przewiduje sie złożoność obliczeniową liniową. Złożoność dodania na koniec wykorzystanego w zadaniu kontenera std :: vector 
+jest stała w czasie, sprawdzenie czy dana linia zawiera pole z rankingiem również, wiec czas przefiltrowania danych zależny jest 
+tylko od ich ilości, więc powinien być liniowy. W notacji dużego O:
+{\Large \begin{equation*}
+       O(n) = n
+\end{equation*}}
+\subsection{Wyznaczona złożoność obliczeniowa}
+W celu wyznaczenia złożoności obliczeniowej został przeprowadzony test, polegający na mierzeniu czasu wczytywania 
+liczby kolejnych krotności 1000 linii z pliku .csv.
+\input{wykres_filtrowanie.tex}
+Tak jak widać na Rys. \ref{fig: filtrowanie} złożoność jest liniowa, wiec jednocześnie zgodna z przewidywaną.
+\section{Quicksort}
+Algorytm wykorzystuje technikę "dziel i zwyciężaj". Według ustalonego schematu wybierany jest jeden element w 
+sortowanej tablicy, który będziemy nazywać pivot. Pivot może być elementem środkowym, pierwszym, ostatnim, losowym 
+lub wybranym według jakiegoś innego schematu dostosowanego do zbioru danych. Następnie ustawiamy elementy nie 
+większe na lewo tej wartości, natomiast nie mniejsze na prawo. W ten sposób powstaną nam dwie części 
+tablicy (niekoniecznie równe), gdzie w pierwszej części znajdują się elementy nie większe od drugiej. 
+Następnie każdą z tych podtablic sortujemy osobno według tego samego schematu. 
+\subsection{Złożoność obliczenia}
+W zależności od rozkładu danych i elementu pivot  określa się następujące złożoności obliczeniowe:
+\subsubsection{Przypadek optymistyczny}
+W przypadku optymistycznym, jeśli mamy szczęście za każdym razem wybrać medianę z sortowanego fragmentu tablicy, to liczba porównań niezbędnych do uporządkowania n-elementowej tablicy opisana jest rekurencyjnym wzorem:
+
+{ \Large \begin{equation*}
+       O(n) = n \cdot log_2 n 
+\end{equation*}}
+\subsubsection{Przypadek przeciętny}
+W przypadku przeciętnym, to jest dla równomiernego rozkładu prawdopodobieństwa wyboru elementu z tablicy: 
+{ \Large \begin{equation*}
+       O(n) = 1,39 \cdot n \cdot log_2 n 
+\end{equation*}}
+
+\subsubsection{Przypadek pesymistyczny}
+W przypadku pesymistycznym, jeśli zawsze wybierzemy element najmniejszy (albo największy) w sortowanym fragmencie tablicy, to: 
+{\Large \begin{equation*}
+       O(n) = \frac{n^2}{2}
+\end{equation*}}
+
+\subsection{Implementacja}
 
 \end{document}
