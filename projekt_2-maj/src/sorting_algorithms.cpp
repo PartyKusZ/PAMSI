@@ -79,24 +79,53 @@ void merge(double array [], int const left , int const mid, int const right ){
 
 void bucket_sort(double *tab, int n){
 
-   std ::  vector<double> b[n+1];
- 
-    for (int i = 0; i < n; i++) {
-        b[static_cast<int>(tab[i])].push_back(tab[i]);
-    }
- 
-    for (int i = 0; i < n; i++)
-        quick_sort(b[i].data(),0,b[i].size() - 1);
+  
 
+
+
+
+ std :: vector<double> *b = new std :: vector<double>[n +1 ]; 
+   for(int i = 0; i<n; i++)  {          //put elements into different buckets
+      b[int(tab[i])].push_back(tab[i]);
+   }
+   for(int i = 0; i<n; i++) {
+      quick_sort(b[i].data(),0,b[i].size() - 1);       //sort individual vectors
+   }
+   int index = 0;
+   for(int i = 0; i<n; i++) {
+      while(!b[i].empty()) {
+         tab[index++] = *(b[i].begin());
+         b[i].erase(b[i].begin());
+      }
+   }
+
+
+
+
+
+
+
+
+//    std :: vector<double> *b = new std :: vector<double>[11]; 
  
-    int index = 0;
-    for (int i = 0; i < n; i++){
-        for (int j = 0; j < b[i].size(); j++){
-            tab[index++] = b[i][j];
+//     for (int i = 0; i < n; i++) {
+//         b[static_cast<int>(tab[i])].push_back(tab[i]);
+//     }
+ 
+//     for (int i = 0; i < n; i++){
+//         if(b[i].size() > 1){
+//             quick_sort(b[i].data(),0,b[i].size() - 1);
+//             //std :: sort(b[i].begin(),b[i].begin() + i );
+//         }
+//     }
+//     int index = 0;
+//     for (int i = 0; i < n; i++){
+//         for (int j = 0; j < b[i].size(); j++){
+//             tab[index++] = b[i][j];
             
-        }
-    }
-    // std :: vector<double> buckets[static_cast<int>(max_value + 1.0)];
+//         }
+//     }
+//     // std :: vector<double> buckets[static_cast<int>(max_value + 1.0)];
     // for(int i = 0; i < how_many; ++i){
     //     buckets[static_cast<int>(tab[i])].push_back(tab[i]);
     // }
@@ -115,22 +144,23 @@ void bucket_sort(double *tab, int n){
 
     // }
     // double p = max_value / how_many;
-    // std :: vector<double> buckets[how_many+1];
+    // //std :: vector<double> buckets[how_many+1];
+    // std :: vector<double> *buckets = new std :: vector<double>[how_many + 1];
     // for(int i = 0; i < how_many; ++i){
     //     buckets[static_cast<int>(tab[i] / p)].push_back(tab[i]);
-    //     std :: cout << "pierwsza pętla ok" << std :: endl;
+    //    // std :: cout << "pierwsza pętla ok" << std :: endl;
     // }
     // for(int i = 0; i < how_many; ++i){
     //     if(buckets[i].size() > 1){
     //         quick_sort(buckets[i].data(),0,buckets[i].size() - 1);
-    //         std :: cout << "druga pętla ok" << std :: endl;
+    //         //std :: cout << "druga pętla ok" << std :: endl;
 
     //     }
     // }
     // for(int i = 0, g = 0; i < how_many + 1; ++i){
     //     for(int j = 0; j < buckets[i].size(); ++j){
     //         tab[g++] = buckets[i][j];
-    //     std :: cout << "trzecia pętla ok" << std :: endl;
+    //     //std :: cout << "trzecia pętla ok" << std :: endl;
 
     //     }
     // }

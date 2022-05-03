@@ -16,6 +16,11 @@
 },
 {
   "directory": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/build",
+  "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/inc  -g   -o CMakeFiles/sortowanie.dir/src/tests.cpp.o -c /home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/tests.cpp",
+  "file": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/tests.cpp"
+},
+{
+  "directory": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/build",
   "command": "/bin/x86_64-linux-gnu-g++-9   -I/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/inc  -g   -o CMakeFiles/sortowanie.dir/src/write_to_mem.cpp.o -c /home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/write_to_mem.cpp",
   "file": "/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/write_to_mem.cpp"
 }

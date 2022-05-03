@@ -27,6 +27,22 @@ vector
 -
 cmath
 -
+iostream
+-
+
+../inc/tests.hpp
+fstream
+-
+chrono
+-
+algorithm
+-
+random
+-
+iostream
+-
+sorting_algorithms.hpp
+../inc/sorting_algorithms.hpp
 
 ../inc/write_to_mem.hpp
 vector
@@ -51,8 +67,6 @@ write_to_mem.hpp
 /home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/write_to_mem.hpp
 sorting_algorithms.hpp
 /home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/sorting_algorithms.hpp
-
-/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/sorting_algorithms.cpp
-sorting_algorithms.hpp
-/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/sorting_algorithms.hpp
+tests.hpp
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/src/tests.hpp
 

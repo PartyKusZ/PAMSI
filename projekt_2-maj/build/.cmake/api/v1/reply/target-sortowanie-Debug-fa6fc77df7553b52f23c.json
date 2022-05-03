@@ -39,11 +39,17 @@
 	"compileGroups" : 
 	[
 		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : "-g  "
+				}
+			],
 			"includes" : 
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/home/kubus/Pulpit/PAMSI/projekt_2-maj/inc"
+					"path" : "/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/inc"
 				}
 			],
 			"language" : "CXX",
@@ -62,6 +68,10 @@
 	{
 		"commandFragments" : 
 		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
 			{
 				"fragment" : "-rdynamic",
 				"role" : "flags"

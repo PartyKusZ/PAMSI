@@ -6,7 +6,6 @@
 			[
 				{
 					"build" : ".",
-					"jsonFile" : "directory-.-f5ebdc15457944623624.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.0"
@@ -19,7 +18,7 @@
 					]
 				}
 			],
-			"name" : "",
+			"name" : "Debug",
 			"projects" : 
 			[
 				{
@@ -39,7 +38,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "sortowanie::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-sortowanie-5d6205ef04c92588452f.json",
+					"jsonFile" : "target-sortowanie-Debug-fa6fc77df7553b52f23c.json",
 					"name" : "sortowanie",
 					"projectIndex" : 0
 				}
@@ -49,12 +48,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/kubus/Pulpit/PAMSI/projekt_2-maj/build",
-		"source" : "/home/kubus/Pulpit/PAMSI/projekt_2-maj"
+		"build" : "/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/build",
+		"source" : "/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 4
+		"minor" : 0
 	}
 }
