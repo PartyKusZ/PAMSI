@@ -12,7 +12,7 @@ void test_qsort_10000(double *tab){
         quick_sort(tab,0,i);
         std :: cout << i << "test_qsort_10000 " << "Done" << "\n";
         auto stop = std::chrono::high_resolution_clock::now();
-        auto time = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
+        auto time = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
         
         file << i << " " << time.count() << '\n';
         std :: shuffle(tab, tab+i, g);
@@ -26,13 +26,13 @@ void test_qsort_100000(double *tab){
     file.open("../sprawko/dane/qsort100'000.txt", std :: ios :: out);
     std::random_device rd;
     std::mt19937 g(rd());
-    for(int i = 100; i <= SIZE_100000; i+=1000){
+    for(int i = 1000; i <= SIZE_100000; i+=1000){
         auto start = std::chrono::high_resolution_clock::now();
         quick_sort(tab,0,i);
         std :: cout << i << "test_qsort_100000 " << "Done" << "\n";
 
         auto stop = std::chrono::high_resolution_clock::now();
-        auto time = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
+        auto time = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
         
         file << i << " " << time.count() << '\n';
         std :: shuffle(tab, tab+i, g);
@@ -46,13 +46,13 @@ void test_qsort_500000(double *tab){
     file.open("../sprawko/dane/qsort500'000.txt", std :: ios :: out);
     std::random_device rd;
     std::mt19937 g(rd());
-    for(int i = 100; i <= SIZE_500000; i+=5000){
+    for(int i = 5000; i <= SIZE_500000; i+=5000){
         auto start = std::chrono::high_resolution_clock::now();
         quick_sort(tab,0,i);
         std :: cout << i << "test_qsort_500000 " << "Done" << "\n";
 
         auto stop = std::chrono::high_resolution_clock::now();
-        auto time = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
+        auto time = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
         
         file << i << " " << time.count() << '\n';
         std :: shuffle(tab, tab+i, g);
@@ -66,13 +66,13 @@ void test_qsort_962903(double *tab){
     file.open("../sprawko/dane/qsort692'903.txt", std :: ios :: out);
     std::random_device rd;
     std::mt19937 g(rd());
-    for(int i = 100; i <= SIZE_MAXIMUM - 3; i+=9629){
+    for(int i = 9629; i <= SIZE_MAXIMUM - 3; i+=9629){
         auto start = std::chrono::high_resolution_clock::now();
         quick_sort(tab,0,i);
         std :: cout << i << "test_qsort_max " << "Done" << "\n";
 
         auto stop = std::chrono::high_resolution_clock::now();
-        auto time = std::chrono::duration_cast<std::chrono::milliseconds>(stop - start);
+        auto time = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
         
         file << i << " " << time.count() << '\n';
         std :: shuffle(tab, tab+i, g);

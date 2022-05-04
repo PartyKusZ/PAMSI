@@ -3,27 +3,26 @@
 void quick_sort(double *tab, int left, int right){
 	if(right <= left) return;
 	
-	int i = left - 1, j = right + 1, pivot = tab[(left+right)/2]; 
+	int i = left - 1;
+    int j = right + 1; 
+    int pivot = tab[(left+right)/2]; 
 	
-	while(1)
-	{
+	while(1){
 		
 		while(pivot>tab[++i]);
-		
 		while(pivot<tab[--j]);
 		
 		
 		if( i <= j)
-		
 			std :: swap(tab[i],tab[j]);
 		else
 			break;
 	}
 
 	if(j > left)
-	quick_sort(tab, left, j);
+	    quick_sort(tab, left, j);
 	if(i < right)
-	quick_sort(tab, i, right);
+	    quick_sort(tab, i, right);
 }
 
 
