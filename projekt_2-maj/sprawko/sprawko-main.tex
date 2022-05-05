@@ -210,6 +210,7 @@ Na przykład dla \textbf{10000} poszczególne paczki to 100, 200, 300... a dla \
        \subfloat[ilość danych: 100000]{\input{wykres_qs_100'000.tex}}
 \end{figure}
 \begin{figure}[H]\ContinuedFloat
+       \centering
        
        \subfloat[ilość danych: 500000]{\input{wykres_qs_500'000.tex}}
        \quad
@@ -334,6 +335,7 @@ Na przykład dla \textbf{10000} poszczególne paczki to 100, 200, 300... a dla \
        \subfloat[ilość danych: 100000]{\input{wykres_ms_100'000.tex}}
 \end{figure}
 \begin{figure}[H]\ContinuedFloat
+       \centering
        
        \subfloat[ilość danych: 500000]{\input{wykres_ms_500'000.tex}}
        \quad
@@ -419,7 +421,19 @@ Poniższe listingi przedstawiają poszczególne funkcje konieczne do wykonania I
 
 }
 
-
+\subsection{Testy złożoności obliczeniowej}
+W celu eksperymentalnego wyznaczenia złożoności obliczeniowej algorytmu Introsort zostały przeprowadzone testy szybkości dla 
+czterech różniących się ilością danych pakietów: 
+\begin{itemize}
+       \item \textbf{10000},
+       \item  \textbf{100000},
+       \item \textbf{500000},
+       \item \textbf{962903}.
+\end{itemize}
+Dla każdego zestawu danych przeprowadzono 100 pomiarów czasu. Najmniejszą paczką dla poszczególnej ilości danych jest 
+$\frac{x}{100}$ gdzie x to ilość danych. Każdy kolejny pomiar pomiar wykonywano dla $n \cdot \frac{x}{100}$ ilości w paczce,
+gdzie $n \in 1,2,3 ... 100$.
+Na przykład dla \textbf{10000} poszczególne paczki to 100, 200, 300... a dla \textbf{500000} to 5000, 10000, 15000... .
 
 
 \begin{figure}[H]
@@ -429,7 +443,7 @@ Poniższe listingi przedstawiają poszczególne funkcje konieczne do wykonania I
        \subfloat[ilość danych: 100000]{\input{wykres_is_100'000.tex}}
 \end{figure}
 \begin{figure}[H]\ContinuedFloat
-       
+       \centering
        \subfloat[ilość danych: 500000]{\input{wykres_is_500'000.tex}}
        \quad
        \subfloat[ilość danych: 962903]{\input{wykres_is_max.tex}}
@@ -454,7 +468,7 @@ liniowa, co nie zgadza się z optymistyczną przeciętną jak i pesymistyczną z
 jednak taki rezultat uznać za właściwy, ponieważ przebieg funkcji $n \cdot log_2 n$ jest kształtem zbliżony do funkcji 
 liniowej.\\
 
-Sortowanie największego zestawu danych (962903 elementów) trwało $\sim$: \textbf{97,871 ms}
+Sortowanie największego zestawu danych (962903 elementów) trwało $\sim$: \textbf{88,101 ms}
 
 \subsubsection{Mergesort}
 
@@ -462,10 +476,10 @@ Sortowanie największego zestawu danych (962903 elementów) trwało $\sim$: \tex
 Analizując Wykres \ref{fig: mergesort} można dojść do wniosku, iż złożoność obliczeniowa algorytmu Mergesort jest
 liniowa, co nie zgadza się z teoretyczną złożonością. (pkt. \ref{ch: mergesort}). Można 
 jednak taki rezultat uznać za właściwy, ponieważ przebieg funkcji $n \cdot log_2 n$ jest kształtem zbliżony do funkcji 
-liniowej. Dla największego zestawu powyżej $8 \cdot 10^5$ ilości danych czas wykonywania sortowania gwałtownie wzrasta,
+liniowej. Dla największego zestawu powyżej $9 \cdot 10^5$ ilości danych czas wykonywania sortowania gwałtownie wzrasta,
 przez co finalny czas sortowania znacznie się wydłużył. \\
 
-Sortowanie największego zestawu danych (962903 elementów) trwało $\sim$: \textbf{496,839 ms}
+Sortowanie największego zestawu danych (962903 elementów) trwało $\sim$: \textbf{442,203 ms}
 
 \subsubsection{Introsort}
 Analizując Wykres \ref{fig: introsort} można dojść do wniosku, iż złożoność obliczeniowa algorytmu Introsort jest
@@ -473,7 +487,7 @@ liniowa, co nie zgadza się z optymistyczną, przeciętną jak i pesymistyczną 
 jednak taki rezultat uznać za właściwy, ponieważ przebieg funkcji $n \cdot log_2 n$ jest kształtem zbliżony do funkcji 
 liniowej.\\
 
-Sortowanie największego zestawu danych (962903 elementów) trwało $\sim$: \textbf{233,121 ms}
+Sortowanie największego zestawu danych (962903 elementów) trwało $\sim$: \textbf{232,851 ms}
 
 \section{Podsumowanie}
 \subsection{Czas trwania}
@@ -485,9 +499,9 @@ Poniższa tabela przedstawia czasy trwania sortowania poszczególnych algorytmó
        \begin{tabular}{|c|c|}
        \hline
        algorytm  & czas trwania {[}ms{]} \\ \hline
-       Quciksort & 97,871                \\ \hline
-       Mergesort & 496,839               \\ \hline
-       Introsort & 233,121               \\ \hline
+       Quciksort & 88,101               \\ \hline
+       Mergesort & 442,203               \\ \hline
+       Introsort & 232,851               \\ \hline
        filtrowanie &    311             \\ \hline
        \end{tabular}
        \label{tab: czasy}
@@ -495,7 +509,7 @@ Poniższa tabela przedstawia czasy trwania sortowania poszczególnych algorytmó
 
        \begin{figure}[H]
               \centering
-              \begin{tikzpicture}[scale = 0.9]
+              \begin{tikzpicture}
                      \begin{axis}[
                      width={\textwidth},
                      height={0.4*\textheight},
@@ -527,13 +541,37 @@ Poniższa tabela przedstawia czasy trwania sortowania poszczególnych algorytmó
                      \label{fig: final}
               
        \end{figure}
+
+       \subsection{Średnia arytmetyczna i mediana}
+       Dla każdego zestawu danych została obliczona średnia arytmetyczna i mediana rankingu. Zostały one zaprezentowane w poniższej 
+       tabeli.
+
+       \begin{table}[H]
+              \centering
+              \caption{Zawierająca wartości średniej arytmetycznej i mediany dla poszczególnych zestawów danych}
+
+              \begin{tabular}{|c|c|c|}
+              \hline
+              ilość elementów & średnia arytmetyczna & mediana \\ \hline
+              10000           & 5.4603                    & 5       \\ \hline
+              100000          & 6.08993                    & 7       \\ \hline
+              500000          & 6.66572                    & 7       \\ \hline
+              962903          & 6.63661                    & 7       \\ \hline
+              \end{tabular}
+              \end{table}
+
        \subsection{Wnioski}
        \begin{itemize}
               \item najszybciej działającym algorytmem sortowania okazał się Quicksort (tab. \ref{tab: czasy}),
               \item najwolniej działającym algorytmem sortowania okazał się Introsort (tab. \ref{tab: czasy}),
-              \item Mergesort dla danych w ilości większej od ok.  $8 \cdot 10^5$ gwałtowanie zwalnia przez co dla dużej ilości danych okazuje się najwolniejszy, nie udało mi się ustalić tego przyczyny (Wykres \ref{fig: final}),
+              \item Mergesort dla danych w ilości większej od ok.  $9 \cdot 10^5$ gwałtowanie zwalnia przez co dla dużej ilości danych okazuje się najwolniejszy, nie udało mi się ustalić tego przyczyny (Wykres \ref{fig: final}),
               \item w przypadku algorytmów sortujących złożoności czasowe wyznaczone doświadczalnie nie są zgodne z teoretycznymi, aczkolwiek na tyle podobne,
               iż wyniki doświadczeń można uznać za satysfakcjonujące.
+              \item mimo, iż najszybciej działającym algorytmem jest Quicksort, może on dla niekorzystnego wyznaczenia pivota
+              okazać się algorytmem o złożoności kwadratowej (pkt. \ref{ch: quicksort}), w przeciwieństwie do algorytmów Introsort i Mergesort(pkt. \ref{ch: introsort},\ref{ch: mergesort}), które gwarantują taką 
+              samą złożoność nie zależnie od zestawu danych, lecz działają wolniej.
        \end{itemize}
 
+
+      
 \end{document}

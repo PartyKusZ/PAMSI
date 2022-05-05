@@ -24,12 +24,14 @@
 \BOOKMARK [2][-]{subsection.6.2}{Implementacja}{section.6}% 24
 \BOOKMARK [3][-]{subsubsection.6.2.1}{Podzia\233}{subsection.6.2}% 25
 \BOOKMARK [3][-]{subsubsection.6.2.2}{Sortowanie}{subsection.6.2}% 26
-\BOOKMARK [1][-]{section.7}{Dyskusja}{}% 27
-\BOOKMARK [2][-]{subsection.7.1}{Czasy trwania filtracji}{section.7}% 28
-\BOOKMARK [2][-]{subsection.7.2}{Sortowanie}{section.7}% 29
-\BOOKMARK [3][-]{subsubsection.7.2.1}{Quicksort}{subsection.7.2}% 30
-\BOOKMARK [3][-]{subsubsection.7.2.2}{Mergesort}{subsection.7.2}% 31
-\BOOKMARK [3][-]{subsubsection.7.2.3}{Introsort}{subsection.7.2}% 32
-\BOOKMARK [1][-]{section.8}{Podsumowanie}{}% 33
-\BOOKMARK [2][-]{subsection.8.1}{Czas trwania}{section.8}% 34
-\BOOKMARK [2][-]{subsection.8.2}{Wnioski}{section.8}% 35
+\BOOKMARK [2][-]{subsection.6.3}{Testy z\233ozonosci obliczeniowej}{section.6}% 27
+\BOOKMARK [1][-]{section.7}{Dyskusja}{}% 28
+\BOOKMARK [2][-]{subsection.7.1}{Czasy trwania filtracji}{section.7}% 29
+\BOOKMARK [2][-]{subsection.7.2}{Sortowanie}{section.7}% 30
+\BOOKMARK [3][-]{subsubsection.7.2.1}{Quicksort}{subsection.7.2}% 31
+\BOOKMARK [3][-]{subsubsection.7.2.2}{Mergesort}{subsection.7.2}% 32
+\BOOKMARK [3][-]{subsubsection.7.2.3}{Introsort}{subsection.7.2}% 33
+\BOOKMARK [1][-]{section.8}{Podsumowanie}{}% 34
+\BOOKMARK [2][-]{subsection.8.1}{Czas trwania}{section.8}% 35
+\BOOKMARK [2][-]{subsection.8.2}{Srednia arytmetyczna i mediana}{section.8}% 36
+\BOOKMARK [2][-]{subsection.8.3}{Wnioski}{section.8}% 37
