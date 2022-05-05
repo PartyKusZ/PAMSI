@@ -30,37 +30,37 @@ void quick_sort(double *tab, int left, int right){
 
 
 void merge(double array [], int const left , int const mid, int const right ){
-    int const subArrayOne = mid - left + 1;
-    int const subArrayTwo = right - mid;
-    double *leftArray = new double[subArrayOne];
-    double *rightArray = new double[subArrayTwo];
-    for ( int i = 0; i < subArrayOne; i++)
-        leftArray [ i ] = array[ left + i ];
-    for ( int j = 0; j < subArrayTwo; j++)
-         rightArray[ j ] = array[mid + 1 + j];
-    int indexOfSubArrayOne = 0;
-    int indexOfSubArrayTwo = 0;
-    int indexOfMergedArray = left;
-    while (indexOfSubArrayOne < subArrayOne && indexOfSubArrayTwo < subArrayTwo) {
-        if (leftArray [indexOfSubArrayOne] <= rightArray[indexOfSubArrayTwo]) {
-            array[indexOfMergedArray] = leftArray[indexOfSubArrayOne];
-            indexOfSubArrayOne++;
+    int const sub_array_one = mid - left + 1;
+    int const sub_array_two = right - mid;
+    double *left_array = new double[sub_array_one];
+    double *right_array = new double[sub_array_two];
+    for ( int i = 0; i < sub_array_one; i++)
+        left_array [ i ] = array[ left + i ];
+    for ( int j = 0; j < sub_array_two; j++)
+         right_array[ j ] = array[mid + 1 + j];
+    int index_of_sub_array_one = 0;
+    int index_of_sub_array_two = 0;
+    int index_of_merged_array = left;
+    while (index_of_sub_array_one < sub_array_one && index_of_sub_array_two < sub_array_two) {
+        if (left_array [index_of_sub_array_one] <= right_array[index_of_sub_array_two]) {
+            array[index_of_merged_array] = left_array[index_of_sub_array_one];
+            index_of_sub_array_one++;
         }
         else {
-            array[indexOfMergedArray] = rightArray[indexOfSubArrayTwo];
-            indexOfSubArrayTwo++;
+            array[index_of_merged_array] = right_array[index_of_sub_array_two];
+            index_of_sub_array_two++;
         }
-        indexOfMergedArray++;
+        index_of_merged_array++;
     }
-     while (indexOfSubArrayOne < subArrayOne) {
-        array[indexOfMergedArray] = leftArray[indexOfSubArrayOne];
-        indexOfSubArrayOne++;
-        indexOfMergedArray++;
+     while (index_of_sub_array_one < sub_array_one) {
+        array[index_of_merged_array] = left_array[index_of_sub_array_one];
+        index_of_sub_array_one++;
+        index_of_merged_array++;
     }
-    while (indexOfSubArrayTwo < subArrayTwo) {
-        array[indexOfMergedArray] = rightArray[indexOfSubArrayTwo];
-        indexOfSubArrayTwo++;
-        indexOfMergedArray++;
+    while (index_of_sub_array_two < sub_array_two) {
+        array[index_of_merged_array] = right_array[index_of_sub_array_two];
+        index_of_sub_array_two++;
+        index_of_merged_array++;
     }
  }
 
@@ -84,11 +84,11 @@ void bucket_sort(double *tab, int n){
 
 
  std :: vector<double> *b = new std :: vector<double>[n +1 ]; 
-   for(int i = 0; i<n; i++)  {          //put elements into different buckets
+   for(int i = 0; i<n; i++)  {          
       b[int(tab[i])].push_back(tab[i]);
    }
    for(int i = 0; i<n; i++) {
-      quick_sort(b[i].data(),0,b[i].size() - 1);       //sort individual vectors
+      quick_sort(b[i].data(),0,b[i].size() - 1);       
    }
    int index = 0;
    for(int i = 0; i<n; i++) {
@@ -97,72 +97,6 @@ void bucket_sort(double *tab, int n){
          b[i].erase(b[i].begin());
       }
    }
-
-
-
-
-
-
-
-
-//    std :: vector<double> *b = new std :: vector<double>[11]; 
- 
-//     for (int i = 0; i < n; i++) {
-//         b[static_cast<int>(tab[i])].push_back(tab[i]);
-//     }
- 
-//     for (int i = 0; i < n; i++){
-//         if(b[i].size() > 1){
-//             quick_sort(b[i].data(),0,b[i].size() - 1);
-//             //std :: sort(b[i].begin(),b[i].begin() + i );
-//         }
-//     }
-//     int index = 0;
-//     for (int i = 0; i < n; i++){
-//         for (int j = 0; j < b[i].size(); j++){
-//             tab[index++] = b[i][j];
-            
-//         }
-//     }
-//     // std :: vector<double> buckets[static_cast<int>(max_value + 1.0)];
-    // for(int i = 0; i < how_many; ++i){
-    //     buckets[static_cast<int>(tab[i])].push_back(tab[i]);
-    // }
-    // for(int i = 0; i < max_value + 1; ++i){
-    //     if(buckets[i].size() > 1){
-    //         quick_sort(buckets[i].data(),0,buckets[i].size() - 1);
-
-    //     }
-    // }
-    // for(int i = 0, g = 0; i < max_value + 1.0; ++i){
-    //     for(int j = 0; j < buckets[i].size(); ++j){
-    //          tab[g++] = buckets[i][j];
-    //    std :: cout << tab[g] << '\n';
-
-    //     }
-
-    // }
-    // double p = max_value / how_many;
-    // //std :: vector<double> buckets[how_many+1];
-    // std :: vector<double> *buckets = new std :: vector<double>[how_many + 1];
-    // for(int i = 0; i < how_many; ++i){
-    //     buckets[static_cast<int>(tab[i] / p)].push_back(tab[i]);
-    //    // std :: cout << "pierwsza pętla ok" << std :: endl;
-    // }
-    // for(int i = 0; i < how_many; ++i){
-    //     if(buckets[i].size() > 1){
-    //         quick_sort(buckets[i].data(),0,buckets[i].size() - 1);
-    //         //std :: cout << "druga pętla ok" << std :: endl;
-
-    //     }
-    // }
-    // for(int i = 0, g = 0; i < how_many + 1; ++i){
-    //     for(int j = 0; j < buckets[i].size(); ++j){
-    //         tab[g++] = buckets[i][j];
-    //     //std :: cout << "trzecia pętla ok" << std :: endl;
-
-    //     }
-    // }
 
 }
 
@@ -196,7 +130,7 @@ void heap_sort(double arr[], int n){
  
     
     for (int i = n - 1; i > 0; i--) {
-        // Move current root to end
+       
         std :: swap(arr[0], arr[i]);
  
        

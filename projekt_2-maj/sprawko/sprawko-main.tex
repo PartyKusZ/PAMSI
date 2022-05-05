@@ -25,6 +25,13 @@
 \usepackage{pgfplots}
 \usepackage{fancyhdr}
 
+\pgfplotsset{%
+compat=newest,%
+/pgf/number format/use comma,%
+/pgf/number format/1000 sep={\,},%
+/pgf/number format/min exponent for 1000 sep=4,}
+
+
 \definecolor{clr-background}{RGB}{255,255,255}
 \definecolor{clr-text}{RGB}{0,0,0}
 \definecolor{clr-string}{RGB}{163,21,21}
@@ -68,6 +75,7 @@
 \fancyhf{}
 \rhead{\textit{Sortowanie}}
 \lhead{\textit{Jakub Kusz}}
+\cfoot{ \thepage}
 \begin{document}
 
 \input{strona_tytulowa.tex}
@@ -95,12 +103,14 @@ Plik zawiera tylko tytuł oraz ranking. Proszę o wykonanie następujących zada
 Zostały przeze mnie wybrane 4 algorytmy sortujące, które poddałem testom:
 
 \begin{enumerate}
-    \item \textbf{quicksort},
-    \item \textbf{mergesort},
-    \item \textbf{bucketsort},
-    \item \textbf{introsort}.
+    \item \textbf{Quicksort},
+    \item \textbf{Mergesort},
+    \item \textbf{Bucketsort},
+    \item \textbf{Introsort}.
 \end{enumerate}
-\section{Filtrowanie danych}
+
+Kod źródłowy programu znajduje się \href{https://github.com/PartyKusZ/PAMSI/tree/main/projekt_2-maj/src}{\textbf{Pod tym adresem}}
+\section{Filtrowanie danych}\label{ch: filtorwanie}
 Pierwszym krokiem było przefiltrowanie danych z pliku .csv zawierającego tytułu i rankingi. Należało usunąć wpisy, 
 które nie zawierały rankingu. Filtrowanie odbywało się jednocześnie z pobieraniem poszczególnych linii z pliku .csv - jeśli dana 
 linia nie zawierała pola z rankingiem to nie zostawała zapisana do struktury danych. 
@@ -108,15 +118,15 @@ linia nie zawierała pola z rankingiem to nie zostawała zapisana do struktury d
 Przewiduje sie złożoność obliczeniową liniową. Złożoność dodania na koniec wykorzystanego w zadaniu kontenera std :: vector 
 jest stała w czasie, sprawdzenie czy dana linia zawiera pole z rankingiem również, wiec czas przefiltrowania danych zależny jest 
 tylko od ich ilości, więc powinien być liniowy. W notacji dużego O:
+
 {\Large \begin{equation*}
-       O(n) = n
+       O(n)
 \end{equation*}}
 \subsection{Wyznaczona złożoność obliczeniowa}
 W celu wyznaczenia złożoności obliczeniowej został przeprowadzony test, polegający na mierzeniu czasu wczytywania 
 liczby kolejnych krotności 1000 linii z pliku .csv.
 \input{wykres_filtrowanie.tex}
-Tak jak widać na Rys. \ref{fig: filtrowanie} złożoność jest liniowa, wiec jednocześnie zgodna z przewidywaną.
-\section{Quicksort}
+\section{Quicksort}\label{ch: quicksort}
 Algorytm wykorzystuje technikę "dziel i zwyciężaj". Według ustalonego schematu wybierany jest jeden element w 
 sortowanej tablicy, który będziemy nazywać pivot. Pivot może być elementem środkowym, pierwszym, ostatnim, losowym 
 lub wybranym według jakiegoś innego schematu dostosowanego do zbioru danych. Następnie ustawiamy elementy nie 
@@ -125,18 +135,18 @@ tablicy (niekoniecznie równe), gdzie w pierwszej części znajdują się elemen
 Następnie każdą z tych podtablic sortujemy osobno według tego samego schematu. 
 \subsection{Złożoność obliczenia}
 W zależności od rozkładu danych i elementu pivot  określa się następujące złożoności obliczeniowe:
-\subsubsection{Przypadek optymistyczny}
+\subsubsection{Przypadek optymistyczny}\label{ch: q optymistyczny}
 W przypadku optymistycznym, jeśli mamy szczęście za każdym razem wybrać medianę z sortowanego fragmentu tablicy, to liczba porównań niezbędnych do uporządkowania n-elementowej tablicy opisana jest rekurencyjnym wzorem:
 
 { \Large \begin{equation*}
-       O(n) = n \cdot log_2 n 
+       O(n \cdot log_2 n)  
 \end{equation*}}
-\subsubsection{Przypadek przeciętny}
+\subsubsection{Przypadek przeciętny}\label{ch: q przecietny}
 W przypadku przeciętnym, to jest dla równomiernego rozkładu prawdopodobieństwa wyboru elementu z tablicy: 
 
 
 { \Large \begin{equation*}
-       O(n) = 1,39 \cdot n \cdot log_2 n 
+       O(1,39 \cdot n \cdot log_2 n )  
 \end{equation*}}
 
 \subsubsection{Przypadek pesymistyczny}
@@ -144,13 +154,13 @@ W przypadku pesymistycznym, jeśli zawsze wybierzemy element najmniejszy (albo n
 
 
 {\Large \begin{equation*}
-       O(n) = \frac{n^2}{2}
+       O\left({n^2}\right)  
 \end{equation*}}
 
 \subsection{Implementacja}
 Poniższy listing przedstawia rekurencyjną implementację algorytmu Quicksort. 
 
-\begin{lstlisting}[language=C++]
+{\small \begin{lstlisting}[language=C++]
 void quick_sort(double *tab, int left, int right){
 	if(right <= left) 
               return;
@@ -177,6 +187,7 @@ void quick_sort(double *tab, int left, int right){
 	    quick_sort(tab, i, right);
 }
 \end{lstlisting}
+}
 
 \subsection{Testy złożoności obliczeniowej}
 W celu eksperymentalnego wyznaczenia złożoności obliczeniowej algorytmu Quicksort zostały przeprowadzone testy szybkości dla 
@@ -194,13 +205,335 @@ Na przykład dla \textbf{10000} poszczególne paczki to 100, 200, 300... a dla \
 
 \begin{figure}[H]
        \centering
-       \subfloat[dsda]{\input{wykres_qs_10'000.tex}}
+       \subfloat[ilość danych: 10000]{\input{wykres_qs_10'000.tex}}
        \quad
-       \subfloat[dsda]{\input{wykres_qs_100'000.tex}}
-       \quad
-       \subfloat[dsda]{\input{wykres_qs_500'000.tex}}
-       \quad
-       \subfloat[dsda]{\input{wykres_qs_max.tex}}
-
+       \subfloat[ilość danych: 100000]{\input{wykres_qs_100'000.tex}}
 \end{figure}
+\begin{figure}[H]\ContinuedFloat
+       
+       \subfloat[ilość danych: 500000]{\input{wykres_qs_500'000.tex}}
+       \quad
+       \subfloat[ilość danych: 962903]{\input{wykres_qs_max.tex}}
+       \renewcommand{\figurename}{Wykres.}
+
+       \caption{Wykresy przedstawiające czas sortowania określonej ilości danych}
+       \label{fig: qsort}
+       \phantomcaption
+\end{figure}
+
+Na Rys. \ref{fig: qsort} można zauważyć, iż złożoność obliczeniowa prezentuje się jako f. liniowa,
+co nie jest dużym zaskoczeniem, ponieważ złożoność zarówno optymistyczna(\ref{ch: q optymistyczny}) jak i przeciętna(\ref{ch: q przecietny}) w dużej dziedzinie kształtem 
+również przypominają f. linowe, aczkolwiek nimi nie są.
+
+\section{Mergesort}\label{ch: mergesort}
+
+
+
+
+Ideą działania algorytmu jest dzielenie zbioru danych na mniejsze zbiory, aż do uzyskania n zbiorów jednoelementowych, które same
+z siebie są posortowane, następnie zbiory te są łączone w coraz większe zbiory posortowane, aż do
+uzyskania jednego, posortowanego zbioru n-elementowego. Etap dzielenia nie jest skomplikowany,
+dzielenie następuje bez sprawdzania jakichkolwiek warunków. Z kolei łączenie zbiorów
+posortowanych wymaga odpowiedniego wybierania poszczególnych elementów z łączonych zbiorów z
+uwzględnieniem faktu, że wielkość zbioru nie musi być równa (parzysta i nieparzysta ilość elementów),
+oraz tego, iż wybieranie elementów z poszczególnych zbiorów nie musi następować naprzemiennie,
+przez co jeden zbiór może osiągąć swój koniec wcześniej niż drugi. Robi sie to w następujący sposób.
+Kopiujemy zawartość zbioru głównego do struktury pomocniczej. Następnie, operując wyłącznie
+na kopii, ustawiamy wskaźniki na początki kolejnych zbiorów i porównujemy wskazywane wartości.
+Mniejszą wartość wpisujemy do zbioru głównego i przesuwamy odpowiedni wskaźnik o 1 i czynności
+powtarzamy, aż do momentu, gdy jeden ze wskaźników osiągnie koniec zbioru. Wówczam mamy do
+rozpatrzenia dwa przypadki, gdy zbiór 1 osiągnął koniec i gdy zbiór 2 osiągnął koniec. W przypadku
+pierwszym nie będzie problemu, elementy w zbiorze głównym są już posortowane i ułożone na właściwych miejscach. W przypadku drugim trzeba skopiować pozostałe elementy zbioru pierwszego
+pokolei na koniec. Po zakończeniu wszystkich operacji otrzmujemy posortowany zbiór główny.
+\newpage
+\subsection{Złożoność obliczeniowa}
+Złożoność obliczeniowa jest niezależna od zestawu danych:
+
+{ \Large \begin{equation*}
+       O(n \cdot log_2 n)  
+\end{equation*}}
+\subsection{Implementacja}
+Poniższe listingi przedstawiają funkcje funkcję scalającą i funkcje sortującą:
+\subsubsection{Scalanie}
+{\small
+\begin{lstlisting}[language=C++]
+void merge(double array [], int const left , int const mid, int const right ){
+    int const sub_array_one = mid - left + 1;
+    int const sub_array_two = right - mid;
+    double *left_array = new double[sub_array_one];
+    double *right_array = new double[sub_array_two];
+    for ( int i = 0; i < sub_array_one; i++)
+        left_array [ i ] = array[ left + i ];
+    for ( int j = 0; j < sub_array_two; j++)
+         right_array[ j ] = array[mid + 1 + j];
+    int index_of_sub_array_one = 0;
+    int index_of_sub_array_two = 0;
+    int index_of_merged_array = left;
+    while (index_of_sub_array_one < sub_array_one && index_of_sub_array_two < sub_array_two) {
+        if (left_array [index_of_sub_array_one] <= right_array[index_of_sub_array_two]) {
+            array[index_of_merged_array] = left_array[index_of_sub_array_one];
+            index_of_sub_array_one++;
+        }
+        else {
+            array[index_of_merged_array] = right_array[index_of_sub_array_two];
+            index_of_sub_array_two++;
+        }
+        index_of_merged_array++;
+    }
+     while (index_of_sub_array_one < sub_array_one) {
+        array[index_of_merged_array] = left_array[index_of_sub_array_one];
+        index_of_sub_array_one++;
+        index_of_merged_array++;
+    }
+    while (index_of_sub_array_two < sub_array_two) {
+        array[index_of_merged_array] = right_array[index_of_sub_array_two];
+        index_of_sub_array_two++;
+        index_of_merged_array++;
+    }
+ }
+       \end{lstlisting}
+
+}
+
+\subsubsection{Sortowanie}
+
+{\small
+\begin{lstlisting}[language=C++]
+
+       void merge_sort(double *arr, int left , int right ){
+              if ( left >= right)
+                  return;
+          
+              auto mid = left + (right - left ) / 2;
+              merge_sort(arr, left , mid);
+              merge_sort(arr, mid + 1, right);
+              merge(arr, left , mid, right );
+           }
+       \end{lstlisting}
+
+}
+
+\subsection{Testy złożoności obliczeniowej}
+W celu eksperymentalnego wyznaczenia złożoności obliczeniowej algorytmu Mergesort zostały przeprowadzone testy szybkości dla 
+czterech różniących się ilością danych pakietów: 
+\begin{itemize}
+       \item \textbf{10000},
+       \item  \textbf{100000},
+       \item \textbf{500000},
+       \item \textbf{962903}.
+\end{itemize}
+Dla każdego zestawu danych przeprowadzono 100 pomiarów czasu. Najmniejszą paczką dla poszczególnej ilości danych jest 
+$\frac{x}{100}$ gdzie x to ilość danych. Każdy kolejny pomiar pomiar wykonywano dla $n \cdot \frac{x}{100}$ ilości w paczce,
+gdzie $n \in 1,2,3 ... 100$.
+Na przykład dla \textbf{10000} poszczególne paczki to 100, 200, 300... a dla \textbf{500000} to 5000, 10000, 15000... .
+
+\begin{figure}[H]
+       \centering
+       \subfloat[ilość danych: 10000]{\input{wykres_ms_10'000.tex}}
+       \quad
+       \subfloat[ilość danych: 100000]{\input{wykres_ms_100'000.tex}}
+\end{figure}
+\begin{figure}[H]\ContinuedFloat
+       
+       \subfloat[ilość danych: 500000]{\input{wykres_ms_500'000.tex}}
+       \quad
+       \subfloat[ilość danych: 962903]{\input{wykres_ms_max.tex}}
+       \renewcommand{\figurename}{Wykres.}
+       \caption{Wykresy przedstawiające czas sortowania określonej ilości danych}
+       \label{fig: mergesort}
+       \phantomcaption
+\end{figure}
+
+
+\section{Introsort}\label{ch: introsort}
+Sortowanie introspektywne to odmiana sortowania hybrydowego, w której wyeliminowany został
+problem złożoności $O(n^2)$ występującej w najgorszym przypadku algorytmu sortowania szybkiego.
+Algorytm łączy w sobie 3 rodzaje sortowań, które wywoływane są dla różnych przypadków.
+Używa on sortowania przez wstawianie (insertion sort), sortowania przez kopcowanie (heap sort)
+i sortowania szybkiego (quick sort).
+\subsection{Złożoność obliczeniowa}
+\subsubsection{Przypadek optymistyzcny}
+
+{ \Large \begin{equation*}
+       O(n \cdot \log_2 n)  
+\end{equation*}}
+\subsubsection{Przypadek przeciętny}
+
+{ \Large \begin{equation*}
+       O( 1.39 \cdot n \cdot log_2 n)   
+\end{equation*}}
+
+\subsubsection{Przypadek pesymistyczny}
+
+{ \Large \begin{equation*}
+       O(2 \cdot n \cdot log_2 n)   
+\end{equation*}}
+
+\subsection{Implementacja}
+
+Poniższe listingi przedstawiają poszczególne funkcje konieczne do wykonania Introsort
+
+\subsubsection{Podział}
+
+{\small
+\begin{lstlisting}[language=C++]
+       int partition (double *data, int left , int right ) {
+              int pivot = data[right ];
+              int temp;
+              int i = left ;
+              for ( int j = left ; j < right; ++j){
+                  if (data[j ] <= pivot){
+                      temp = data[j];
+                      data[j ] = data[i ];
+                      data[i ] = temp;
+                      i++;
+                  }
+              }
+          
+               data[right ] = data[i ];
+              data[i ] = pivot;
+          
+              return i;
+          }
+       \end{lstlisting}
+
+}
+
+\subsubsection{Sortowanie}
+
+{\small
+\begin{lstlisting}[language=C++]
+       void intro_sort(double *arr , int size ) {
+              int partitionSize = partition(arr , 0, size - 1);
+                  if ( partitionSize < 16){
+                      insertion_sort(arr , size );
+                  }
+                  else if ( partitionSize >(2 * std :: log( size ))){
+                      heap_sort(arr, size );
+                  }
+                  else{
+                      quick_sort(arr, 0, size -1);
+                  }
+          }
+       \end{lstlisting}
+
+}
+
+
+
+
+\begin{figure}[H]
+       \centering
+       \subfloat[ilość danych: 10000]{\input{wykres_is_10'000.tex}}
+       \quad
+       \subfloat[ilość danych: 100000]{\input{wykres_is_100'000.tex}}
+\end{figure}
+\begin{figure}[H]\ContinuedFloat
+       
+       \subfloat[ilość danych: 500000]{\input{wykres_is_500'000.tex}}
+       \quad
+       \subfloat[ilość danych: 962903]{\input{wykres_is_max.tex}}
+       \renewcommand{\figurename}{Wykres.}
+       \caption{Wykresy przedstawiające czas sortowania określonej ilości danych}
+       \label{fig: introsort}
+       \phantomcaption
+\end{figure}
+
+\section{Dyskusja}
+
+\subsection{Czasy trwania filtracji}
+
+Wyznaczona doświadczalnie złożoność obliczeniowa filtrowania danych (Wykres \ref{fig: filtrowanie}) jest 
+zgodna ze złożonością prognozowaną (pkt. \ref{ch: filtorwanie}).\\
+
+Filtrowanie danych trwało $\sim $: \textbf{311 ms}
+\subsection{Sortowanie}
+\subsubsection{Quicksort}
+Analizując Wykres \ref{fig: qsort} można dojść do wniosku, iż złożoność obliczeniowa algorytmu Quicksort jest
+liniowa, co nie zgadza się z optymistyczną przeciętną jak i pesymistyczną złożonością. (pkt. \ref{ch: quicksort}). Można 
+jednak taki rezultat uznać za właściwy, ponieważ przebieg funkcji $n \cdot log_2 n$ jest kształtem zbliżony do funkcji 
+liniowej.\\
+
+Sortowanie największego zestawu danych (962903 elementów) trwało $\sim$: \textbf{97,871 ms}
+
+\subsubsection{Mergesort}
+
+
+Analizując Wykres \ref{fig: mergesort} można dojść do wniosku, iż złożoność obliczeniowa algorytmu Mergesort jest
+liniowa, co nie zgadza się z teoretyczną złożonością. (pkt. \ref{ch: mergesort}). Można 
+jednak taki rezultat uznać za właściwy, ponieważ przebieg funkcji $n \cdot log_2 n$ jest kształtem zbliżony do funkcji 
+liniowej. Dla największego zestawu powyżej $8 \cdot 10^5$ ilości danych czas wykonywania sortowania gwałtownie wzrasta,
+przez co finalny czas sortowania znacznie się wydłużył. \\
+
+Sortowanie największego zestawu danych (962903 elementów) trwało $\sim$: \textbf{496,839 ms}
+
+\subsubsection{Introsort}
+Analizując Wykres \ref{fig: introsort} można dojść do wniosku, iż złożoność obliczeniowa algorytmu Introsort jest
+liniowa, co nie zgadza się z optymistyczną, przeciętną jak i pesymistyczną złożonością. (pkt. \ref{ch: introsort}). Można 
+jednak taki rezultat uznać za właściwy, ponieważ przebieg funkcji $n \cdot log_2 n$ jest kształtem zbliżony do funkcji 
+liniowej.\\
+
+Sortowanie największego zestawu danych (962903 elementów) trwało $\sim$: \textbf{233,121 ms}
+
+\section{Podsumowanie}
+\subsection{Czas trwania}
+Poniższa tabela przedstawia czasy trwania sortowania poszczególnych algorytmów:
+
+\begin{table}[H]
+       \centering
+       \caption{Zawierająca czasy trwania sortowania poszczególnych algorytmów}
+       \begin{tabular}{|c|c|}
+       \hline
+       algorytm  & czas trwania {[}ms{]} \\ \hline
+       Quciksort & 97,871                \\ \hline
+       Mergesort & 496,839               \\ \hline
+       Introsort & 233,121               \\ \hline
+       filtrowanie &    311             \\ \hline
+       \end{tabular}
+       \label{tab: czasy}
+       \end{table}
+
+       \begin{figure}[H]
+              \centering
+              \begin{tikzpicture}[scale = 0.9]
+                     \begin{axis}[
+                     width={\textwidth},
+                     height={0.4*\textheight},
+                     title={Czas sortowania maksymalnej ilości danych dla poszczególnycyh algorytmów},
+                     title style={yshift=0.3cm},
+                     ylabel={czas [ms]},
+                     xlabel={ilość elementów},
+                     xmin=0,xmax=1000000 ,
+                     ymin=0,ymax=510000,
+                     legend pos=north west,
+                     ymajorgrids=true,xmajorgrids=true,grid style=dashed
+                     ]
+                 
+                   
+                     \addplot[color=red, mark=*,mark size=0.04cm,style=dashed] table {dane/merge962'903.txt};
+                     \addlegendentry{Mergesort}
+                     \addplot[color=blue, mark=*,mark size=0.04cm,style=dashed] table {dane/qsort692'903.txt};
+                     \addlegendentry{Quicksort}
+                     \addplot[color=green, mark=*,mark size=0.04cm,style=dashed] table {dane/intro962'903.txt};
+                     \addlegendentry{Introsort}
+
+                     
+                   
+                     \end{axis}
+                     \end{tikzpicture}
+       \renewcommand{\figurename}{Wykres.}
+
+                     \caption{Przedstawiający czas sortowania maksymalnej ilości danych dla poszczególnycyh algorytmów }
+                     \label{fig: final}
+              
+       \end{figure}
+       \subsection{Wnioski}
+       \begin{itemize}
+              \item najszybciej działającym algorytmem sortowania okazał się Quicksort (tab. \ref{tab: czasy}),
+              \item najwolniej działającym algorytmem sortowania okazał się Introsort (tab. \ref{tab: czasy}),
+              \item Mergesort dla danych w ilości większej od ok.  $8 \cdot 10^5$ gwałtowanie zwalnia przez co dla dużej ilości danych okazuje się najwolniejszy, nie udało mi się ustalić tego przyczyny (Wykres \ref{fig: final}),
+              \item w przypadku algorytmów sortujących złożoności czasowe wyznaczone doświadczalnie nie są zgodne z teoretycznymi, aczkolwiek na tyle podobne,
+              iż wyniki doświadczeń można uznać za satysfakcjonujące.
+       \end{itemize}
+
 \end{document}

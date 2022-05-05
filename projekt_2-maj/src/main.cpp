@@ -45,10 +45,10 @@ int main(){
     for(int i = 0; i < SIZE_MAXIMUM; ++i){
         tabmax[i] = movie_rating_list[i].rating;
     }
-    test_qsort_10000(tab10000);
-    test_qsort_100000(tab100000);
-    test_qsort_500000(tab500000);
-    test_qsort_962903(tabmax);
+    //test_qsort_10000(tab10000);
+    //test_qsort_100000(tab100000);
+    //test_qsort_500000(tab500000);
+    //test_qsort_962903(tabmax);
     //test_merge_sort_10000(tab10000);
     //test_merge_sort_100000(tab100000);
     //test_merge_sort_500000(tab500000);
@@ -57,10 +57,10 @@ int main(){
     //test_bucket_sort_100000(tab100000);
     //test_bucket_sort_500000(tab500000);
     //test_bucket_sort_962903(tabmax);
-    //test_intro_sort_10000(tab10000);
-    //test_intro_sort_100000(tab100000);
-    //test_intro_sort_500000(tab500000);
-    //test_intro_sort_962903(tabmax);
+    test_intro_sort_10000(tab10000);
+    test_intro_sort_100000(tab100000);
+    test_intro_sort_500000(tab500000);
+    test_intro_sort_962903(tabmax);
 
     // bucket_sort(tab500000,20);
     // for (int i = 0; i < 20; i++)

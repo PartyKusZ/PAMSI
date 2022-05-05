@@ -5,14 +5,15 @@
         title style={yshift=0.3cm},
         ylabel={czas [ms]},
         xlabel={ilość elementów},
-        xmin=0,xmax=500000 ,
-        ymin=0,ymax=50000,
+        xmin=0,xmax=99100 ,
+        ymin=0,ymax=80000,
         ymajorgrids=true,xmajorgrids=true,grid style=dashed
         ]
     
       
-        \addplot[color=red, mark=*,mark size=0.04cm,style=dashed] table {dane/qsort500'000.txt};
-       
+        \addplot[color=red, mark=*,mark size=0.04cm,style=dashed] table {dane/bucket100'000.txt};
+    
+      
         \end{axis}
         \end{tikzpicture}
         

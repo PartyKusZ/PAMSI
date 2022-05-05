@@ -1,0 +1,17 @@
+\begin{tikzpicture}[scale = 0.9]
+    \begin{axis}[
+    title={Czas sortowania w zależności od ilości dnaych},
+    title style={yshift=0.3cm},
+    ylabel={czas [ms]},
+    xlabel={ilość elementów},
+    xmin=0,xmax=99100 ,
+    ymin=0,ymax=21700,
+    ymajorgrids=true,xmajorgrids=true,grid style=dashed
+    ]
+
+  
+    \addplot[color=red, mark=*,mark size=0.04cm,style=dashed] table {dane/intro100'000.txt};
+   
+    \end{axis}
+    \end{tikzpicture}
+    

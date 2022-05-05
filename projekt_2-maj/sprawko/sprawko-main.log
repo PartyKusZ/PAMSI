@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.1.6)  4 MAY 2022 02:28
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.1.6)  5 MAY 2022 17:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -716,22 +716,22 @@ File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
 ) (/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/sprawko/sprawko-main.aux)
 \openout1 = `sprawko-main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 71.
-LaTeX Font Info:    ... okay on input line 71.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -821,7 +821,7 @@ LaTeX Info: Redefining \selectfont on input line 126.
 \JustifyingParindent=\skip89
 )
 \AtBeginShipoutBox=\box116
-Package hyperref Info: Link coloring OFF on input line 71.
+Package hyperref Info: Link coloring OFF on input line 79.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
  (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
@@ -831,21 +831,19 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count337
 )
-LaTeX Info: Redefining \ref on input line 71.
-LaTeX Info: Redefining \pageref on input line 71.
-LaTeX Info: Redefining \nameref on input line 71.
+LaTeX Info: Redefining \ref on input line 79.
+LaTeX Info: Redefining \pageref on input line 79.
+LaTeX Info: Redefining \nameref on input line 79.
  (/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/sprawko/sprawko-main.out) (/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/sprawko/sprawko-main.out)
 \@outlinefile=\write4
 \openout4 = `sprawko-main.out'.
 
 \c@lstlisting=\count338
  ABD: EveryShipout initializing macros
-
-Package pgfplots Warning: running in backwards compatibility mode (unsuitable tick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into your preamble.
- on input line 71.
+Package pgfplots notification 'compat/show suggested version=true': document has been generated with the most recent feature set (\pgfplotsset{compat=1.16}).
 
 (/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/sprawko/strona_tytulowa.tex
-<//home/kubus/Obrazy/logo-Pwr.png, id=55, 540.0978pt x 135.8676pt>
+<//home/kubus/Obrazy/logo-Pwr.png, id=147, 540.0978pt x 135.8676pt>
 File: //home/kubus/Obrazy/logo-Pwr.png Graphic file (type png)
 <use //home/kubus/Obrazy/logo-Pwr.png>
 Package pdftex.def Info: //home/kubus/Obrazy/logo-Pwr.png  used on input line 4.
@@ -867,7 +865,7 @@ This may cause the page layout to be inconsistent, however.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.76 \newpage
+l.84 \newpage
               [1] [2] (/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/sprawko/wykres_filtrowanie.tex
 PGFPlots: reading {dane/filtrowanie.txt}
 ) [3] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -885,28 +883,72 @@ PGFPlots: reading {dane/qsort500'000.txt}
 ) (/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/sprawko/wykres_qs_max.tex
 PGFPlots: reading {dane/qsort692'903.txt}
 ) [5] [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 206.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 206.
+Overfull \hbox (32.85588pt too wide) in paragraph at lines 272--273
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[7] (/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/sprawko/wykres_ms_10'000.tex
+PGFPlots: reading {dane/merge10'000.txt}
+) (/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/sprawko/wykres_ms_100'000.tex
+PGFPlots: reading {dane/merge100'000.txt}
+) (/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/sprawko/wykres_ms_500'000.tex
+PGFPlots: reading {dane/merge500'000.txt}
+) (/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/sprawko/wykres_ms_max.tex
+PGFPlots: reading {dane/merge962'903.txt}
+) [8] [9] (/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/sprawko/wykres_is_10'000.tex
+PGFPlots: reading {dane/intro10'000.txt}
+) (/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/sprawko/wykres_is_100'000.tex
+PGFPlots: reading {dane/intro100'000.txt}
+) (/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/sprawko/wykres_is_500'000.tex
+PGFPlots: reading {dane/intro500'000.txt}
+) (/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/sprawko/wykres_is_max.tex
+PGFPlots: reading {dane/intro962'903.txt}
+) [10]
+Underfull \hbox (badness 10000) in paragraph at lines 446--448
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 452--456
+
+ []
+
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 462--467
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 471--475
+
+ []
+
+PGFPlots: reading {dane/merge962'903.txt}
+PGFPlots: reading {dane/qsort692'903.txt}
+PGFPlots: reading {dane/intro962'903.txt}
+[12] [13]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 539.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 539.
  (/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/sprawko/sprawko-main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 206.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 206.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 539.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 539.
 Package rerunfilecheck Info: File `sprawko-main.out' has not changed.
-(rerunfilecheck)             Checksum: FE56A00EB48D2786973A2FE57FD67243;833.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 206.
+(rerunfilecheck)             Checksum: B9B6B0C719600612709F481D4AE3FC1D;2357.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 539.
  ) 
 Here is how much of TeX's memory you used:
- 31769 strings out of 481239
- 730043 string characters out of 5920378
- 1296592 words of memory out of 5100000
- 46379 multiletter control sequences out of 15000+600000
- 547063 words of font info for 54 fonts, out of 8000000 for 9000
+ 32131 strings out of 481239
+ 736918 string characters out of 5920378
+ 1322330 words of memory out of 5100000
+ 46572 multiletter control sequences out of 15000+600000
+ 549313 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,13n,98p,781b,2050s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm3583.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1728.pfb>
-Output written on /home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/sprawko/sprawko-main.pdf (7 pages, 321903 bytes).
+ 79i,19n,136p,781b,2252s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm3583.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1728.pfb>
+Output written on /home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/sprawko/sprawko-main.pdf (14 pages, 495777 bytes).
 PDF statistics:
- 235 PDF objects out of 1000 (max. 8388607)
- 204 compressed objects within 3 object streams
- 60 named destinations out of 1000 (max. 500000)
- 114 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 528 PDF objects out of 1000 (max. 8388607)
+ 486 compressed objects within 5 object streams
+ 187 named destinations out of 1000 (max. 500000)
+ 298 words of extra memory for PDF output out of 10000 (max. 10000000)
 
