@@ -310,3 +310,20 @@ void test_intro_sort_962903(double *tab){
     }    
 }
 
+void test_std_sort_962903(double *tab){
+    std :: fstream file;
+    file.open("../sprawko/dane/stdsort962'903.txt", std :: ios :: out);
+    std::random_device rd;
+    std::mt19937 g(rd());
+    for(int i = 100; i <= SIZE_MAXIMUM - 3; i+=9629){
+        auto start = std::chrono::high_resolution_clock::now();
+        std :: sort(tab,tab+i);
+        std :: cout << i << "test_stdsprt_max " << "Done" << "\n";
+
+         auto stop = std::chrono::high_resolution_clock::now();
+        auto time = std::chrono::duration_cast<std::chrono::microseconds>(stop - start);
+        file << i << " " << time.count() << '\n';
+        std :: shuffle(tab, tab+i, g);
+    }    
+}
+

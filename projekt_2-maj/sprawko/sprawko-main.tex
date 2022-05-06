@@ -455,7 +455,7 @@ Na przykład dla \textbf{10000} poszczególne paczki to 100, 200, 300... a dla \
 
 \section{Dyskusja}
 
-\subsection{Czasy trwania filtracji}
+\subsection{Czas trwania filtracji}
 
 Wyznaczona doświadczalnie złożoność obliczeniowa filtrowania danych (Wykres \ref{fig: filtrowanie}) jest 
 zgodna ze złożonością prognozowaną (pkt. \ref{ch: filtorwanie}).\\
@@ -507,6 +507,12 @@ Poniższa tabela przedstawia czasy trwania sortowania poszczególnych algorytmó
        \label{tab: czasy}
        \end{table}
 
+       Na poniższym wykresie zostały zaprezentowane charakterystyki złożoności czasowej wszystkich omawianych 
+       algorytmów, dodatkowo została zaprezentowana  implementacja algorytmu sortującego z
+       biblioteki STL C++ std :: sort(), w celu porównania szybkości gotowego rozwiązania dostępnego dla
+       programisty, z jego własną implementacją algorytmu sortującego.
+
+
        \begin{figure}[H]
               \centering
               \begin{tikzpicture}
@@ -530,7 +536,8 @@ Poniższa tabela przedstawia czasy trwania sortowania poszczególnych algorytmó
                      \addlegendentry{Quicksort}
                      \addplot[color=green, mark=*,mark size=0.04cm,style=dashed] table {dane/intro962'903.txt};
                      \addlegendentry{Introsort}
-
+                     \addplot[color=black, mark=*,mark size=0.04cm,style=dashed] table {dane/stdsort962'903.txt};
+                     \addlegendentry{std :: sort}
                      
                    
                      \end{axis}
@@ -541,6 +548,9 @@ Poniższa tabela przedstawia czasy trwania sortowania poszczególnych algorytmó
                      \label{fig: final}
               
        \end{figure}
+       \textbf{Uwaga.} Algorytm std :: sort() został przedstawiony tylko w celu porównania i zaprezentowania go na wykresie z 
+       z napisanymi w ramach zadania algorytmami, nie został on uwzględniony w podsumowaniu i wnioskach, pojawił się 
+       jako rodzaj ciekawostki.
 
        \subsection{Średnia arytmetyczna i mediana}
        Dla każdego zestawu danych została obliczona średnia arytmetyczna i mediana rankingu. Zostały one zaprezentowane w poniższej 

@@ -58,11 +58,7 @@ int main(){
   //test_intro_sort_500000(tab500000);
   //test_intro_sort_962903(tabmax);
 
-    // bucket_sort(tab500000,20);
-    // for (int i = 0; i < 20; i++)
-    // {
-    //     std :: cout << tab500000[i] << '\n';
-    // }
+    test_std_sort_962903(tabmax);
      double art10000;
      double art100000;
      double art500000;
