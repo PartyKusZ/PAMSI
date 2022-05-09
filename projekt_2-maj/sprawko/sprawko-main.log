@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.1.6)  6 MAY 2022 11:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2022.1.6)  9 MAY 2022 12:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -866,9 +866,9 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has b
 <to be read again> 
                    \relax 
 l.84 \newpage
-              [1] [2] (/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/sprawko/wykres_filtrowanie.tex
+              [1] (/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/sprawko/wykres_filtrowanie.tex
 PGFPlots: reading {dane/filtrowanie.txt}
-) [3] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+ [2]) [3] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 ) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
@@ -883,7 +883,7 @@ PGFPlots: reading {dane/qsort500'000.txt}
 ) (/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/sprawko/wykres_qs_max.tex
 PGFPlots: reading {dane/qsort692'903.txt}
 ) [5] [6]
-Overfull \hbox (32.85588pt too wide) in paragraph at lines 273--274
+Overfull \hbox (32.85588pt too wide) in paragraph at lines 272--273
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
@@ -904,22 +904,22 @@ PGFPlots: reading {dane/intro500'000.txt}
 ) (/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/sprawko/wykres_is_max.tex
 PGFPlots: reading {dane/intro962'903.txt}
 )
-Underfull \hbox (badness 10000) in paragraph at lines 460--462
+Underfull \hbox (badness 10000) in paragraph at lines 459--461
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 466--470
+Underfull \hbox (badness 10000) in paragraph at lines 465--469
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 476--481
+Underfull \hbox (badness 10000) in paragraph at lines 475--480
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 485--489
+Underfull \hbox (badness 10000) in paragraph at lines 484--488
 
  []
 
@@ -929,28 +929,28 @@ PGFPlots: reading {dane/qsort692'903.txt}
 PGFPlots: reading {dane/intro962'903.txt}
 PGFPlots: reading {dane/stdsort962'903.txt}
  [13] [14]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 587.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 587.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 586.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 586.
  (/home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/sprawko/sprawko-main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 587.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 587.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 586.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 586.
 Package rerunfilecheck Info: File `sprawko-main.out' has not changed.
 (rerunfilecheck)             Checksum: 61E3A19C228CFB7D41DECB17F0DD1047;2519.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 587.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 586.
  ) 
 Here is how much of TeX's memory you used:
- 32141 strings out of 481239
- 737065 string characters out of 5920378
- 1304330 words of memory out of 5100000
+ 32140 strings out of 481239
+ 737059 string characters out of 5920378
+ 1303567 words of memory out of 5100000
  46576 multiletter control sequences out of 15000+600000
  549313 words of font info for 60 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  79i,19n,136p,781b,2228s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0900.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1728.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm2488.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm3583.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfti1728.pfb>
-Output written on /home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/sprawko/sprawko-main.pdf (15 pages, 508565 bytes).
+Output written on /home/kubus/Pulpit/SEM4/PAMSI/projekt_2-maj/sprawko/sprawko-main.pdf (15 pages, 508089 bytes).
 PDF statistics:
- 547 PDF objects out of 1000 (max. 8388607)
- 503 compressed objects within 6 object streams
- 191 named destinations out of 1000 (max. 500000)
+ 546 PDF objects out of 1000 (max. 8388607)
+ 502 compressed objects within 6 object streams
+ 190 named destinations out of 1000 (max. 500000)
  314 words of extra memory for PDF output out of 10000 (max. 10000000)
 
