@@ -21,8 +21,7 @@ int main(){
     double *tabmax;
 
     file.open("../projekt2_dane.csv", std :: ios :: in);
-    // pkt 1 zadania 
-    write_to_mems(movie_rating_list,file);
+    write_to_mem(movie_rating_list,file);
 
    std :: cout << movie_rating_list.size() << std :: endl;
    
@@ -45,18 +44,18 @@ int main(){
     for(int i = 0; i < SIZE_MAXIMUM; ++i){
         tabmax[i] = movie_rating_list[i].rating;
     }
-    //  test_quick_sort_10000(tab10000);
-    //  test_quick_sort_100000(tab100000);
-    //  test_quick_sort_500000(tab500000);
-    //  test_quick_sort_962903(tabmax);
-    // test_merge_sort_10000(tab10000);
-    // test_merge_sort_100000(tab100000);
-    // test_merge_sort_500000(tab500000);
-    // test_merge_sort_962903(tabmax);
-  //test_intro_sort_10000(tab10000);
-  //test_intro_sort_100000(tab100000);
-  //test_intro_sort_500000(tab500000);
-  //test_intro_sort_962903(tabmax);
+    test_qsort_10000(tab10000);
+    test_qsort_100000(tab100000);
+    test_qsort_500000(tab500000);
+    test_qsort_962903(tabmax);
+    test_merge_sort_10000(tab10000);
+    test_merge_sort_100000(tab100000);
+    test_merge_sort_500000(tab500000);
+    test_merge_sort_962903(tabmax);
+    test_intro_sort_10000(tab10000);
+    test_intro_sort_100000(tab100000);
+    test_intro_sort_500000(tab500000);
+    test_intro_sort_962903(tabmax);
 
     test_std_sort_962903(tabmax);
      double art10000;
