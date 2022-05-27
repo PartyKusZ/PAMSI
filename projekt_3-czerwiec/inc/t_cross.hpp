@@ -1,0 +1,19 @@
+#pragma once
+#include <SFML/Graphics.hpp>
+#include<SFML/Window.hpp>
+#include "t_figure.hpp"
+
+class t_cross: public t_figure{
+    
+    public:
+        t_cross(int _font_size): t_figure(_font_size){ 
+            this->loadFromFile("arial.ttf");
+            this->setFont(*this);
+            this->setString("X");
+            this->setLineSpacing(0);
+            this->setLetterSpacing(0);
+            this->setCharacterSize(font_size);
+            this->setPosition(0, offset * font_size);
+            this->setFillColor(sf::Color::Black);
+        };
+};

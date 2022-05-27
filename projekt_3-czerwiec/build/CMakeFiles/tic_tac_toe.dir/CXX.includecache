@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../inc/t_gameboard.hpp
+SFML/Graphics.hpp
+-
+SFML/Window.hpp
+-
+vector
+-
+
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_3-czerwiec/src/t_gameboard.cpp
+t_gameboard.hpp
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_3-czerwiec/src/t_gameboard.hpp
+

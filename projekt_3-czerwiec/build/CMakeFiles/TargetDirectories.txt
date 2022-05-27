@@ -1,0 +1,3 @@
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_3-czerwiec/build/CMakeFiles/rebuild_cache.dir
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_3-czerwiec/build/CMakeFiles/edit_cache.dir
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_3-czerwiec/build/CMakeFiles/tic_tac_toe.dir
