@@ -1,9 +1,11 @@
-#include "t_gameboard.hpp"
-
+#include "t_game.hpp"
+#include <iostream>
 int main(){
-    t_gameboard x;
-    x.init_gameboard(5);
+    t_game x;
+    
+    x.init_gameboard(10);
     sf :: RenderWindow window(sf::VideoMode(800,800), "test myszki");
+   
     while (window.isOpen())
     {
         sf::Event event;
@@ -13,7 +15,12 @@ int main(){
                 window.close();
         }
         window.clear(sf::Color( 255, 255, 255 ) );
+        if(x.isButtonPressed(sf :: Mouse :: Left)){
+           x.set_gameboad_table(x.getPosition(window));
+        }
+
         window.draw(x);
+       // std:: cout << "X: " << x.getPosition(window).x << '\n' << "Y: " << x.getPosition(window).y << '\n'; 
         window.display();
     }
 }

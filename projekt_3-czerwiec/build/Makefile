@@ -150,6 +150,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/t_game.o: src/t_game.cpp.o
+
+.PHONY : src/t_game.o
+
+# target to build an object file
+src/t_game.cpp.o:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/t_game.cpp.o
+.PHONY : src/t_game.cpp.o
+
+src/t_game.i: src/t_game.cpp.i
+
+.PHONY : src/t_game.i
+
+# target to preprocess a source file
+src/t_game.cpp.i:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/t_game.cpp.i
+.PHONY : src/t_game.cpp.i
+
+src/t_game.s: src/t_game.cpp.s
+
+.PHONY : src/t_game.s
+
+# target to generate assembly for a file
+src/t_game.cpp.s:
+	$(MAKE) -f CMakeFiles/tic_tac_toe.dir/build.make CMakeFiles/tic_tac_toe.dir/src/t_game.cpp.s
+.PHONY : src/t_game.cpp.s
+
 src/t_gameboard.o: src/t_gameboard.cpp.o
 
 .PHONY : src/t_gameboard.o
@@ -189,6 +216,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/t_game.o"
+	@echo "... src/t_game.i"
+	@echo "... src/t_game.s"
 	@echo "... src/t_gameboard.o"
 	@echo "... src/t_gameboard.i"
 	@echo "... src/t_gameboard.s"

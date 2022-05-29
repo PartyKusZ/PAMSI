@@ -4,8 +4,12 @@
 
 class t_figure: public sf :: Font, public sf :: Text{
     protected:
-        const int font_size;
-        const double offset = -0.29;
+         int font_size;
+         double hor_offset = -0.15;
+         double ver_offset = 0.10;
     public:
-        t_figure(int _font_size): font_size(_font_size) {}
+        t_figure() = default;
+        void set_position(double x, double y){
+            this->setPosition(x + (ver_offset * this->getCharacterSize()), y + (hor_offset * this->getCharacterSize() ) );
+        }
 };

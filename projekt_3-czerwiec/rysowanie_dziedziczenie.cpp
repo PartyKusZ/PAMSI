@@ -62,7 +62,7 @@ class textX: public sf :: Font, public sf :: Text{
        textX(): sf :: Font(), sf :: Text(){
            this->loadFromFile("arial.ttf");
            this->setFont(*this);
-           this->setString("Xsa\nsd");
+           this->setString("");
            this->setCharacterSize(SIZE);
            this->setLineSpacing(1);
            this->setLetterSpacing(0);
@@ -126,9 +126,9 @@ int main(){
         window.draw(*cr[1]);
         //X->move(0,0);
         X->setPosition(0,-0.29*SIZE);
-        //window.draw(*X);
+        window.draw(*X);
         xy = myszka.getPosition(window);
-        window.draw(rt);
+        //window.draw(rt);
         window.display();
         std:: cout << "X: " << xy.x << '\n' << "Y: " << xy.y << '\n'; 
     }
