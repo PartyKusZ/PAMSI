@@ -9,10 +9,13 @@
 
 class t_game: public t_gameboard, public sf :: Mouse{
     protected:
-       
+       int human_win = 0;
+       int ai_win = 0;
+       who_start winner;
     public:
         t_game(): t_gameboard(), sf :: Mouse(){};
-
+        who_start check_win();
+        
         
 
 };

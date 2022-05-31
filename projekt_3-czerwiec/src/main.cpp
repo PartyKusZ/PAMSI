@@ -3,7 +3,7 @@
 int main(){
     t_game x;
     
-    x.init_gameboard(10);
+    x.init_gameboard(3);
     sf :: RenderWindow window(sf::VideoMode(800,800), "test myszki");
    
     while (window.isOpen())
@@ -18,7 +18,7 @@ int main(){
         if(x.isButtonPressed(sf :: Mouse :: Left)){
            x.set_gameboad_table(x.getPosition(window));
         }
-
+        x.check_win();
         window.draw(x);
        // std:: cout << "X: " << x.getPosition(window).x << '\n' << "Y: " << x.getPosition(window).y << '\n'; 
         window.display();

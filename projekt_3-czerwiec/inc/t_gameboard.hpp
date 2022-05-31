@@ -20,7 +20,8 @@ class t_gameboard: public sf ::Drawable{
         sf :: RectangleShape line;
         std :: vector <sf :: RectangleShape> lines;
         char **gameborad_table;
-        enum class who_start {human, ai};
+        enum class who_start {human, ai, draw};
+        int move_counter = 2;
         who_start player;
     public:
         

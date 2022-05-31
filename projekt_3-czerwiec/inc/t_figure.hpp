@@ -5,7 +5,7 @@
 class t_figure: public sf :: Font, public sf :: Text{
     protected:
          int font_size;
-         double hor_offset = -0.15;
+         double hor_offset = -0.13;
          double ver_offset = 0.10;
     public:
         t_figure() = default;

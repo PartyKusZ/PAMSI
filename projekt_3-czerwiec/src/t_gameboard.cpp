@@ -27,11 +27,30 @@ void t_gameboard :: init_gameboard(int number){
 }
 
 void t_gameboard :: set_gameboad_table( sf :: Vector2i xy){
-    
+        player = who_start :: ai;
         xy.x = xy.x / filed_size;
         xy.y = xy.y / filed_size;
-        if(xy.x < number_of_fields && xy.y < number_of_fields)
-            gameborad_table[xy.x][xy.y] = 'x';
+        //std :: cout << "num_of_fileds: " << number_of_fields << '\n' << "x: " << xy.x << '\n' << "y: " << xy.y << '\n';
+        if((xy.x < number_of_fields )&& (xy.y < number_of_fields)){
+            if(gameborad_table[xy.x][xy.y] == '_'){
+                if(player == who_start :: ai){
+                    if(++move_counter % 2 == 0){
+                        gameborad_table[xy.x][xy.y] = 'o';
+                    }else{
+                        gameborad_table[xy.x][xy.y] = 'x';
+                    }
+
+                }
+                if(player == who_start :: human){
+                    if(++move_counter % 2 == 1){
+                        gameborad_table[xy.x][xy.y] = 'o';
+                    }else{
+                        gameborad_table[xy.x][xy.y] = 'x';
+                    }
+
+                }
+            }
+        }
         
     
 }
@@ -40,11 +59,19 @@ void t_gameboard :: clear_gameboard(){
     lines.clear();
     line.setPosition(0,0);
     line.setRotation(0);
+    move_counter = 2;
+    for(int i = 0; i < number_of_fields; ++i){
+        for(int j = 0; j < number_of_fields; ++j){
+            gameborad_table[i][j] = '_';
+        }
+    }
 }
 
  void t_gameboard :: draw(sf::RenderTarget& target, sf::RenderStates states)const{
      t_circe circle;
      t_cross cross;
+     int circle_win = 0;
+     int cross_win = 0;
      circle.setCharacterSize(filed_size);
      cross.setCharacterSize(filed_size);
      for(int i = 0; i < lines.size(); ++i){
@@ -58,10 +85,10 @@ void t_gameboard :: clear_gameboard(){
                 target.draw(cross,states);
             }
             if(gameborad_table[i][j] == 'o'){
-                circle.setPosition(i * filed_size , j * filed_size);
+                circle.set_position(i * filed_size , j * filed_size);
                 target.draw(circle,states);
             }
          }
      }
-    
+     
 }
