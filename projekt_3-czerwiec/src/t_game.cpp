@@ -170,10 +170,11 @@ void t_game :: evaluate_position(){
 
 int Z = 1;
 int t_game :: minimax_alpha_beta(who_start current_player,  int depth, long int a, long int b){
+    this->check_win();
     std :: cout << ++Z<<'\n';
-    if(winner == current_player){
+    if(winner != who_start::draw){
         if(current_player == who_start :: ai){
-        return INT32_MAX;
+            return INT32_MAX;
         }else{
             return INT32_MIN;
         }
@@ -252,5 +253,6 @@ void t_game ::  best_ai_move(){
             }
         }
     }
-    gameborad_table[set_i][set_j] = 'o';
+    if(set_i < number_of_fields && set_j < number_of_fields)
+        gameborad_table[set_i][set_j] = 'o';
 }

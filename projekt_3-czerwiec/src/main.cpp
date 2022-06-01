@@ -3,7 +3,7 @@
 int main(){
     t_game x;
     
-    x.init_gameboard(4);
+    x.init_gameboard(3);
     //x.best_ai_move();
     sf :: RenderWindow window(sf::VideoMode(x.get_window_size(),x.get_window_size()), "test myszki");
     window.clear(sf::Color( 255, 255, 255 ) );
