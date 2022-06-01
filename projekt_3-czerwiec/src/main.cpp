@@ -3,9 +3,13 @@
 int main(){
     t_game x;
     
-    x.init_gameboard(3);
-    sf :: RenderWindow window(sf::VideoMode(800,800), "test myszki");
-   
+    x.init_gameboard(4);
+    //x.best_ai_move();
+    sf :: RenderWindow window(sf::VideoMode(x.get_window_size(),x.get_window_size()), "test myszki");
+    window.clear(sf::Color( 255, 255, 255 ) );
+    window.draw(x);
+    window.display();
+
     while (window.isOpen())
     {
         sf::Event event;
@@ -14,13 +18,19 @@ int main(){
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-        window.clear(sf::Color( 255, 255, 255 ) );
-        if(x.isButtonPressed(sf :: Mouse :: Left)){
+        if(x.isButtonPressed(sf :: Mouse :: Left)  ){
+           window.clear(sf::Color( 255, 255, 255 ) );
            x.set_gameboad_table(x.getPosition(window));
-        }
-        x.check_win();
-        window.draw(x);
-       // std:: cout << "X: " << x.getPosition(window).x << '\n' << "Y: " << x.getPosition(window).y << '\n'; 
-        window.display();
+          
+           x.best_ai_move();
+           window.draw(x);
+           //std:: cout << "X: " << x.getPosition(window).x << '\n' << "Y: " << x.getPosition(window).y << '\n'; 
+          
+           window.display();
+               if(x.check_win())
+                break; 
+            while(x.isButtonPressed(sf :: Mouse :: Left)){}
+        } 
+        
     }
 }

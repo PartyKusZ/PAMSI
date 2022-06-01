@@ -8,7 +8,7 @@ CMakeFiles/tic_tac_toe.dir/src/main.cpp.o
  ../inc/t_figure.hpp
  ../inc/t_game.hpp
  ../inc/t_gameboard.hpp
- //home/kubus/Pulpit/SEM4/PAMSI/projekt_3-czerwiec/src/main.cpp
+ /home/kubus/Pulpit/SEM4/PAMSI/projekt_3-czerwiec/src/main.cpp
 CMakeFiles/tic_tac_toe.dir/src/t_game.cpp.o
  ../inc/t_circle.hpp
  ../inc/t_cross.hpp
@@ -16,11 +16,11 @@ CMakeFiles/tic_tac_toe.dir/src/t_game.cpp.o
  ../inc/t_figure.hpp
  ../inc/t_game.hpp
  ../inc/t_gameboard.hpp
- //home/kubus/Pulpit/SEM4/PAMSI/projekt_3-czerwiec/src/t_game.cpp
+ /home/kubus/Pulpit/SEM4/PAMSI/projekt_3-czerwiec/src/t_game.cpp
 CMakeFiles/tic_tac_toe.dir/src/t_gameboard.cpp.o
  ../inc/t_circle.hpp
  ../inc/t_cross.hpp
  ../inc/t_empy.hpp
  ../inc/t_figure.hpp
  ../inc/t_gameboard.hpp
- //home/kubus/Pulpit/SEM4/PAMSI/projekt_3-czerwiec/src/t_gameboard.cpp
+ /home/kubus/Pulpit/SEM4/PAMSI/projekt_3-czerwiec/src/t_gameboard.cpp

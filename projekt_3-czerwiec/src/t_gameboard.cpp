@@ -35,7 +35,7 @@ void t_gameboard :: set_gameboad_table( sf :: Vector2i xy){
             if(gameborad_table[xy.x][xy.y] == '_'){
                 if(player == who_start :: ai){
                     if(++move_counter % 2 == 0){
-                        gameborad_table[xy.x][xy.y] = 'o';
+                        gameborad_table[xy.x][xy.y] = 'x';
                     }else{
                         gameborad_table[xy.x][xy.y] = 'x';
                     }
@@ -43,7 +43,7 @@ void t_gameboard :: set_gameboad_table( sf :: Vector2i xy){
                 }
                 if(player == who_start :: human){
                     if(++move_counter % 2 == 1){
-                        gameborad_table[xy.x][xy.y] = 'o';
+                        gameborad_table[xy.x][xy.y] = 'x';
                     }else{
                         gameborad_table[xy.x][xy.y] = 'x';
                     }
@@ -90,5 +90,127 @@ void t_gameboard :: clear_gameboard(){
             }
          }
      }
+     int circles;
+     int crosses;
+     circle.setColor(sf :: Color :: Green);
+     cross.setColor(sf :: Color :: Green);
+     for(int i = 0; i < number_of_fields; ++i){
+         for(int j = 0; j < number_of_fields; ++j){
+             if(gameborad_table[i][j] == 'o'){
+                circles++;
+            }
+            if(gameborad_table[i][j] == 'x'){
+                crosses++;
+            }
+         }
+         if(circles == number_of_fields){
+             for(int j = 0; j < number_of_fields; ++j){
+                circle.set_position(i * filed_size , j * filed_size);
+                target.draw(circle,states);
+             }
+             return;
+        }
+        if(crosses == number_of_fields){
+            for(int j = 0; j < number_of_fields; ++j){
+                cross.set_position(i * filed_size , j * filed_size);
+                target.draw(cross,states);
+             }
+             return;
+
+        }
+        circles = 0;
+        crosses = 0;
+     }  
+
+     for(int i = 0; i < number_of_fields; ++i){
+         for(int j = 0; j < number_of_fields; ++j){
+             if(gameborad_table[j][i] == 'o'){
+                circles++;
+            }
+            if(gameborad_table[j][i] == 'x'){
+                crosses++;
+            }
+         }
+         if(circles == number_of_fields){
+             for(int j = 0; j < number_of_fields; ++j){
+                circle.set_position(j * filed_size , i * filed_size);
+                target.draw(circle,states);
+             }
+             return;
+
+        }
+        if(crosses == number_of_fields){
+            for(int j = 0; j < number_of_fields; ++j){
+                cross.set_position(j * filed_size , i * filed_size);
+                target.draw(cross,states);
+             }
+             return;
+
+        }
+        circles = 0;
+        crosses = 0;
+     }  
+
+
+     for(int j = 0; j < number_of_fields; ++j){
+             if(gameborad_table[j][j] == 'o'){
+                circles++;
+            }
+            if(gameborad_table[j][j] == 'x'){
+                crosses++;
+            }
+         }
+         if(circles == number_of_fields){
+             for(int j = 0; j < number_of_fields; ++j){
+                circle.set_position(j * filed_size , j * filed_size);
+                target.draw(circle,states);
+             }
+             return;
+
+        }
+        if(crosses == number_of_fields){
+            for(int j = 0; j < number_of_fields; ++j){
+                cross.set_position(j * filed_size , j * filed_size);
+                target.draw(cross,states);
+             }
+             return;
+
+        }
+        circles = 0;
+        crosses = 0;
+
+        for(int i = 0, j = number_of_fields - 1; i < number_of_fields; ++i, --j){
+             if(gameborad_table[i][j] == 'o'){
+                circles++;
+            }
+            if(gameborad_table[i][j] == 'x'){
+                crosses++;
+            }
+         }
+         if(circles == number_of_fields){
+             for(int i = 0, j = number_of_fields - 1; i < number_of_fields; ++i, --j){
+                circle.set_position(i * filed_size , j * filed_size);
+                target.draw(circle,states);
+             }
+             return;
+
+        }
+        if(crosses == number_of_fields){
+            for(int i = 0, j = number_of_fields - 1; i < number_of_fields; ++i, --j){
+                cross.set_position(i * filed_size , j * filed_size);
+                target.draw(cross,states);
+             }
+             return;
+
+        }
+        circles = 0;
+        crosses = 0;
+
+
+
+
+
+
      
+      
 }
