@@ -168,10 +168,10 @@ void t_game :: evaluate_position(){
    
 }
 
-int Z = 1;
+int Zz = 0;
 int t_game :: minimax_alpha_beta(who_start current_player,  int depth, long int a, long int b){
     this->check_win();
-    std :: cout << ++Z<<'\n';
+    ++Zz;
     if(winner != who_start::draw){
         if(current_player == who_start :: ai){
             return INT32_MAX;
@@ -202,7 +202,7 @@ int t_game :: minimax_alpha_beta(who_start current_player,  int depth, long int 
             if(gameborad_table[i][j] == '_'){
                 if(current_player == who_start :: ai){
                     gameborad_table[i][j] = 'o';
-                    tmp = this->minimax_alpha_beta(current_player, --depth, a, b);
+                    tmp = this->minimax_alpha_beta(current_player, depth-1, a, b);
                     if(best_score < tmp){
                         best_score = tmp;
                     }
@@ -215,7 +215,7 @@ int t_game :: minimax_alpha_beta(who_start current_player,  int depth, long int 
                     }
                 }else{
                     gameborad_table[i][j] = 'x';
-                    tmp = this->minimax_alpha_beta(current_player, --depth, a, b);
+                    tmp = this->minimax_alpha_beta(current_player, depth-1, a, b);
                     if(best_score > tmp){
                         best_score = tmp;
                     }
@@ -233,9 +233,10 @@ int t_game :: minimax_alpha_beta(who_start current_player,  int depth, long int 
     return best_score;
 }
 
-void t_game ::  best_ai_move(){
+void t_game ::  best_ai_move(int depth){
+
     long int best_score = INT64_MIN;
-    std :: cout << best_score;
+    //std :: cout << best_score;
     int tmp;
     int set_i;
     int set_j;
@@ -243,7 +244,9 @@ void t_game ::  best_ai_move(){
         for(int j = 0; j < number_of_fields; ++j){
             if(gameborad_table[i][j] == '_'){
                 gameborad_table[i][j] = 'o';
-                tmp = minimax_alpha_beta(who_start :: ai, 4, INT64_MIN, INT64_MAX);
+                tmp = minimax_alpha_beta(who_start :: ai, depth, INT64_MIN, INT64_MAX);
+                std :: cout << Zz<<'\n';
+
                 gameborad_table[i][j] = '_';
                 if(tmp > best_score){
                     best_score = tmp;
@@ -256,3 +259,162 @@ void t_game ::  best_ai_move(){
     if(set_i < number_of_fields && set_j < number_of_fields)
         gameborad_table[set_i][set_j] = 'o';
 }
+
+
+
+
+
+
+
+
+void t_game :: draw(sf::RenderTarget& target, sf::RenderStates states)const{
+    
+     t_circe circle;
+     t_cross cross;
+     int circle_win = 0;
+     int cross_win = 0;
+     circle.setCharacterSize(filed_size);
+     cross.setCharacterSize(filed_size);
+     for(int i = 0; i < lines.size(); ++i){
+         target.draw(lines[i],states);
+     }
+     for(int i = 0; i < number_of_fields; ++i){
+         for(int j = 0; j < number_of_fields; ++j){
+             
+            if(gameborad_table[i][j] == 'x'){
+                cross.set_position(i * filed_size, j * filed_size);
+                target.draw(cross,states);
+            }
+            if(gameborad_table[i][j] == 'o'){
+                circle.set_position(i * filed_size , j * filed_size);
+                target.draw(circle,states);
+            }
+         }
+     }
+     int circles;
+     int crosses;
+     circle.setColor(sf :: Color :: Green);
+     cross.setColor(sf :: Color :: Green);
+     for(int i = 0; i < number_of_fields; ++i){
+         for(int j = 0; j < number_of_fields; ++j){
+             if(gameborad_table[i][j] == 'o'){
+                circles++;
+            }
+            if(gameborad_table[i][j] == 'x'){
+                crosses++;
+            }
+         }
+         if(circles == number_of_fields){
+             for(int j = 0; j < number_of_fields; ++j){
+                circle.set_position(i * filed_size , j * filed_size);
+                target.draw(circle,states);
+             }
+             return;
+        }
+        if(crosses == number_of_fields){
+            for(int j = 0; j < number_of_fields; ++j){
+                cross.set_position(i * filed_size , j * filed_size);
+                target.draw(cross,states);
+             }
+             return;
+
+        }
+        circles = 0;
+        crosses = 0;
+     }  
+
+     for(int i = 0; i < number_of_fields; ++i){
+         for(int j = 0; j < number_of_fields; ++j){
+             if(gameborad_table[j][i] == 'o'){
+                circles++;
+            }
+            if(gameborad_table[j][i] == 'x'){
+                crosses++;
+            }
+         }
+         if(circles == number_of_fields){
+             for(int j = 0; j < number_of_fields; ++j){
+                circle.set_position(j * filed_size , i * filed_size);
+                target.draw(circle,states);
+             }
+             return;
+
+        }
+        if(crosses == number_of_fields){
+            for(int j = 0; j < number_of_fields; ++j){
+                cross.set_position(j * filed_size , i * filed_size);
+                target.draw(cross,states);
+             }
+             return;
+
+        }
+        circles = 0;
+        crosses = 0;
+     }  
+
+
+     for(int j = 0; j < number_of_fields; ++j){
+             if(gameborad_table[j][j] == 'o'){
+                circles++;
+            }
+            if(gameborad_table[j][j] == 'x'){
+                crosses++;
+            }
+         }
+         if(circles == number_of_fields){
+             for(int j = 0; j < number_of_fields; ++j){
+                circle.set_position(j * filed_size , j * filed_size);
+                target.draw(circle,states);
+             }
+             return;
+
+        }
+        if(crosses == number_of_fields){
+            for(int j = 0; j < number_of_fields; ++j){
+                cross.set_position(j * filed_size , j * filed_size);
+                target.draw(cross,states);
+             }
+             return;
+
+        }
+        circles = 0;
+        crosses = 0;
+
+        for(int i = 0, j = number_of_fields - 1; i < number_of_fields; ++i, --j){
+             if(gameborad_table[i][j] == 'o'){
+                circles++;
+            }
+            if(gameborad_table[i][j] == 'x'){
+                crosses++;
+            }
+         }
+         if(circles == number_of_fields){
+             for(int i = 0, j = number_of_fields - 1; i < number_of_fields; ++i, --j){
+                circle.set_position(i * filed_size , j * filed_size);
+                target.draw(circle,states);
+             }
+             return;
+
+        }
+        if(crosses == number_of_fields){
+            for(int i = 0, j = number_of_fields - 1; i < number_of_fields; ++i, --j){
+                cross.set_position(i * filed_size , j * filed_size);
+                target.draw(cross,states);
+             }
+             return;
+
+        }
+        circles = 0;
+        crosses = 0;
+
+
+
+
+
+
+     
+      
+}
+
+
+

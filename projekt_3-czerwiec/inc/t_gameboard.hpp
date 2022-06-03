@@ -6,7 +6,6 @@
 #include "t_figure.hpp"
 #include "t_circle.hpp"
 #include "t_cross.hpp"
-#include "t_empy.hpp"
 
 
 
@@ -29,5 +28,4 @@ class t_gameboard: public sf ::Drawable{
         void set_gameboad_table( sf :: Vector2i xy);
         void clear_gameboard();
         
-        virtual void draw(sf::RenderTarget& target, sf::RenderStates states)const;
 };

@@ -3,7 +3,6 @@
 
 CMakeFiles/tic_tac_toe.dir/src/main.cpp.o: ../inc/t_circle.hpp
 CMakeFiles/tic_tac_toe.dir/src/main.cpp.o: ../inc/t_cross.hpp
-CMakeFiles/tic_tac_toe.dir/src/main.cpp.o: ../inc/t_empy.hpp
 CMakeFiles/tic_tac_toe.dir/src/main.cpp.o: ../inc/t_figure.hpp
 CMakeFiles/tic_tac_toe.dir/src/main.cpp.o: ../inc/t_game.hpp
 CMakeFiles/tic_tac_toe.dir/src/main.cpp.o: ../inc/t_gameboard.hpp
@@ -11,7 +10,6 @@ CMakeFiles/tic_tac_toe.dir/src/main.cpp.o: ../src/main.cpp
 
 CMakeFiles/tic_tac_toe.dir/src/t_game.cpp.o: ../inc/t_circle.hpp
 CMakeFiles/tic_tac_toe.dir/src/t_game.cpp.o: ../inc/t_cross.hpp
-CMakeFiles/tic_tac_toe.dir/src/t_game.cpp.o: ../inc/t_empy.hpp
 CMakeFiles/tic_tac_toe.dir/src/t_game.cpp.o: ../inc/t_figure.hpp
 CMakeFiles/tic_tac_toe.dir/src/t_game.cpp.o: ../inc/t_game.hpp
 CMakeFiles/tic_tac_toe.dir/src/t_game.cpp.o: ../inc/t_gameboard.hpp
@@ -19,7 +17,6 @@ CMakeFiles/tic_tac_toe.dir/src/t_game.cpp.o: ../src/t_game.cpp
 
 CMakeFiles/tic_tac_toe.dir/src/t_gameboard.cpp.o: ../inc/t_circle.hpp
 CMakeFiles/tic_tac_toe.dir/src/t_gameboard.cpp.o: ../inc/t_cross.hpp
-CMakeFiles/tic_tac_toe.dir/src/t_gameboard.cpp.o: ../inc/t_empy.hpp
 CMakeFiles/tic_tac_toe.dir/src/t_gameboard.cpp.o: ../inc/t_figure.hpp
 CMakeFiles/tic_tac_toe.dir/src/t_gameboard.cpp.o: ../inc/t_gameboard.hpp
 CMakeFiles/tic_tac_toe.dir/src/t_gameboard.cpp.o: ../src/t_gameboard.cpp

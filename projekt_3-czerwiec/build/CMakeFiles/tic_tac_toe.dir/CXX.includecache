@@ -22,10 +22,6 @@ SFML/Window.hpp
 t_figure.hpp
 ../inc/t_figure.hpp
 
-../inc/t_empy.hpp
-t_figure.hpp
-../inc/t_figure.hpp
-
 ../inc/t_figure.hpp
 SFML/Graphics.hpp
 -
@@ -43,13 +39,13 @@ t_circle.hpp
 ../inc/t_circle.hpp
 t_cross.hpp
 ../inc/t_cross.hpp
-t_empy.hpp
-../inc/t_empy.hpp
 iostream
 -
 math.h
 -
 limits
+-
+cstring
 -
 
 ../inc/t_gameboard.hpp
@@ -65,10 +61,10 @@ t_circle.hpp
 ../inc/t_circle.hpp
 t_cross.hpp
 ../inc/t_cross.hpp
-t_empy.hpp
-../inc/t_empy.hpp
 
-/home/kubus/Pulpit/SEM4/PAMSI/projekt_3-czerwiec/src/t_game.cpp
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_3-czerwiec/src/main.cpp
 t_game.hpp
 /home/kubus/Pulpit/SEM4/PAMSI/projekt_3-czerwiec/src/t_game.hpp
+iostream
+-
 
