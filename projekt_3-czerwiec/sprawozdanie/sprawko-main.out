@@ -1,0 +1,13 @@
+\BOOKMARK [1][-]{section.1}{Cel cwiczenia}{}% 1
+\BOOKMARK [1][-]{section.2}{Wstep}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{MiniMax}{section.2}% 3
+\BOOKMARK [3][-]{subsubsection.2.1.1}{Zasada dzia\233ania}{subsection.2.1}% 4
+\BOOKMARK [2][-]{subsection.2.2}{Alfa-beta ciecia}{section.2}% 5
+\BOOKMARK [1][-]{section.3}{Implementacja}{}% 6
+\BOOKMARK [2][-]{subsection.3.1}{Ocena pozycji}{section.3}% 7
+\BOOKMARK [2][-]{subsection.3.2}{MiniMax z alfa-beta cieciami}{section.3}% 8
+\BOOKMARK [2][-]{subsection.3.3}{Ustalenie wsp\363\233rzednych najlepszego posuniecia}{section.3}% 9
+\BOOKMARK [1][-]{section.4}{Testy}{}% 10
+\BOOKMARK [2][-]{subsection.4.1}{Poprawnosc dzia\233ania}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.2}{Wydajnosc}{section.4}% 12
+\BOOKMARK [1][-]{section.5}{Wnioski}{}% 13

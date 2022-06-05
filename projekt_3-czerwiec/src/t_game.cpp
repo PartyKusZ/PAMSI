@@ -113,7 +113,7 @@ void t_game :: evaluate_position(){
         for(int j = 0; j < number_of_fields; ++j){
             if(gameborad_table[i][j] == 'o'){
                 tmp++;
-            }else if(gameborad_table[i][j] == '_'){
+            }else if(gameborad_table[i][j] == 'x'){
                 tmp = 0;
                 break;
             }
@@ -128,7 +128,7 @@ void t_game :: evaluate_position(){
         for(int j = 0; j < number_of_fields; ++j){
             if(gameborad_table[j][i] == 'o'){
                 tmp++;
-            }else if(gameborad_table[j][i] == '_'){
+            }else if(gameborad_table[j][i] == 'x'){
                 tmp = 0;
                 break;
             }
@@ -142,7 +142,7 @@ void t_game :: evaluate_position(){
         tmp = 0;
             if(gameborad_table[j][j] == 'o'){
                 tmp++;
-            }else if(gameborad_table[j][j] == '_'){
+            }else if(gameborad_table[j][j] == 'x'){
                 tmp = 0;
                 break;
             }
@@ -156,7 +156,7 @@ void t_game :: evaluate_position(){
         tmp = 0;
             if(gameborad_table[i][j] == 'o'){
                 tmp++;
-            }else if(gameborad_table[i][j] == '_'){
+            }else if(gameborad_table[i][j] == 'x'){
                 tmp = 0;
                 break;
             }
@@ -236,7 +236,6 @@ int t_game :: minimax_alpha_beta(who_start current_player,  int depth, long int 
 void t_game ::  best_ai_move(int depth){
 
     long int best_score = INT64_MIN;
-    //std :: cout << best_score;
     int tmp;
     int set_i;
     int set_j;
@@ -245,7 +244,7 @@ void t_game ::  best_ai_move(int depth){
             if(gameborad_table[i][j] == '_'){
                 gameborad_table[i][j] = 'o';
                 tmp = minimax_alpha_beta(who_start :: ai, depth, INT64_MIN, INT64_MAX);
-                std :: cout << Zz<<'\n';
+                //std :: cout << Zz<<'\n';
 
                 gameborad_table[i][j] = '_';
                 if(tmp > best_score){

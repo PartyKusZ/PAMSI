@@ -62,9 +62,7 @@ t_circle.hpp
 t_cross.hpp
 ../inc/t_cross.hpp
 
-/home/kubus/Pulpit/SEM4/PAMSI/projekt_3-czerwiec/src/main.cpp
+/home/kubus/Pulpit/SEM4/PAMSI/projekt_3-czerwiec/src/t_game.cpp
 t_game.hpp
 /home/kubus/Pulpit/SEM4/PAMSI/projekt_3-czerwiec/src/t_game.hpp
-iostream
--
 

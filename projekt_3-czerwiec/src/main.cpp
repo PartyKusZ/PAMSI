@@ -1,5 +1,6 @@
 #include "t_game.hpp"
 #include <iostream>
+#include <chrono>
 int main(){
     t_game x;
     std :: cout << "Witam w grze kółko i krzyżyk. Zaleca się rozmiar planszy od 3 do 10, poziomy trudności:\n 1. dla plansz od 3 i 4 do poziom 5\n 2. dla plansz od 5 do 8 poziom 3\n 3. dla plansz 9 i 10 poziom 2.\n ";
@@ -16,12 +17,13 @@ int main(){
         window.clear(sf::Color( 255, 255, 255 ) );
     
 
-    
+
         x.init_gameboard(board_size);
-
+        auto begin = std::chrono::high_resolution_clock::now();
         x.best_ai_move(difficulty);
-
-
+        auto end = std::chrono::high_resolution_clock::now();
+        auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - begin);
+        std :: cout << "czas oczekiwania na pierwszy ruch: " << elapsed.count() << '\n';
         window.draw(x);
         window.display();
         //while(!x.isButtonPressed(sf :: Mouse :: Left)){}
