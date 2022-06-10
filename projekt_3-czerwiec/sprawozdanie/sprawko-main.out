@@ -7,7 +7,10 @@
 \BOOKMARK [2][-]{subsection.3.1}{Ocena pozycji}{section.3}% 7
 \BOOKMARK [2][-]{subsection.3.2}{MiniMax z alfa-beta cieciami}{section.3}% 8
 \BOOKMARK [2][-]{subsection.3.3}{Ustalenie wsp\363\233rzednych najlepszego posuniecia}{section.3}% 9
-\BOOKMARK [1][-]{section.4}{Testy}{}% 10
-\BOOKMARK [2][-]{subsection.4.1}{Poprawnosc dzia\233ania}{section.4}% 11
-\BOOKMARK [2][-]{subsection.4.2}{Wydajnosc}{section.4}% 12
-\BOOKMARK [1][-]{section.5}{Wnioski}{}% 13
+\BOOKMARK [1][-]{section.4}{Srodowisko graficzne - SFML}{}% 10
+\BOOKMARK [2][-]{subsection.4.1}{Obliczanie odstep\363w miedzy liniami stanowiacymi plansze}{section.4}% 11
+\BOOKMARK [2][-]{subsection.4.2}{Rysowanie planszy, k\363\233ek, krzyzyk\363w i zwyciestwa}{section.4}% 12
+\BOOKMARK [1][-]{section.5}{Testy}{}% 13
+\BOOKMARK [2][-]{subsection.5.1}{Poprawnosc dzia\233ania}{section.5}% 14
+\BOOKMARK [2][-]{subsection.5.2}{Wydajnosc}{section.5}% 15
+\BOOKMARK [1][-]{section.6}{Wnioski}{}% 16

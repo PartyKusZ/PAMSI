@@ -405,14 +405,6 @@ void t_game :: draw(sf::RenderTarget& target, sf::RenderStates states)const{
         }
         circles = 0;
         crosses = 0;
-
-
-
-
-
-
-     
-      
 }
 
 

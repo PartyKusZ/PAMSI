@@ -177,7 +177,10 @@
     
 
         \subsection{MiniMax z alfa-beta cięciami}
-            Metoda znajdująca najlepsze zagranie:
+            Metoda znajdująca najlepsze zagranie: Na początku sprawdzane jest czy któryś z zawodników wygrał, jeśli tak to zwracamy maksymalnie/minimalnie duże oceny pozycji i funkcja się kończy.
+            Jeśli nikt nie wygrał, to po osiągnięciu danej głębokości następuje ocena pozycji i zwrócenie jej wartości. Jeśli nie osiągnęliśmy jeszcze zadanej głębokości,
+            algorytm wykonuje naprzemiennie ruchy graczy i wywołuje się rekurencyjnie. Po osiągnięciu ostatniego wywołania funkcji do działania przystępują alfa-beta cięcia.
+            
 
             \begin{lstlisting}[language=C++, caption=minimax\_alpha\_beta()]
     int t_game :: minimax_alpha_beta(who_start current_player,  int depth, long int a, long int b){
@@ -272,6 +275,199 @@
 }
 
 \end{lstlisting}
+
+\section{Środowisko graficzne - SFML}
+W celu przyjemnego przedstawienia rozgrywki została wykorzystana biblioteka graficzna SFML.
+Cechuje się ona łatwością użycia, nieskomplikowanym procesem konfiguracyjnym i dobrą wydajnością.
+\subsection{Obliczanie odstępów między liniami stanowiącymi planszę}
+
+    Aby obliczyć odstępy między liniami stanowiącymi planszę rozmiar okna został podzielony przez 
+    ilość pól w kolumnie. Znając rozmiar pola łatwo można narysować linię stanowiące planszę.
+
+    \begin{lstlisting}[language=C++, caption=set\_gameboad\_table()]
+    
+    void t_gameboard :: set_gameboad_table( sf :: Vector2i xy){
+        player = who_start :: ai;
+        xy.x = xy.x / filed_size;
+        xy.y = xy.y / filed_size;
+        if((xy.x < number_of_fields )&& (xy.y < number_of_fields)){
+            if(gameborad_table[xy.x][xy.y] == '_'){
+                if(player == who_start :: ai){
+                    if(++move_counter % 2 == 0){
+                        gameborad_table[xy.x][xy.y] = 'x';
+                    }else{
+                        gameborad_table[xy.x][xy.y] = 'x';
+                    }
+
+                }
+                if(player == who_start :: human){
+                    if(++move_counter % 2 == 1){
+                        gameborad_table[xy.x][xy.y] = 'x';
+                    }else{
+                        gameborad_table[xy.x][xy.y] = 'x';
+                    }
+
+                }
+            }
+        }
+        
+    
+}
+
+
+    \end{lstlisting}
+    
+
+    \subsection{Rysowanie planszy, kółek, krzyżyków i zwycięstwa}
+
+        Poniższa wirtualna z biblioteki SFML została wykorzystana do rysowania całego stanu gry:
+
+    \begin{lstlisting}[language=C++, caption=draw()]
+        
+void t_game :: draw(sf::RenderTarget& target, sf::RenderStates states)const{
+    
+     t_circe circle;
+     t_cross cross;
+     int circle_win = 0;
+     int cross_win = 0;
+     circle.setCharacterSize(filed_size);
+     cross.setCharacterSize(filed_size);
+     for(int i = 0; i < lines.size(); ++i){
+         target.draw(lines[i],states);
+     }
+     for(int i = 0; i < number_of_fields; ++i){
+         for(int j = 0; j < number_of_fields; ++j){
+             
+            if(gameborad_table[i][j] == 'x'){
+                cross.set_position(i * filed_size, j * filed_size);
+                target.draw(cross,states);
+            }
+            if(gameborad_table[i][j] == 'o'){
+                circle.set_position(i * filed_size , j * filed_size);
+                target.draw(circle,states);
+            }
+         }
+     }
+     int circles;
+     int crosses;
+     circle.setColor(sf :: Color :: Green);
+     cross.setColor(sf :: Color :: Green);
+     for(int i = 0; i < number_of_fields; ++i){
+         for(int j = 0; j < number_of_fields; ++j){
+             if(gameborad_table[i][j] == 'o'){
+                circles++;
+            }
+            if(gameborad_table[i][j] == 'x'){
+                crosses++;
+            }
+         }
+         if(circles == number_of_fields){
+             for(int j = 0; j < number_of_fields; ++j){
+                circle.set_position(i * filed_size , j * filed_size);
+                target.draw(circle,states);
+             }
+             return;
+        }
+        if(crosses == number_of_fields){
+            for(int j = 0; j < number_of_fields; ++j){
+                cross.set_position(i * filed_size , j * filed_size);
+                target.draw(cross,states);
+             }
+             return;
+
+        }
+        circles = 0;
+        crosses = 0;
+     }  
+
+     for(int i = 0; i < number_of_fields; ++i){
+         for(int j = 0; j < number_of_fields; ++j){
+             if(gameborad_table[j][i] == 'o'){
+                circles++;
+            }
+            if(gameborad_table[j][i] == 'x'){
+                crosses++;
+            }
+         }
+         if(circles == number_of_fields){
+             for(int j = 0; j < number_of_fields; ++j){
+                circle.set_position(j * filed_size , i * filed_size);
+                target.draw(circle,states);
+             }
+             return;
+
+        }
+        if(crosses == number_of_fields){
+            for(int j = 0; j < number_of_fields; ++j){
+                cross.set_position(j * filed_size , i * filed_size);
+                target.draw(cross,states);
+             }
+             return;
+
+        }
+        circles = 0;
+        crosses = 0;
+     }  
+
+
+     for(int j = 0; j < number_of_fields; ++j){
+             if(gameborad_table[j][j] == 'o'){
+                circles++;
+            }
+            if(gameborad_table[j][j] == 'x'){
+                crosses++;
+            }
+         }
+         if(circles == number_of_fields){
+             for(int j = 0; j < number_of_fields; ++j){
+                circle.set_position(j * filed_size , j * filed_size);
+                target.draw(circle,states);
+             }
+             return;
+
+        }
+        if(crosses == number_of_fields){
+            for(int j = 0; j < number_of_fields; ++j){
+                cross.set_position(j * filed_size , j * filed_size);
+                target.draw(cross,states);
+             }
+             return;
+
+        }
+        circles = 0;
+        crosses = 0;
+
+        for(int i = 0, j = number_of_fields - 1; i < number_of_fields; ++i, --j){
+             if(gameborad_table[i][j] == 'o'){
+                circles++;
+            }
+            if(gameborad_table[i][j] == 'x'){
+                crosses++;
+            }
+         }
+         if(circles == number_of_fields){
+             for(int i = 0, j = number_of_fields - 1; i < number_of_fields; ++i, --j){
+                circle.set_position(i * filed_size , j * filed_size);
+                target.draw(circle,states);
+             }
+             return;
+
+        }
+        if(crosses == number_of_fields){
+            for(int i = 0, j = number_of_fields - 1; i < number_of_fields; ++i, --j){
+                cross.set_position(i * filed_size , j * filed_size);
+                target.draw(cross,states);
+             }
+             return;
+
+        }
+        circles = 0;
+        crosses = 0;
+}
+
+    \end{lstlisting}
+                
+
 \section{Testy}
     Gra została przetestowana pod względem poprawności działania i wydajności. 
         \subsection{Poprawność działania}
@@ -303,5 +499,7 @@
                 \item Algorytm MiniMax wraz z alfa-beta cięciami doskonale nadaje się do symulacji gracze w grze o sumie zerowej;
                 \item Dzięki zastosowaniu alfa-beta cięć algorytm znacząco skraca czas działania, dzięki odcinaniu gałęzi niemających znaczenia dla rozwoju gry,
                 \item Algorytm nawet na głębokości 1 jest w stanie skutecznie powstrzymać zwycięstwo człowieka, pozwalając maksymalnie na remis.
+                \item Ważne jest aby dopasować głębokość do wielkości planszy. Zbyt duża głębokość znacząco wydłuża działanie programu.
+                \item SFLM jest potężnym narzędziem do tworzenia GUI, niestety brakuje w tej bibliotece prostej obsługi przycisków i obsługi pól tekstowych przez co poziom trudności i wymiar planszy należy podać w terminalu.
             \end{itemize}
 \end{document}

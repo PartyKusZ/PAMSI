@@ -30,7 +30,6 @@ void t_gameboard :: set_gameboad_table( sf :: Vector2i xy){
         player = who_start :: ai;
         xy.x = xy.x / filed_size;
         xy.y = xy.y / filed_size;
-        //std :: cout << "num_of_fileds: " << number_of_fields << '\n' << "x: " << xy.x << '\n' << "y: " << xy.y << '\n';
         if((xy.x < number_of_fields )&& (xy.y < number_of_fields)){
             if(gameborad_table[xy.x][xy.y] == '_'){
                 if(player == who_start :: ai){
